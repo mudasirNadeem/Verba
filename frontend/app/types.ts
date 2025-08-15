@@ -446,6 +446,8 @@ export interface SelectSetting {
 // Base Settings
 
 const AvailableFonts: string[] = [
+  "Amiri",
+  "Georgia_Pro_Condensed",
   "Inter",
   "Plus_Jakarta_Sans",
   "Open_Sans",
@@ -453,7 +455,7 @@ const AvailableFonts: string[] = [
 ];
 
 const BaseFonts: SelectSetting = {
-  value: "Plus_Jakarta_Sans",
+  value: "Amiri",
   type: "select",
   options: AvailableFonts,
   description: "Text Font",
@@ -482,14 +484,14 @@ export interface Theme {
 
 export const LightTheme: Theme = {
   theme_name: "Light",
-  title: { text: "Verba", type: "text", description: "Title" },
+  title: { text: "RAG Assistant", type: "text", description: "Title" },
   subtitle: {
-    text: "The Golden RAGtriever",
+    text: "Your AI Assistant",
     type: "text",
     description: "Subtitle",
   },
   intro_message: {
-    text: "Welcome to Verba, your open-source RAG application!",
+    text: "Welcome to your AI Assistant, your personal RAG application!",
     type: "text",
     description: "First Message",
   },
@@ -499,53 +501,53 @@ export const LightTheme: Theme = {
     description: "Logo",
   },
   primary_color: {
-    color: "#FDFF91",
+    color: "#023eba",
     type: "color",
     description: "Primary",
   },
   secondary_color: {
-    color: "#90FFA8",
+    color: "#000000",
     type: "color",
     description: "Secondary",
   },
   warning_color: {
-    color: "#FF8399",
+    color: "#023eba",
     type: "color",
     description: "Warning",
   },
   bg_color: {
-    color: "#FEF7F7",
+    color: "#ffffff",
     type: "color",
     description: "Background",
   },
   bg_alt_color: {
-    color: "#FFFFFF",
+    color: "#ffffff",
     type: "color",
     description: "Alt. Background",
   },
-  text_color: { color: "#161616", type: "color", description: "Text" },
+  text_color: { color: "#000000", type: "color", description: "Text" },
   text_alt_color: {
-    color: "#8E8E8E",
+    color: "#023eba",
     type: "color",
     description: "Alt. Text",
   },
   button_text_color: {
-    color: "#161616",
+    color: "#000000",
     type: "color",
     description: "Button Text",
   },
   button_text_alt_color: {
-    color: "#8E8E8E",
+    color: "#ffffff",
     type: "color",
     description: "Button Alt. Text",
   },
   button_color: {
-    color: "#EFEFEF",
+    color: "#ffffff",
     type: "color",
     description: "Button",
   },
   button_hover_color: {
-    color: "#DCDCDC",
+    color: "#023eba",
     type: "color",
     description: "Button Hover",
   },
@@ -556,31 +558,31 @@ export const LightTheme: Theme = {
 export const DarkTheme: Theme = {
   ...LightTheme,
   theme_name: "Dark",
-  title: { ...LightTheme.title, text: "Verba" },
-  subtitle: { ...LightTheme.subtitle, text: "The Dark RAGtriever" },
+  title: { ...LightTheme.title, text: "RAG Assistant" },
+  subtitle: { ...LightTheme.subtitle, text: "Your AI Assistant" },
   intro_message: {
     ...LightTheme.intro_message,
-    text: "Welcome to Verba, your open-source RAG application!",
+    text: "Welcome to your AI Assistant, your personal RAG application!",
   },
   image: {
     ...LightTheme.image,
     src: "https://github.com/weaviate/Verba/blob/main/img/verba_icon.png?raw=true",
   },
-  primary_color: { ...LightTheme.primary_color, color: "#BB86FC" },
-  secondary_color: { ...LightTheme.secondary_color, color: "#008F82" },
-  warning_color: { ...LightTheme.warning_color, color: "#FF8399" },
-  bg_color: { ...LightTheme.bg_color, color: "#202020" },
-  bg_alt_color: { ...LightTheme.bg_alt_color, color: "#2F2929" },
+  primary_color: { ...LightTheme.primary_color, color: "#023eba" },
+  secondary_color: { ...LightTheme.secondary_color, color: "#ffffff" },
+  warning_color: { ...LightTheme.warning_color, color: "#023eba" },
+  bg_color: { ...LightTheme.bg_color, color: "#000000" },
+  bg_alt_color: { ...LightTheme.bg_alt_color, color: "#023eba" },
   text_color: { ...LightTheme.text_color, color: "#ffffff" },
-  text_alt_color: { ...LightTheme.text_alt_color, color: "#999999" },
+  text_alt_color: { ...LightTheme.text_alt_color, color: "#ffffff" },
   button_text_color: { ...LightTheme.button_text_color, color: "#ffffff" },
   button_text_alt_color: {
     ...LightTheme.button_text_alt_color,
-    color: "#999999",
+    color: "#000000",
   },
-  button_color: { ...LightTheme.button_color, color: "#3C3C3C" },
-  button_hover_color: { ...LightTheme.button_hover_color, color: "#2C2C2C" },
-  font: { ...LightTheme.font, value: "Open_Sans" },
+  button_color: { ...LightTheme.button_color, color: "#023eba" },
+  button_hover_color: { ...LightTheme.button_hover_color, color: "#ffffff" },
+  font: { ...LightTheme.font, value: "Amiri" },
   theme: "dark",
 };
 

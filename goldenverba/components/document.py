@@ -5,7 +5,11 @@ from spacy.language import Language
 import spacy
 import json
 
-from langdetect import detect
+try:
+    from langdetect import detect
+except ImportError:
+    def detect(text):
+        return "en"  # Default to English if langdetect is not available
 
 
 def load_nlp_for_language(language: str):

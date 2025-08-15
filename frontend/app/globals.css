@@ -1,7 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Georgia+Pro+Condensed:wght@400;600;700&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+/* Remove scroll bars */
+html {
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* Hide scrollbars but keep functionality */
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: transparent;
+}
+
+/* For Firefox */
+html {
+  scrollbar-width: none;
+}
+
 .react-colorful {
   height: 100px;
+}
+
+/* Custom font classes */
+.font-amiri {
+  font-family: 'Amiri', serif;
+}
+
+.font-georgia-pro {
+  font-family: 'Georgia Pro Condensed', Georgia, serif;
+}
+
+/* CSS Variables for dynamic theming */
+:root {
+  --font-verba: var(--font-amiri), serif;
+  --bg-verba: #ffffff;
+  --bg-alt-verba: #ffffff;
+  --text-verba: #000000;
+  --text-alt-verba: #023eba;
+  --primary-verba: #023eba;
+  --secondary-verba: #000000;
+  --warning-verba: #023eba;
+  --button-verba: #ffffff;
+  --button-hover-verba: #023eba;
+  --button-text-verba: #000000;
+  --button-text-alt-verba: #ffffff;
+}
+
+[data-theme="dark"] {
+  --bg-verba: #000000;
+  --bg-alt-verba: #023eba;
+  --text-verba: #ffffff;
+  --text-alt-verba: #ffffff;
+  --button-verba: #023eba;
+  --button-hover-verba: #ffffff;
+  --button-text-verba: #ffffff;
+  --button-text-alt-verba: #000000;
 }
