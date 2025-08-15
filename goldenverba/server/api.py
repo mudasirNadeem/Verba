@@ -1,4 +1,4 @@
-from fastapi import FastAPI, WebSocket, Request
+from fastapi import FastAPI, WebSocket, Request, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse, JSONResponse
 from contextlib import asynccontextmanager
@@ -131,6 +131,16 @@ app.mount("/static", StaticFiles(directory=BASE_DIR / "frontend/out"), name="app
 @app.head("/")
 async def serve_frontend():
     return FileResponse(os.path.join(BASE_DIR, "frontend/out/index.html"))
+
+
+# Serve specific images from root path for compatibility
+@app.get("/verba2.png")
+async def serve_verba2_image():
+    return FileResponse(os.path.join(BASE_DIR, "frontend/out/verba2.png"))
+
+@app.get("/verba.png")
+async def serve_verba_image():
+    return FileResponse(os.path.join(BASE_DIR, "frontend/out/verba.png"))
 
 
 ### INITIAL ENDPOINTS
