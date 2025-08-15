@@ -496,7 +496,7 @@ export const LightTheme: Theme = {
     description: "First Message",
   },
   image: {
-    src: "https://github.com/weaviate/Verba/blob/main/img/verba_icon.png?raw=true",
+    src: "/verba2.png",
     type: "image",
     description: "Logo",
   },
@@ -566,7 +566,7 @@ export const DarkTheme: Theme = {
   },
   image: {
     ...LightTheme.image,
-    src: "https://github.com/weaviate/Verba/blob/main/img/verba_icon.png?raw=true",
+    src: "/verba2.png",
   },
   primary_color: { ...LightTheme.primary_color, color: "#023eba" },
   secondary_color: { ...LightTheme.secondary_color, color: "#ffffff" },
@@ -597,7 +597,7 @@ export const WCDTheme: Theme = {
   },
   image: {
     ...LightTheme.image,
-    src: "https://github.com/weaviate/Verba/blob/1.0.0/frontend/public/weaviate.png?raw=true",
+    src: "/verba2.png",
   },
   primary_color: { ...LightTheme.primary_color, color: "#BF40C5" },
   secondary_color: { ...LightTheme.secondary_color, color: "#28395B" },
@@ -628,7 +628,7 @@ export const WeaviateTheme: Theme = {
   },
   image: {
     ...LightTheme.image,
-    src: "https://github.com/weaviate/Verba/blob/1.0.0/frontend/public/weaviate.png?raw=true",
+    src: "/verba2.png",
   },
   primary_color: { ...LightTheme.primary_color, color: "#9bfc88" },
   secondary_color: { ...LightTheme.secondary_color, color: "#8bffe7" },

@@ -1,8 +1,5 @@
-import * as THREE from "three";
 import React, { useState, useEffect, useMemo } from "react";
-import { Canvas } from "@react-three/fiber";
-import { PresentationControls, useGLTF, Float } from "@react-three/drei";
-import GUI from "lil-gui";
+import Image from "next/image";
 
 import { FaDatabase } from "react-icons/fa";
 import { FaDocker } from "react-icons/fa";
@@ -26,105 +23,6 @@ if (process.env.NODE_ENV === "production") {
 } else {
   prefix = "";
 }
-
-const VerbaThree = ({
-  color,
-  useMaterial,
-  model_path,
-}: {
-  color: string;
-  useMaterial: boolean;
-  model_path: string;
-}) => {
-  const verba_model = useGLTF(prefix + model_path);
-
-  const material = useMemo(
-    () =>
-      new THREE.MeshMatcapMaterial({
-        color: "#e6e6e6",
-        matcap: new THREE.TextureLoader().load(prefix + "/ice_cap.png"), // Add this line
-      }),
-    []
-  );
-
-  const material1 = useMemo(
-    () =>
-      new THREE.MeshPhysicalMaterial({
-        metalness: 0.4,
-        roughness: 0.4,
-        color: "#ffe229",
-        ior: 1,
-        thickness: 1,
-        transparent: false,
-        wireframe: false,
-        clearcoat: 1,
-        clearcoatRoughness: 0.0,
-      }),
-    []
-  );
-
-  useEffect(() => {
-    const enableGUI = false; // Set this to true to re-enable the GUI
-
-    if (enableGUI) {
-      const gui = new GUI();
-      const materialFolder = gui.addFolder("Material");
-
-      materialFolder.add(material, "roughness", 0, 1).name("roughness");
-      materialFolder.add(material, "metalness", 0, 1).name("metalness");
-      materialFolder.add(material, "clearcoat", 0, 1).name("clearcoat");
-      materialFolder
-        .add(material, "clearcoatRoughness", 0, 1)
-        .name("clearcoatRoughness");
-      materialFolder.addColor(material, "color").name("color");
-      return () => {
-        gui.destroy();
-      };
-    }
-  }, [material]);
-
-  // Apply the shiny material to all meshes in the model
-  useEffect(() => {
-    verba_model.scene.traverse((child) => {
-      if (child instanceof THREE.Mesh) {
-        if (!useMaterial) {
-          child.material = material;
-        } else {
-          child.material.roughness = 0.3;
-          child.material.metalness = 0.2;
-        }
-        child.castShadow = true;
-        child.receiveShadow = true;
-      }
-    });
-  }, [verba_model, material]);
-
-  return (
-    <>
-      <color args={[color]} attach="background" />
-      <PresentationControls
-        global
-        rotation={[0.13, 0.1, 0]}
-        polar={[-0.4, 0.2]}
-        azimuth={[-1, 0.75]}
-        config={{ mass: 2, tension: 400 }}
-        snap={{ mass: 4, tension: 400 }}
-      >
-        <Float speed={2} rotationIntensity={1}>
-          <primitive
-            object={verba_model.scene}
-            position-y={0}
-            position-x={0}
-            rotation-y={0.2}
-            rotation-x={-0.2}
-            position-z={0}
-            scale={0.6}
-          />
-        </Float>
-      </PresentationControls>
-    </>
-  );
-};
 
 interface LoginViewProps {
   credentials: Credentials;
@@ -223,39 +121,14 @@ const LoginView: React.FC<LoginViewProps> = ({
           isLoading ? "opacity-0" : "opacity-100"
         }`}
       >
-        <div className="hidden md:flex md:w-1/2 lg:w-3/5 h-full">
-          <Canvas
-            camera={{ position: [0, 0, 4], fov: 50 }}
-            className="w-full h-full touch-none"
-          >
-            <color attach="background" args={["#FAFAFA"]} />
-            <ambientLight intensity={0.5} />
-            <directionalLight
-              castShadow
-              position={[-1, 1, 1]}
-              intensity={1}
-              shadow-mapSize={1024}
-            />
-            <directionalLight
-              castShadow
-              position={[1, 1, -1]}
-              intensity={1}
-              shadow-mapSize={1024}
-            />
-            <directionalLight
-              castShadow
-              position={[0, 1, 1]}
-              intensity={1}
-              shadow-mapSize={1024}
-            />
-            <VerbaThree
-              color="#FAFAFA"
-              useMaterial={production == "Local" ? false : true}
-              model_path={
-                production == "Local" ? "/verba.glb" : "/weaviate.glb"
-              }
-            />
-          </Canvas>
+        <div className="hidden md:flex md:w-1/2 lg:w-3/5 h-full items-center justify-center bg-gray-50">
+          <Image 
+            src="/verba2.png" 
+            alt="Logo" 
+            width={400}
+            height={400}
+            className="max-w-md max-h-md object-contain"
+          />
         </div>
         <div className="w-full md:flex md:w-1/2 lg:w-2/5 h-full flex justify-center items-center p-5">
           <div className="flex flex-col gap-8 items-center md:items-start justify-center w-4/5">
