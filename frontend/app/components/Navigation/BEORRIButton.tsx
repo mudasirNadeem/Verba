@@ -3,7 +3,7 @@
 import React from "react";
 import { FaStar } from "react-icons/fa";
 
-interface VerbaButtonProps {
+interface BEORRIButtonProps {
   title?: string;
   Icon?: typeof FaStar;
   onClick?: (...args: any[]) => void; // Updated to accept any number of arguments
@@ -24,7 +24,7 @@ interface VerbaButtonProps {
   onClickParams?: any[]; // New prop to pass additional parameters
 }
 
-const VerbaButton: React.FC<VerbaButtonProps> = ({
+const BEORRIButton: React.FC<BEORRIButtonProps> = ({
   title = "",
   key = "Button" + title,
   Icon,
@@ -73,4 +73,4 @@ const VerbaButton: React.FC<VerbaButtonProps> = ({
   );
 };
 
-export default VerbaButton;
+export default BEORRIButton;

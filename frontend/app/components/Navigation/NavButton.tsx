@@ -1,8 +1,8 @@
-"use client";
+﻿"use client";
 
 import React from "react";
 import { FaStar } from "react-icons/fa";
-import VerbaButton from "./VerbaButton";
+import BEORRIButton from "./BEORRIButton";
 
 interface NavbarButtonProps {
   Icon: typeof FaStar;
@@ -24,7 +24,7 @@ const NavbarButton: React.FC<NavbarButtonProps> = ({
   hide,
 }) => {
   return (
-    <VerbaButton
+    <BEORRIButton
       title={title}
       Icon={Icon}
       selected_color="bg-primary-verba"

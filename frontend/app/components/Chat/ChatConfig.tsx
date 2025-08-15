@@ -7,7 +7,7 @@ import { RAGConfig, RAGComponentConfig, Credentials } from "@/app/types";
 import { updateRAGConfig } from "@/app/api";
 import ComponentView from "../Ingestion/ComponentView";
 
-import VerbaButton from "../Navigation/VerbaButton";
+import BEORRIButton from "../Navigation/BEORRIButton";
 
 interface ChatConfigProps {
   RAGConfig: RAGConfig | null;
@@ -93,13 +93,13 @@ const ChatConfig: React.FC<ChatConfigProps> = ({
         <div className="sticky flex flex-col gap-2 w-full top-0 z-20 justify-end">
           {/* Add Save and Reset buttons */}
           <div className="flex justify-end w-full gap-2 p-4 bg-bg-alt-verba rounded-lg">
-            <VerbaButton
+            <BEORRIButton
               Icon={IoSettingsSharp}
               title="Save Config"
               onClick={onSave}
               disabled={production == "Demo"}
             />
-            <VerbaButton
+            <BEORRIButton
               Icon={MdCancel}
               title="Reset"
               onClick={onReset}

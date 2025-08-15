@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import React, { useState, useEffect } from "react";
 import { FaInfoCircle } from "react-icons/fa";
 import VectorView from "./VectorView";
@@ -23,7 +23,7 @@ import {
   DocumentFilter,
 } from "@/app/types";
 
-import VerbaButton from "../Navigation/VerbaButton";
+import BEORRIButton from "../Navigation/BEORRIButton";
 
 import { fetchSelectedDocument } from "@/app/api";
 
@@ -114,7 +114,7 @@ const DocumentExplorer: React.FC<DocumentExplorerProps> = ({
           />
         </div>
         <div className="flex gap-3 justify-end">
-          <VerbaButton
+          <BEORRIButton
             title="Content"
             Icon={MdContentPaste}
             onClick={() => setSelectedSetting("Content")}
@@ -122,7 +122,7 @@ const DocumentExplorer: React.FC<DocumentExplorerProps> = ({
             selected_color="bg-secondary-verba"
           />
 
-          <VerbaButton
+          <BEORRIButton
             title="Chunks"
             Icon={MdContentCopy}
             onClick={() => setSelectedSetting("Chunks")}
@@ -130,7 +130,7 @@ const DocumentExplorer: React.FC<DocumentExplorerProps> = ({
             selected_color="bg-secondary-verba"
           />
 
-          <VerbaButton
+          <BEORRIButton
             title="Vector"
             Icon={TbVectorTriangle}
             onClick={() => setSelectedSetting("Vector Space")}
@@ -138,7 +138,7 @@ const DocumentExplorer: React.FC<DocumentExplorerProps> = ({
             selected_color="bg-secondary-verba"
           />
 
-          <VerbaButton
+          <BEORRIButton
             Icon={MdCancel}
             onClick={() => {
               setSelectedDocument(null);
@@ -190,7 +190,7 @@ const DocumentExplorer: React.FC<DocumentExplorerProps> = ({
           {documentFilter.some(
             (filter) => filter.uuid === selectedDocument
           ) && (
-            <VerbaButton
+            <BEORRIButton
               title="Delete from Chat"
               Icon={MdCancel}
               selected={true}
@@ -205,7 +205,7 @@ const DocumentExplorer: React.FC<DocumentExplorerProps> = ({
           )}
           {!documentFilter.some((filter) => filter.uuid === selectedDocument) &&
             document && (
-              <VerbaButton
+              <BEORRIButton
                 title="Add to Chat"
                 Icon={IoMdAddCircle}
                 onClick={() => {
@@ -220,7 +220,7 @@ const DocumentExplorer: React.FC<DocumentExplorerProps> = ({
         </div>
         <div className="flex gap-3">
           {selectedDocument && document && document.source && (
-            <VerbaButton
+            <BEORRIButton
               title="Go To Source"
               Icon={FaExternalLinkAlt}
               onClick={() => {
@@ -228,7 +228,7 @@ const DocumentExplorer: React.FC<DocumentExplorerProps> = ({
               }}
             />
           )}
-          <VerbaButton
+          <BEORRIButton
             title="Document Info"
             Icon={FaInfoCircle}
             onClick={() => setSelectedSetting("Metadata")}

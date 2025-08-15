@@ -484,7 +484,7 @@ export interface Theme {
 
 export const LightTheme: Theme = {
   theme_name: "Light",
-  title: { text: "RAG Assistant", type: "text", description: "Title" },
+  title: { text: "BEORRI Assistant", type: "text", description: "Title" },
   subtitle: {
     text: "Your AI Assistant",
     type: "text",
@@ -558,7 +558,7 @@ export const LightTheme: Theme = {
 export const DarkTheme: Theme = {
   ...LightTheme,
   theme_name: "Dark",
-  title: { ...LightTheme.title, text: "RAG Assistant" },
+  title: { ...LightTheme.title, text: "BEORRI Assistant" },
   subtitle: { ...LightTheme.subtitle, text: "Your AI Assistant" },
   intro_message: {
     ...LightTheme.intro_message,
@@ -589,11 +589,11 @@ export const DarkTheme: Theme = {
 export const WCDTheme: Theme = {
   ...LightTheme,
   theme_name: "WCD",
-  title: { ...LightTheme.title, text: "Verba" },
+  title: { ...LightTheme.title, text: "BEORRI" },
   subtitle: { ...LightTheme.subtitle, text: "Weaviate Chatbot" },
   intro_message: {
     ...LightTheme.intro_message,
-    text: "Welcome to Verba, your open-source RAG application!",
+    text: "Welcome to BEORRI, your open-source RAG application!",
   },
   image: {
     ...LightTheme.image,
@@ -620,11 +620,11 @@ export const WCDTheme: Theme = {
 export const WeaviateTheme: Theme = {
   ...LightTheme,
   theme_name: "Weaviate",
-  title: { ...LightTheme.title, text: "Verba" },
+  title: { ...LightTheme.title, text: "BEORRI" },
   subtitle: { ...LightTheme.subtitle, text: "Weaviate Chatbot" },
   intro_message: {
     ...LightTheme.intro_message,
-    text: "Welcome to Verba, your open-source RAG application!",
+    text: "Welcome to BEORRI, your open-source RAG application!",
   },
   image: {
     ...LightTheme.image,

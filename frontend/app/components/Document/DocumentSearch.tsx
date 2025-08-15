@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import React, { useState, useEffect } from "react";
 import {
   DocumentPreview,
@@ -11,7 +11,7 @@ import { MdOutlineRefresh, MdCancel } from "react-icons/md";
 import { FaArrowAltCircleLeft, FaArrowAltCircleRight } from "react-icons/fa";
 import InfoComponent from "../Navigation/InfoComponent";
 import UserModalComponent from "../Navigation/UserModal";
-import VerbaButton from "../Navigation/VerbaButton";
+import BEORRIButton from "../Navigation/BEORRIButton";
 import { IoMdAddCircle } from "react-icons/io";
 
 interface DocumentSearchComponentProps {
@@ -160,7 +160,7 @@ const DocumentSearch: React.FC<DocumentSearchComponentProps> = ({
       <div className="bg-bg-alt-verba rounded-2xl flex gap-2 p-3 items-center justify-between h-min w-full">
         <div className="hidden lg:flex gap-2 justify-start w-[8vw]">
           <InfoComponent
-            tooltip_text="Search and inspect different documents imported into Verba"
+            tooltip_text="Search and inspect different documents imported into BEORRI"
             display_text="Search"
           />
         </div>
@@ -178,8 +178,8 @@ const DocumentSearch: React.FC<DocumentSearchComponentProps> = ({
           />
         </label>
 
-        <VerbaButton onClick={handleSearch} Icon={FaSearch} />
-        <VerbaButton
+        <BEORRIButton onClick={handleSearch} Icon={FaSearch} />
+        <BEORRIButton
           onClick={clearSearch}
           icon_size={20}
           Icon={MdOutlineRefresh}
@@ -191,7 +191,7 @@ const DocumentSearch: React.FC<DocumentSearchComponentProps> = ({
         <div className="flex flex-col w-full justify-start gap-2">
           <div className="dropdown dropdown-hover">
             <label tabIndex={0}>
-              <VerbaButton
+              <BEORRIButton
                 title="Label"
                 className="btn-sm min-w-min"
                 icon_size={12}
@@ -229,7 +229,7 @@ const DocumentSearch: React.FC<DocumentSearchComponentProps> = ({
           </div>
           <div className="flex flex-wrap gap-2">
             {selectedLabels.map((label, index) => (
-              <VerbaButton
+              <BEORRIButton
                 title={label}
                 key={"FilterDocumentLabel" + index}
                 Icon={MdCancel}
@@ -261,7 +261,7 @@ const DocumentSearch: React.FC<DocumentSearchComponentProps> = ({
                 className="flex justify-between items-center gap-2 rounded-2xl p-1 w-full"
               >
                 <div className="flex justify-between items-center w-full gap-2">
-                  <VerbaButton
+                  <BEORRIButton
                     title={document.title}
                     selected={selectedDocument == document.uuid}
                     selected_color="bg-secondary-verba"
@@ -271,7 +271,7 @@ const DocumentSearch: React.FC<DocumentSearchComponentProps> = ({
                     onClick={() => setSelectedDocument(document.uuid)}
                   />
                   {production !== "Demo" && (
-                    <VerbaButton
+                    <BEORRIButton
                       Icon={FaTrash}
                       selected={selectedDocument == document.uuid}
                       selected_color="bg-warning-verba"
@@ -299,7 +299,7 @@ const DocumentSearch: React.FC<DocumentSearchComponentProps> = ({
       <div className="bg-bg-alt-verba rounded-2xl flex gap-2 p-4 items-center justify-center h-min w-full">
         <div className="join justify-center items-center text-text-verba">
           <div className="flex justify-center items-center gap-2 bg-bg-alt-verba">
-            <VerbaButton
+            <BEORRIButton
               title={"Previous Page"}
               onClick={previousPage}
               className="btn-sm min-w-min max-w-[200px]"
@@ -309,7 +309,7 @@ const DocumentSearch: React.FC<DocumentSearchComponentProps> = ({
             <div className="flex items-center">
               <p className="text-xs text-text-verba">Page {page}</p>
             </div>
-            <VerbaButton
+            <BEORRIButton
               title={"Next Page"}
               onClick={nextPage}
               className="btn-sm min-w-min max-w-[200px]"

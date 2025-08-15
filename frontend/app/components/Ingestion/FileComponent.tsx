@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import React from "react";
 import { FileData, FileMap, statusTextMap } from "@/app/types";
@@ -8,7 +8,7 @@ import { MdError } from "react-icons/md";
 
 import UserModalComponent from "../Navigation/UserModal";
 
-import VerbaButton from "../Navigation/VerbaButton";
+import BEORRIButton from "../Navigation/BEORRIButton";
 
 interface FileComponentProps {
   fileData: FileData;
@@ -40,13 +40,13 @@ const FileComponent: React.FC<FileComponentProps> = ({
         <div className="flex gap-2">
           {fileMap[fileData.fileID].status != "DONE" &&
             fileMap[fileData.fileID].status != "ERROR" && (
-              <VerbaButton
+              <BEORRIButton
                 title={statusTextMap[fileMap[fileData.fileID].status]}
                 className="w-[120px]"
               />
             )}
           {fileMap[fileData.fileID].status == "DONE" && (
-            <VerbaButton
+            <BEORRIButton
               title={statusTextMap[fileMap[fileData.fileID].status]}
               Icon={FaCheckCircle}
               selected={true}
@@ -55,7 +55,7 @@ const FileComponent: React.FC<FileComponentProps> = ({
             />
           )}
           {fileMap[fileData.fileID].status == "ERROR" && (
-            <VerbaButton
+            <BEORRIButton
               title={statusTextMap[fileMap[fileData.fileID].status]}
               Icon={MdError}
               className="w-[120px]"
@@ -66,7 +66,7 @@ const FileComponent: React.FC<FileComponentProps> = ({
         </div>
       ) : (
         <div className="flex gap-2">
-          <VerbaButton
+          <BEORRIButton
             title={fileMap[fileData.fileID].rag_config["Reader"].selected}
             className="w-[120px]"
             text_class_name="truncate w-[100px]"
@@ -74,7 +74,7 @@ const FileComponent: React.FC<FileComponentProps> = ({
         </div>
       )}
 
-      <VerbaButton
+      <BEORRIButton
         title={
           fileMap[fileData.fileID].filename
             ? fileMap[fileData.fileID].filename
@@ -89,7 +89,7 @@ const FileComponent: React.FC<FileComponentProps> = ({
         }}
       />
 
-      <VerbaButton
+      <BEORRIButton
         Icon={FaTrash}
         onClick={openDeleteModal}
         className="w-[50px]"

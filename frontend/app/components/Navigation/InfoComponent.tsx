@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import { FaInfo } from "react-icons/fa";
-import VerbaButton from "./VerbaButton";
+import BEORRIButton from "./BEORRIButton";
 
 interface InfoComponentProps {
   tooltip_text: string;

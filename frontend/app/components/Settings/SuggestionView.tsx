@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import React, { useState, useEffect } from "react";
 import { Credentials, Suggestion } from "@/app/types";
@@ -9,7 +9,7 @@ import UserModalComponent from "../Navigation/UserModal";
 import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from "react-icons/fa";
 import { formatDistanceToNow, parseISO } from "date-fns";
 
-import VerbaButton from "../Navigation/VerbaButton";
+import BEORRIButton from "../Navigation/BEORRIButton";
 
 interface SuggestionViewProps {
   credentials: Credentials;
@@ -97,7 +97,7 @@ const SuggestionView: React.FC<SuggestionViewProps> = ({
     <div className="flex flex-col w-full h-full p-4">
       <div className="flex justify-between items-center mb-4">
         <p className="text-2xl font-bold">Manage Suggestions ({totalCount})</p>
-        <VerbaButton
+        <BEORRIButton
           title="Refresh"
           className="max-w-min"
           onClick={handleRefresh}
@@ -124,11 +124,11 @@ const SuggestionView: React.FC<SuggestionViewProps> = ({
                   </p>
                 </div>
                 <div className="flex gap-2">
-                  <VerbaButton
+                  <BEORRIButton
                     onClick={() => handleCopy(suggestion.query)}
                     Icon={IoCopy}
                   />
-                  <VerbaButton
+                  <BEORRIButton
                     onClick={() =>
                       openModal("remove_suggestion" + suggestion.uuid)
                     }
@@ -150,7 +150,7 @@ const SuggestionView: React.FC<SuggestionViewProps> = ({
       </div>
       {suggestions.length > 0 && (
         <div className="flex justify-center items-center gap-2 p-3 bg-bg-alt-verba">
-          <VerbaButton
+          <BEORRIButton
             title="Previous Page"
             onClick={previousPage}
             className="btn-sm min-w-min max-w-[200px]"
@@ -158,7 +158,7 @@ const SuggestionView: React.FC<SuggestionViewProps> = ({
             Icon={FaArrowAltCircleLeft}
           />
           <p className="text-xs flex text-text-verba">Page {page}</p>
-          <VerbaButton
+          <BEORRIButton
             title="Next Page"
             onClick={nextPage}
             className="btn-sm min-w-min max-w-[200px]"

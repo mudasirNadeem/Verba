@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useEffect, useRef, useState } from "react";
-import VerbaButton from "../Navigation/VerbaButton";
+import BEORRIButton from "../Navigation/BEORRIButton";
 import { FaGithub } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa";
 import { IoDocumentTextSharp } from "react-icons/io5";
@@ -72,14 +72,14 @@ const GettingStartedComponent: React.FC<GettingStartedComponentProps> = ({
                 GitHub.
               </p>
               <div className="flex flex-col md:flex-row gap-2">
-                <VerbaButton
+                <BEORRIButton
                   title="GitHub"
                   Icon={FaGithub}
                   onClick={() =>
                     window.open("https://github.com/weaviate/verba", "_blank")
                   }
                 />
-                <VerbaButton
+                <BEORRIButton
                   title="YouTube"
                   Icon={FaYoutube}
                   onClick={() =>
@@ -89,7 +89,7 @@ const GettingStartedComponent: React.FC<GettingStartedComponentProps> = ({
                     )
                   }
                 />
-                <VerbaButton
+                <BEORRIButton
                   title="Blog Post"
                   Icon={IoDocumentTextSharp}
                   onClick={() =>
@@ -113,7 +113,7 @@ const GettingStartedComponent: React.FC<GettingStartedComponentProps> = ({
         </div>
         <div className="modal-action mt-6 justify-center md:justify-end">
           <form method="dialog">
-            <VerbaButton
+            <BEORRIButton
               title="Let's get started"
               type="submit"
               selected={true}

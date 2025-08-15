@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import React, { useState, useCallback } from "react";
 import InfoComponent from "../Navigation/InfoComponent";
@@ -16,7 +16,7 @@ import { RAGConfig } from "@/app/types";
 
 import { Credentials, RAGComponentConfig } from "@/app/types";
 
-import VerbaButton from "../Navigation/VerbaButton";
+import BEORRIButton from "../Navigation/BEORRIButton";
 
 import BasicSettingView from "./BasicSettingView";
 import ComponentView from "./ComponentView";
@@ -212,7 +212,7 @@ const ConfigurationView: React.FC<ConfigurationViewProps> = ({
           />
         </div>
         <div className="flex gap-3 justify-end">
-          <VerbaButton
+          <BEORRIButton
             title="Overview"
             selected={selectedSetting === "Basic"}
             selected_color="bg-secondary-verba"
@@ -222,7 +222,7 @@ const ConfigurationView: React.FC<ConfigurationViewProps> = ({
             Icon={IoSettingsSharp}
           />
 
-          <VerbaButton
+          <BEORRIButton
             title="Config"
             selected={selectedSetting === "Pipeline"}
             selected_color="bg-secondary-verba"
@@ -232,7 +232,7 @@ const ConfigurationView: React.FC<ConfigurationViewProps> = ({
             Icon={FaHammer}
           />
 
-          <VerbaButton
+          <BEORRIButton
             onClick={() => {
               setSelectedFileData(null);
             }}
@@ -286,19 +286,19 @@ const ConfigurationView: React.FC<ConfigurationViewProps> = ({
       {/* Import Footer */}
       <div className="bg-bg-alt-verba rounded-2xl flex gap-2 p-6 items-center justify-end h-min w-full">
         <div className="flex gap-3 justify-end">
-          <VerbaButton
+          <BEORRIButton
             title="Apply to All"
             onClick={openApplyAllModal}
             Icon={VscSaveAll}
           />
 
-          <VerbaButton
+          <BEORRIButton
             title="Save Config"
             onClick={openDefaultModal}
             Icon={IoSettingsSharp}
           />
 
-          <VerbaButton title="Reset" onClick={openResetModal} Icon={MdCancel} />
+          <BEORRIButton title="Reset" onClick={openResetModal} Icon={MdCancel} />
         </div>
       </div>
       <UserModalComponent

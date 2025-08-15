@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import React, { useState, useEffect } from "react";
 import FileComponent from "./FileComponent";
@@ -14,7 +14,7 @@ import { closeOnClick } from "@/app/util";
 
 import UserModalComponent from "../Navigation/UserModal";
 
-import VerbaButton from "../Navigation/VerbaButton";
+import BEORRIButton from "../Navigation/BEORRIButton";
 
 import { FileMap } from "@/app/types";
 import { RAGConfig } from "@/app/types";
@@ -223,14 +223,14 @@ const FileSelectionView: React.FC<FileSelectionViewProps> = ({
       <div className="bg-bg-alt-verba rounded-2xl flex gap-2 p-3 items-center justify-end lg:justify-between h-min w-full">
         <div className="hidden lg:flex gap-2 justify-start ">
           <InfoComponent
-            tooltip_text="Upload your data through this interface into Verba. You can select individual files, directories or add URL to fetch data from."
+            tooltip_text="Upload your data through this interface into BEORRI. You can select individual files, directories or add URL to fetch data from."
             display_text="File Selection"
           />
         </div>
         <div className="flex gap-3 justify-center lg:justify-end">
           <div className="dropdown dropdown-hover">
             <label tabIndex={0}>
-              <VerbaButton
+              <BEORRIButton
                 title="Files"
                 Icon={IoMdAddCircle}
                 onClick={() => document.getElementById("files_upload")?.click()}
@@ -267,7 +267,7 @@ const FileSelectionView: React.FC<FileSelectionViewProps> = ({
 
           <div className="dropdown dropdown-hover">
             <label tabIndex={0}>
-              <VerbaButton title="Directory" Icon={GoFileDirectoryFill} />
+              <BEORRIButton title="Directory" Icon={GoFileDirectoryFill} />
             </label>
             <ul
               tabIndex={0}
@@ -301,7 +301,7 @@ const FileSelectionView: React.FC<FileSelectionViewProps> = ({
 
           <div className="dropdown dropdown-hover">
             <label tabIndex={0}>
-              <VerbaButton title="URL" Icon={IoMdAddCircle} />
+              <BEORRIButton title="URL" Icon={IoMdAddCircle} />
             </label>
             <input id={"url_upload"} type="file" className="hidden" />
             <ul
@@ -346,19 +346,19 @@ const FileSelectionView: React.FC<FileSelectionViewProps> = ({
         <div className="bg-bg-alt-verba rounded-2xl flex gap-2 p-3 items-center justify-end h-min w-full">
           <div className="flex flex-wrap gap-3 justify-end">
             {selectedFileData && (
-              <VerbaButton
+              <BEORRIButton
                 title="Import Selected"
                 Icon={FaFileImport}
                 onClick={importSelected}
               />
             )}
-            <VerbaButton
+            <BEORRIButton
               title="Import All"
               Icon={FaFileImport}
               onClick={importAll}
             />
 
-            <VerbaButton
+            <BEORRIButton
               title="Clear Files"
               Icon={MdCancel}
               onClick={openDeleteModal}

@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import React, { useState, useEffect } from "react";
 import { VerbaChunk, ChunksPayload, Theme } from "@/app/types";
@@ -14,7 +14,7 @@ import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from "react-icons/fa";
 import { fetch_chunks } from "@/app/api";
 import { Credentials } from "@/app/types";
 
-import VerbaButton from "../Navigation/VerbaButton";
+import BEORRIButton from "../Navigation/BEORRIButton";
 
 interface ChunkViewProps {
   selectedDocument: string | null;
@@ -181,7 +181,7 @@ const ChunkView: React.FC<ChunkViewProps> = ({
           {/* Navigation div */}
           {chunks.length > 1 && (
             <div className="flex justify-center items-center gap-2 p-3 bg-bg-alt-verba">
-              <VerbaButton
+              <BEORRIButton
                 title={"Previous Chunk"}
                 onClick={previousChunk}
                 className="btn-sm min-w-min max-w-[200px]"
@@ -189,7 +189,7 @@ const ChunkView: React.FC<ChunkViewProps> = ({
                 disabled={isPreviousDisabled}
                 Icon={FaArrowAltCircleLeft}
               />
-              <VerbaButton
+              <BEORRIButton
                 title={"Next Chunk"}
                 onClick={nextChunk}
                 className="btn-sm min-w-min max-w-[200px]"

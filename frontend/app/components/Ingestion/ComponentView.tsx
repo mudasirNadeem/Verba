@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import React, { useState, useEffect } from "react";
 import { FaTrash } from "react-icons/fa";
@@ -8,7 +8,7 @@ import { RAGConfig, RAGComponentConfig } from "@/app/types";
 
 import { closeOnClick } from "@/app/util";
 
-import VerbaButton from "../Navigation/VerbaButton";
+import BEORRIButton from "../Navigation/BEORRIButton";
 
 export const MultiInput: React.FC<{
   component_name: string;
@@ -178,7 +178,7 @@ const ComponentView: React.FC<ComponentViewProps> = ({
       <div className="flex items-center justify-between">
         <div className="divider text-text-alt-verba flex-grow text-xs lg:text-sm">
           <p>{RAGConfig[component_name].selected} Settings</p>
-          <VerbaButton
+          <BEORRIButton
             title="Save"
             onClick={() => {
               saveComponentConfig(

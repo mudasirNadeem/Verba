@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import React, { useState, useEffect } from "react";
 
@@ -11,7 +11,7 @@ import { TiThMenu } from "react-icons/ti";
 
 import { closeOnClick } from "@/app/util";
 
-import VerbaButton from "./VerbaButton";
+import BEORRIButton from "./BEORRIButton";
 
 import NavbarButton from "./NavButton";
 import { getGitHubStars } from "./util";
@@ -89,7 +89,7 @@ const Navbar: React.FC<NavbarProps> = ({
         </div>
         <div className="flex md:hidden flex-col items-center gap-3 justify-between">
           <div className="dropdown dropdown-hover">
-            <VerbaButton Icon={TiThMenu} title="Menu" />
+            <BEORRIButton Icon={TiThMenu} title="Menu" />
             <ul
               tabIndex={0}
               className="dropdown-content dropdown-left z-[1] menu p-2 shadow bg-base-100 rounded-box w-52"
@@ -189,7 +189,7 @@ const Navbar: React.FC<NavbarProps> = ({
           <div
             className={`sm:h-[3vh] lg:h-[5vh] mx-1 hidden md:block bg-text-alt-verba w-px`}
           ></div>
-          <VerbaButton
+          <BEORRIButton
             title={gitHubStars}
             Icon={FaGithub}
             onClick={handleGitHubClick}

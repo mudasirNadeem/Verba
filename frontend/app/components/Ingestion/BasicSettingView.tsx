@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import React, { useState, useEffect, useCallback } from "react";
 import {
@@ -8,7 +8,7 @@ import {
   statusColorMap,
   RAGComponentConfig,
 } from "@/app/types";
-import VerbaButton from "../Navigation/VerbaButton";
+import BEORRIButton from "../Navigation/BEORRIButton";
 import { MdCancel } from "react-icons/md";
 import { IoAddCircleSharp } from "react-icons/io5";
 import { CgDebug } from "react-icons/cg";
@@ -170,7 +170,7 @@ const BasicSettingView: React.FC<BasicSettingViewProps> = ({
   function renderLabelBoxes(fileData: FileData) {
     return Object.entries(fileData.labels).map(([key, label]) => (
       <div key={fileData.fileID + key + label}>
-        <VerbaButton
+        <BEORRIButton
           title={label}
           className="btn-sm"
           text_class_name="text-xs"
@@ -301,7 +301,7 @@ const BasicSettingView: React.FC<BasicSettingViewProps> = ({
               title={label}
             />
           </label>
-          <VerbaButton
+          <BEORRIButton
             title="Add"
             Icon={IoAddCircleSharp}
             onClick={() => {
@@ -473,7 +473,7 @@ const BasicSettingView: React.FC<BasicSettingViewProps> = ({
 
         <div className="flex gap-2 justify-between items-center text-text-verba">
           <p className="flex min-w-[8vw]">Debug</p>
-          <VerbaButton
+          <BEORRIButton
             Icon={CgDebug}
             onClick={openDebugModal}
             className="max-w-min"

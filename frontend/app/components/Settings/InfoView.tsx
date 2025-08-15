@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import React, { useState, useEffect } from "react";
 import { Credentials, NodePayload, CollectionPayload } from "@/app/types";
@@ -7,7 +7,7 @@ import { FaWrench } from "react-icons/fa";
 import { deleteAllDocuments, fetchMeta } from "@/app/api";
 import UserModalComponent from "../Navigation/UserModal";
 
-import VerbaButton from "../Navigation/VerbaButton";
+import BEORRIButton from "../Navigation/BEORRIButton";
 
 interface InfoViewProps {
   credentials: Credentials;
@@ -95,7 +95,7 @@ const InfoView: React.FC<InfoViewProps> = ({
     <div className="flex flex-col w-full h-full p-4">
       <div className="flex justify-between items-center mb-4">
         <p className="text-2xl font-bold">Admin Panel</p>
-        <VerbaButton
+        <BEORRIButton
           title="Refresh"
           loading={isLoading}
           onClick={fetchMetadata}
@@ -108,22 +108,22 @@ const InfoView: React.FC<InfoViewProps> = ({
           <p className="font-bold text-lg">Resetting Verba</p>
           <div className="flex flex-wrap gap-2 justify-between">
             <div className="flex flex-wrap gap-2">
-              <VerbaButton
+              <BEORRIButton
                 title="Clear Documents"
                 onClick={() => openModal("reset-documents")}
                 Icon={IoDocumentSharp}
               />
-              <VerbaButton
+              <BEORRIButton
                 title="Clear Config"
                 onClick={() => openModal("reset-configs")}
                 Icon={FaWrench}
               />
-              <VerbaButton
+              <BEORRIButton
                 title="Clear Everything"
                 onClick={() => openModal("reset-verba")}
                 Icon={IoTrash}
               />
-              <VerbaButton
+              <BEORRIButton
                 title="Clear Suggestions"
                 onClick={() => openModal("reset-suggestions")}
                 Icon={IoTrash}

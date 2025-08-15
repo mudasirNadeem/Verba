@@ -13,7 +13,7 @@ import {
   oneLight,
 } from "react-syntax-highlighter/dist/cjs/styles/prism";
 
-import VerbaButton from "../Navigation/VerbaButton";
+import BEORRIButton from "../Navigation/BEORRIButton";
 
 import { Theme } from "@/app/types";
 
@@ -125,7 +125,7 @@ const ChatMessage: React.FC<ChatMessageProps> = ({
             </div>
           </button>
         ))}
-        <VerbaButton
+        <BEORRIButton
           Icon={IoDocumentAttach}
           className="btn-sm btn-square"
           onClick={() =>

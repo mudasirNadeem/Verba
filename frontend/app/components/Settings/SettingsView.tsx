@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import React, { useState } from "react";
 
@@ -8,7 +8,7 @@ import { BiSolidCommentError } from "react-icons/bi";
 import { IoLogOutSharp } from "react-icons/io5";
 import { IoChatboxEllipsesSharp } from "react-icons/io5";
 
-import VerbaButton from "../Navigation/VerbaButton";
+import BEORRIButton from "../Navigation/BEORRIButton";
 
 import { Theme, Themes, Credentials } from "@/app/types";
 
@@ -55,21 +55,21 @@ const SettingsView: React.FC<SettingsViewProps> = ({
             </div>
           </div>
           <div className="bg-bg-alt-verba gap-2 rounded-2xl flex flex-col p-3 w-full overflow-y-auto overflow-x-hidden">
-            <VerbaButton
+            <BEORRIButton
               title="Admin"
               onClick={() => setSettingMode("INFO")}
               selected={settingMode === "INFO"}
               selected_color="bg-secondary-verba"
               Icon={RiAdminFill}
             />
-            <VerbaButton
+            <BEORRIButton
               title="Customize Theme"
               onClick={() => setSettingMode("THEME")}
               selected={settingMode === "THEME"}
               selected_color="bg-secondary-verba"
               Icon={FaPaintBrush}
             />
-            <VerbaButton
+            <BEORRIButton
               title="Manage Suggestions"
               onClick={() => setSettingMode("SUGGESTIONS")}
               selected={settingMode === "SUGGESTIONS"}
@@ -78,12 +78,12 @@ const SettingsView: React.FC<SettingsViewProps> = ({
             />
           </div>
           <div className="bg-bg-alt-verba gap-2 rounded-2xl flex flex-col p-6 w-full overflow-y-auto overflow-x-hidden">
-            <VerbaButton
+            <BEORRIButton
               title="Logout"
               onClick={() => window.location.reload()}
               Icon={IoLogOutSharp}
             />
-            <VerbaButton
+            <BEORRIButton
               title="Report Issue"
               onClick={() =>
                 window.open(

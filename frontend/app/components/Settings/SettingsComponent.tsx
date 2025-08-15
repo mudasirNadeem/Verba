@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import React, { useState, useEffect } from "react";
 import {
@@ -17,7 +17,7 @@ import {
   Credentials,
 } from "@/app/types";
 
-import VerbaButton from "@/app/components/Navigation/VerbaButton";
+import BEORRIButton from "@/app/components/Navigation/BEORRIButton";
 
 import { HexColorPicker } from "react-colorful";
 
@@ -209,11 +209,11 @@ const SettingsComponent: React.FC<SettingsComponentProps> = ({
               </div>
               <div className="flex justify-between items-center gap-4">
                 <div className="flex flex-col gap-2">
-                  <VerbaButton
+                  <BEORRIButton
                     title="Set Link"
                     onClick={() => updateValue(title, imageURL)}
                   />
-                  <VerbaButton
+                  <BEORRIButton
                     title="Upload Image"
                     onClick={() =>
                       document.getElementById(`${title}ImageInput`)?.click()
@@ -292,13 +292,13 @@ const SettingsComponent: React.FC<SettingsComponentProps> = ({
         </div>
       </div>
       <div className="flex justify-end gap-2 mt-3">
-        <VerbaButton
+        <BEORRIButton
           title="Save"
           onClick={saveTheme}
           className="max-w-min"
           Icon={FaCheckCircle}
         />
-        <VerbaButton
+        <BEORRIButton
           title="Reset"
           onClick={resetThemes}
           className="max-w-min"

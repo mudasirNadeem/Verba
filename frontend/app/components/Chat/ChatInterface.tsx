@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import React, { useState, useEffect, useRef } from "react";
 import { MdCancel, MdOutlineRefresh } from "react-icons/md";
@@ -8,7 +8,7 @@ import { FaHammer } from "react-icons/fa";
 import { IoIosSend } from "react-icons/io";
 import { BiError } from "react-icons/bi";
 import { IoMdAddCircle } from "react-icons/io";
-import VerbaButton from "../Navigation/VerbaButton";
+import BEORRIButton from "../Navigation/BEORRIButton";
 
 import {
   updateRAGConfig,
@@ -392,7 +392,7 @@ const ChatInterface: React.FC<ChatInterfaceProps> = ({
           />
         </div>
         <div className="w-full md:w-fit flex gap-3 justify-end items-center">
-          <VerbaButton
+          <BEORRIButton
             title="Chat"
             Icon={IoChatbubbleSharp}
             onClick={() => {
@@ -403,7 +403,7 @@ const ChatInterface: React.FC<ChatInterfaceProps> = ({
             selected_color="bg-secondary-verba"
           />
           {production != "Demo" && (
-            <VerbaButton
+            <BEORRIButton
               title="Config"
               Icon={FaHammer}
               onClick={() => {
@@ -425,7 +425,7 @@ const ChatInterface: React.FC<ChatInterfaceProps> = ({
               <div className="flex gap-2">
                 <div className="dropdown dropdown-hover">
                   <label tabIndex={0}>
-                    <VerbaButton
+                    <BEORRIButton
                       title="Label"
                       className="btn-sm min-w-min"
                       icon_size={12}
@@ -463,7 +463,7 @@ const ChatInterface: React.FC<ChatInterfaceProps> = ({
                 </div>
               </div>
               {(filterLabels.length > 0 || documentFilter.length > 0) && (
-                <VerbaButton
+                <BEORRIButton
                   onClick={() => {
                     setFilterLabels([]);
                     setDocumentFilter([]);
@@ -480,7 +480,7 @@ const ChatInterface: React.FC<ChatInterfaceProps> = ({
             </div>
             <div className="flex flex-wrap gap-2">
               {filterLabels.map((label, index) => (
-                <VerbaButton
+                <BEORRIButton
                   title={label}
                   key={"FilterLabel" + index}
                   Icon={MdCancel}
@@ -496,7 +496,7 @@ const ChatInterface: React.FC<ChatInterfaceProps> = ({
                 />
               ))}
               {documentFilter.map((filter, index) => (
-                <VerbaButton
+                <BEORRIButton
                   title={filter.title}
                   key={"DocumentFilter" + index}
                   Icon={MdCancel}
@@ -642,7 +642,7 @@ const ChatInterface: React.FC<ChatInterfaceProps> = ({
               )}
             </div>
             <div className="flex flex-col gap-1 items-center justify-center">
-              <VerbaButton
+              <BEORRIButton
                 type="button"
                 Icon={IoIosSend}
                 onClick={() => {
@@ -651,7 +651,7 @@ const ChatInterface: React.FC<ChatInterfaceProps> = ({
                 disabled={false}
                 selected_color="bg-primary-verba"
               />
-              <VerbaButton
+              <BEORRIButton
                 type="button"
                 Icon={MdOutlineRefresh}
                 onClick={() => {

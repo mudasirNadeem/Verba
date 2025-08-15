@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import React, { useState, useEffect, useRef } from "react";
 import ReactMarkdown from "react-markdown";
@@ -20,7 +20,7 @@ import {
 } from "@/app/types";
 import { fetchContent } from "@/app/api";
 
-import VerbaButton from "../Navigation/VerbaButton";
+import BEORRIButton from "../Navigation/BEORRIButton";
 
 interface ContentViewProps {
   document: VerbaDocument | null;
@@ -241,7 +241,7 @@ const ContentView: React.FC<ContentViewProps> = ({
               </div>
               <div className="gap-2 flex flex-wrap">
                 {Object.entries(document.labels).map(([key, label]) => (
-                  <VerbaButton
+                  <BEORRIButton
                     key={document.title + key + label}
                     title={label}
                     text_size="text-xs"
@@ -266,7 +266,7 @@ const ContentView: React.FC<ContentViewProps> = ({
           {/* Navigation div */}
 
           <div className="flex justify-center items-center gap-2 p-3 bg-bg-alt-verba">
-            <VerbaButton
+            <BEORRIButton
               title={"Previous " + (chunkScores ? "Chunk" : "Page")}
               onClick={previousPage}
               className="btn-sm min-w-min max-w-[200px]"
@@ -278,7 +278,7 @@ const ContentView: React.FC<ContentViewProps> = ({
                 {chunkScores ? "Chunk " : "Page "} {page}
               </p>
             </div>
-            <VerbaButton
+            <BEORRIButton
               title={"Next " + (chunkScores ? "Chunk" : "Page")}
               onClick={nextPage}
               className="btn-sm min-w-min max-w-[200px]"

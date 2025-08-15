@@ -11,9 +11,9 @@ import { FaBackspace } from "react-icons/fa";
 import { HiMiniSparkles } from "react-icons/hi2";
 import { TbDatabaseEdit } from "react-icons/tb";
 
-import { connectToVerba } from "@/app/api";
+import { connectToBEORRI } from "@/app/api";
 
-import VerbaButton from "../Navigation/VerbaButton";
+import BEORRIButton from "../Navigation/BEORRIButton";
 
 import { Credentials, RAGConfig, Theme, Themes } from "@/app/types";
 
@@ -79,7 +79,7 @@ const LoginView: React.FC<LoginViewProps> = ({
   ) => {
     setErrorText("");
     setIsConnecting(true);
-    const response = await connectToVerba(
+    const response = await connectToBEORRI(
       deployment,
       weaviateURL,
       weaviateAPIKey,
@@ -135,10 +135,10 @@ const LoginView: React.FC<LoginViewProps> = ({
             <div className="flex flex-col items-center md:items-start gap-2">
               <div className="flex items-center gap-3">
                 <p className="font-light text-3xl md:text-4xl text-text-alt-verba">
-                  Welcome to
+                  Welcome
                 </p>
                 {/* <p className="font-light text-3xl md:text-4xl text-text-verba">
-                  Verba
+                  BEORRI
                 </p> */}
               </div>
               {production == "Local" && (
@@ -151,7 +151,7 @@ const LoginView: React.FC<LoginViewProps> = ({
               <div className="flex flex-col justify-start gap-4 w-full">
                 {production == "Local" && (
                   <div className="flex flex-col justify-start gap-2 w-full">
-                    <VerbaButton
+                    <BEORRIButton
                       Icon={FaDatabase}
                       title="Weaviate"
                       disabled={isConnecting}
@@ -160,7 +160,7 @@ const LoginView: React.FC<LoginViewProps> = ({
                         setSelectedDeployment("Weaviate");
                       }}
                     />
-                    <VerbaButton
+                    <BEORRIButton
                       title="Docker"
                       Icon={FaDocker}
                       disabled={isConnecting}
@@ -170,7 +170,7 @@ const LoginView: React.FC<LoginViewProps> = ({
                       }}
                       loading={isConnecting && selectedDeployment == "Docker"}
                     />
-                    <VerbaButton
+                    <BEORRIButton
                       title="Custom"
                       Icon={TbDatabaseEdit}
                       disabled={isConnecting}
@@ -180,7 +180,7 @@ const LoginView: React.FC<LoginViewProps> = ({
                       }}
                       loading={isConnecting && selectedDeployment == "Custom"}
                     />
-                    <VerbaButton
+                    <BEORRIButton
                       title="Local"
                       Icon={FaLaptopCode}
                       disabled={isConnecting}
@@ -194,7 +194,7 @@ const LoginView: React.FC<LoginViewProps> = ({
                 )}
                 {production == "Demo" && (
                   <div className="flex flex-col justify-start gap-4 w-full">
-                    <VerbaButton
+                    <BEORRIButton
                       Icon={HiMiniSparkles}
                       title="Start Demo"
                       disabled={isConnecting}
@@ -208,7 +208,7 @@ const LoginView: React.FC<LoginViewProps> = ({
                 )}
                 {production == "Production" && (
                   <div className="flex flex-col justify-start gap-4 w-full">
-                    <VerbaButton
+                    <BEORRIButton
                       Icon={HiMiniSparkles}
                       title="Start Application" // Changed from "Start Verba"
                       onClick={() => {
@@ -273,7 +273,7 @@ const LoginView: React.FC<LoginViewProps> = ({
                       <div className="flex justify-between gap-4 mt-4">
                         <div className="flex flex-col w-full gap-2">
                           <div className="flex flex-col justify-start gap-2 w-full">
-                            <VerbaButton
+                            <BEORRIButton
                               Icon={GrConnect}
                               title="Connect to Weaviate"
                               type="submit"
@@ -282,7 +282,7 @@ const LoginView: React.FC<LoginViewProps> = ({
                               loading={isConnecting}
                             />
                             {selectedDeployment == "Weaviate" && (
-                              <VerbaButton
+                              <BEORRIButton
                                 Icon={CgWebsite}
                                 title="Register"
                                 type="button"
@@ -295,7 +295,7 @@ const LoginView: React.FC<LoginViewProps> = ({
                                 }
                               />
                             )}
-                            <VerbaButton
+                            <BEORRIButton
                               Icon={FaBackspace}
                               title="Back"
                               type="button"
