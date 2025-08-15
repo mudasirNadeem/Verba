@@ -4,7 +4,7 @@ setup(
     name="goldenverba",
     version="2.1.3",
     packages=find_packages(),
-    python_requires=">=3.10.0,<3.13.0",
+    python_requires=">=3.10.0,<3.14.0",
     entry_points={
         "console_scripts": [
             "verba=goldenverba.server.cli:cli",
@@ -38,9 +38,9 @@ setup(
         "requests==2.31.0",
         "pypdf==4.3.1",
         "python-docx==1.1.2",
-        "scikit-learn==1.5.1",
+        "scikit-learn>=1.5.1",
         "langchain-text-splitters==0.2.2",
-        "spacy==3.7.5",
+        "spacy>=3.7.0",
         "aiohttp==3.9.5",
         "markdownify==0.13.1",
         "aiofiles==24.1.0",

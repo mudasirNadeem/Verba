@@ -57,10 +57,10 @@ const InfoView: React.FC<InfoViewProps> = ({
   const resetVerba = async () => {
     const response = await deleteAllDocuments("ALL", credentials);
     if (response) {
-      addStatusMessage("Verba reset", "SUCCESS");
+      addStatusMessage("Application reset", "SUCCESS"); // Changed from "Verba reset"
       fetchMetadata();
     } else {
-      addStatusMessage("Failed to reset Verba", "ERROR");
+      addStatusMessage("Failed to reset application", "ERROR"); // Changed from "Failed to reset Verba"
     }
   };
 

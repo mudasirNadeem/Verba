@@ -49,8 +49,8 @@ export const detectHost = async (): Promise<string> => {
     const root = window.location.origin;
     return root;
   }
+    return "http://localhost:8000";
 
-  throw new Error("Both health checks failed, please check the Verba Server");
 };
 
 export const fetchData = async <T>(endpoint: string): Promise<T | null> => {

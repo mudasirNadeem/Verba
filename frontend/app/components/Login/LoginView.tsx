@@ -264,13 +264,13 @@ const LoginView: React.FC<LoginViewProps> = ({
                 <p className="font-light text-3xl md:text-4xl text-text-alt-verba">
                   Welcome to
                 </p>
-                <p className="font-light text-3xl md:text-4xl text-text-verba">
+                {/* <p className="font-light text-3xl md:text-4xl text-text-verba">
                   Verba
-                </p>
+                </p> */}
               </div>
               {production == "Local" && (
                 <p className="text-text-verba text-base lg:text-lg ">
-                  Choose your deployment
+                 Choose your deployment 
                 </p>
               )}
             </div>
@@ -337,7 +337,7 @@ const LoginView: React.FC<LoginViewProps> = ({
                   <div className="flex flex-col justify-start gap-4 w-full">
                     <VerbaButton
                       Icon={HiMiniSparkles}
-                      title="Start Verba"
+                      title="Start Application" // Changed from "Start Verba"
                       onClick={() => {
                         setSelectStage(false);
                         setSelectedDeployment("Weaviate");
