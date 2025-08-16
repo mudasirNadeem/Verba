@@ -263,10 +263,10 @@ const ComponentView: React.FC<ComponentViewProps> = ({
             {/* Text Input */}
             {typeof config.value != "boolean" &&
               ["text", "number", "password"].includes(config.type) && (
-                <label className="input flex text-sm items-center gap-2 w-full bg-bg-verba">
+                <label className="input flex text-sm items-center gap-2 w-full bg-transparent border border-gray-300">
                   <input
                     type={config.type}
-                    className="grow w-full"
+                    className="grow w-full bg-transparent"
                     value={config.value}
                     onChange={(e) => {
                       if (!blocked) {

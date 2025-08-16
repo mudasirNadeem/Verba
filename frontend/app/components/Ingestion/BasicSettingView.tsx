@@ -354,7 +354,7 @@ const BasicSettingView: React.FC<BasicSettingViewProps> = ({
         <div className="flex gap-2 justify-between items-center text-text-verba">
           <p className="flex min-w-[8vw]">Metadata</p>
           <textarea
-            className="grow w-full textarea flex items-center gap-2 max-h-64 bg-bg-verba"
+            className="grow w-full textarea flex items-center gap-2 max-h-64 bg-transparent border border-gray-300"
             value={metadata}
             onChange={handleMetadataChange}
             disabled={blocked}

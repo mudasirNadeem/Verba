@@ -594,7 +594,7 @@ const ChatInterface: React.FC<ChatInterfaceProps> = ({
           <div className="flex gap-2 items-center justify-end w-full relative">
             <div className="relative w-full">
               <textarea
-                className="textarea textarea-bordered w-full bg-bg-verba placeholder-text-alt-verb min-h min-h-[40px] max-h-[150px] overflow-y-auto"
+                className="textarea textarea-bordered w-full bg-transparent border border-gray-300 placeholder-text-alt-verb min-h min-h-[40px] max-h-[150px] overflow-y-auto"
                 placeholder={
                   currentDatacount > 0
                     ? currentDatacount >= 100
