@@ -1,4 +1,4 @@
-import { Inter, Plus_Jakarta_Sans, Open_Sans, PT_Mono } from "next/font/google";
+import { Inter, Plus_Jakarta_Sans, Open_Sans, PT_Mono, Amiri, Crimson_Pro } from "next/font/google";
 import { RAGConfig } from "./types";
 
 // Fonts
@@ -6,13 +6,18 @@ const inter = Inter({ subsets: ["latin"] });
 const plus_jakarta_sans = Plus_Jakarta_Sans({ subsets: ["latin"] });
 const open_sans = Open_Sans({ subsets: ["latin"] });
 const pt_mono = PT_Mono({ subsets: ["latin"], weight: "400" });
-export type FontKey = "Inter" | "Plus_Jakarta_Sans" | "Open_Sans" | "PT_Mono";
+const amiri = Amiri({ subsets: ["latin"], weight: ["400", "700"] });
+const crimson_pro = Crimson_Pro({ subsets: ["latin"], weight: ["400", "600", "700"] });
+
+export type FontKey = "Inter" | "Plus_Jakarta_Sans" | "Open_Sans" | "PT_Mono" | "Amiri" | "Georgia_Pro_Condensed";
 
 export const fonts: Record<FontKey, typeof inter> = {
   Inter: inter,
   Plus_Jakarta_Sans: plus_jakarta_sans,
   Open_Sans: open_sans,
   PT_Mono: pt_mono,
+  Amiri: amiri,
+  Georgia_Pro_Condensed: crimson_pro, // Using Crimson Pro as substitute for Georgia Pro Condensed
 };
 
 export const chat_interface_info =

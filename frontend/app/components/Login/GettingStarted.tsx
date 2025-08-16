@@ -51,10 +51,10 @@ const GettingStartedComponent: React.FC<GettingStartedComponentProps> = ({
         <div className="hero">
           <div className="hero-content flex-row">
             <div className="text-center lg:text-left">
-              <h1 className="text-2xl md:text-5xl font-bold">
+              <h1 className="text-2xl md:text-5xl font-subtitle font-bold">
                 Welcome to Verba
               </h1>
-              <h2 className="text-lg md:text-2xl mt-2">
+              <h2 className="text-lg md:text-2xl font-subtitle mt-2">
                 Your Open Source RAG App
               </h2>
               <p className="py-6 text-sm md:text-base">

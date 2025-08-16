@@ -134,7 +134,7 @@ const LoginView: React.FC<LoginViewProps> = ({
           <div className="flex flex-col gap-8 items-center md:items-start justify-center w-4/5">
             <div className="flex flex-col items-center md:items-start gap-2">
               <div className="flex items-center gap-3">
-                <p className="font-light text-3xl md:text-4xl text-text-alt-verba">
+                <p className="font-light text-3xl md:text-4xl font-subtitle text-text-alt-verba">
                   Welcome
                 </p>
                 {/* <p className="font-light text-3xl md:text-4xl text-text-verba">

@@ -50,7 +50,7 @@ const BEORRIButton: React.FC<BEORRIButtonProps> = ({
       key={key}
       className={
         className +
-        ` p-3 transition-all active:scale-95 scale-100 duration-300 flex gap-1 items-center justify-center ${circle ? "rounded-full" : "rounded-lg"} hover:bg-[#023eba] hover:text-white ${selected ? selected_color + " shadow-md " + selected_text_color : " bg-white text-black border border-gray-300"} `
+        ` font-amiri p-3 transition-all active:scale-95 scale-100 duration-300 flex gap-1 items-center justify-center ${circle ? "rounded-full" : "rounded-lg"} hover:bg-[#023eba] hover:text-white ${selected ? selected_color + " shadow-md " + selected_text_color : " bg-white text-black border border-gray-300"} `
       }
       onClick={(e) => onClick(e, ...onClickParams)}
       disabled={disabled}

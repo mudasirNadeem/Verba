@@ -79,7 +79,8 @@ const config: Config = {
       },
       fontFamily: {
         "amiri": ["Amiri", "serif"],
-        "georgia-pro": ["Georgia Pro Condensed", "Georgia", "serif"],
+        "crimson-pro": ["Crimson Pro", "Georgia", "serif"],
+        "subtitle": ["Crimson Pro", "Georgia", "serif"],
         "sans": ["Amiri", "serif"],
       },
       backgroundImage: {

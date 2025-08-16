@@ -613,7 +613,7 @@ export const WCDTheme: Theme = {
   },
   button_color: { ...LightTheme.button_color, color: "#1D253A" },
   button_hover_color: { ...LightTheme.button_hover_color, color: "#313749" },
-  font: { ...LightTheme.font, value: "Open_Sans" },
+  font: { ...LightTheme.font, value: "Amiri" },
   theme: "dark",
 };
 
@@ -644,7 +644,7 @@ export const WeaviateTheme: Theme = {
   },
   button_color: { ...LightTheme.button_color, color: "#eeeeee" },
   button_hover_color: { ...LightTheme.button_hover_color, color: "#7dfffb" },
-  font: { ...LightTheme.font, value: "Plus_Jakarta_Sans" },
+  font: { ...LightTheme.font, value: "Amiri" },
   theme: "light",
 };
 

@@ -245,7 +245,7 @@ const SettingsComponent: React.FC<SettingsComponentProps> = ({
   return (
     <div className="flex flex-col w-full h-full p-4">
       <div className="flex justify-between items-center mb-4">
-        <p className="text-2xl font-bold">Customize Theme</p>
+        <p className="text-2xl font-subtitle font-bold">Customize Theme</p>
         <select
           className="select bg-bg-verba"
           value={

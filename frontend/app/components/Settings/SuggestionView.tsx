@@ -96,7 +96,7 @@ const SuggestionView: React.FC<SuggestionViewProps> = ({
   return (
     <div className="flex flex-col w-full h-full p-4">
       <div className="flex justify-between items-center mb-4">
-        <p className="text-2xl font-bold">Manage Suggestions ({totalCount})</p>
+        <p className="text-2xl font-subtitle font-bold">Manage Suggestions ({totalCount})</p>
         <BEORRIButton
           title="Refresh"
           className="max-w-min"
