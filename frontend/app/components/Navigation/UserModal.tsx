@@ -35,6 +35,7 @@ const UserModalComponent: React.FC<UserModalComponentProps> = ({
                 onClick={() => {
                   triggerAccept(triggerValue);
                 }}
+                className="hover:!bg-white hover:!text-black"
               />
             )}
             <BEORRIButton
@@ -42,6 +43,7 @@ const UserModalComponent: React.FC<UserModalComponentProps> = ({
               title="Cancel"
               selected_color="bg-warning-verba"
               selected={true}
+              className="hover:!bg-warning-verba"
             />
           </form>
         </div>
