@@ -99,7 +99,7 @@ const InfoView: React.FC<InfoViewProps> = ({
           title="Refresh"
           loading={isLoading}
           onClick={fetchMetadata}
-          className="max-w-min"
+          className="max-w-min [&_.loading]:!text-black"
           Icon={IoReload}
         />
       </div>
