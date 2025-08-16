@@ -78,9 +78,9 @@ const config: Config = {
         "pure-black": "#000000",
       },
       fontFamily: {
-        "amiri": ["var(--font-amiri)", "serif"],
+        "amiri": ["Amiri", "serif"],
         "georgia-pro": ["Georgia Pro Condensed", "Georgia", "serif"],
-        "sans": ["var(--font-amiri)", "serif"],
+        "sans": ["Amiri", "serif"],
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
