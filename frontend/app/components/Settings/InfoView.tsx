@@ -132,32 +132,32 @@ const InfoView: React.FC<InfoViewProps> = ({
           </div>
           <p className="font-bold text-lg">Weaviate Information</p>
 
-          <div className="flex flex-col border-2 gap-2 border-bg-verba shadow-sm p-4 rounded-lg">
+          <div className="card bg-base-100 shadow-md border-1 p-4">
             <p className="text-sm lg:text-base font-semibold text-text-alt-verba">
               Connected to
             </p>
             <p className="   text-text-verba">{credentials.url}</p>
           </div>
 
-          <div className="flex flex-col border-2 gap-2 border-bg-verba shadow-sm p-4 rounded-lg">
+          <div className="card bg-base-100 shadow-md border-1 p-4">
             <p className="text-sm lg:text-base font-semibold text-text-alt-verba">
               Deployment
             </p>
             <p className=" text-text-verba">{credentials.deployment}</p>
           </div>
 
-          <div className="flex flex-col border-2 gap-2 border-secondary-verba shadow-sm p-4 rounded-lg">
-            <p className="text-sm lg:text-base font-semibold text-text-alt-verba">
+          <div className="card bg-base-100 shadow-lg border-1 border-primary-verba p-4 ring-2 ring-primary-verba ring-opacity-30">
+            <p className="text-sm lg:text-base font-semibold text-primary-verba">
               Version
             </p>
             {nodePayload ? (
-              <p className="text-text-verba">{nodePayload.weaviate_version}</p>
+              <p className="text-text-verba font-medium">{nodePayload.weaviate_version}</p>
             ) : (
               <span className="loading loading-spinner loading-sm"></span>
             )}
           </div>
 
-          <div className="flex flex-col border-2 border-bg-verba shadow-sm p-4 rounded-lg">
+          <div className="card bg-base-100 shadow-md border-1 p-4">
             <div className="flex gap-2 items-center">
               <p className="text-text-alt-verba text-sm lg:text-base font-semibold">
                 Nodes
@@ -190,7 +190,7 @@ const InfoView: React.FC<InfoViewProps> = ({
             )}
           </div>
 
-          <div className="flex flex-col border-2 border-bg-verba shadow-sm p-4 rounded-lg">
+          <div className="card bg-base-100 shadow-md border-1 p-4">
             <div className="flex gap-2 items-center">
               <p className="text-text-alt-verba text-sm lg:text-base font-semibold">
                 Collections
