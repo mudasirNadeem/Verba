@@ -118,7 +118,8 @@ const GettingStartedComponent: React.FC<GettingStartedComponentProps> = ({
               type="submit"
               selected={true}
               onClick={handleGetStarted}
-              selected_color="bg-primary-verba"
+              selected_color="bg-[#023eba]"
+              selected_text_color="text-white"
               Icon={FaHeart}
             />
           </form>

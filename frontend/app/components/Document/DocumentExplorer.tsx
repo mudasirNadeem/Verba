@@ -119,7 +119,8 @@ const DocumentExplorer: React.FC<DocumentExplorerProps> = ({
             Icon={MdContentPaste}
             onClick={() => setSelectedSetting("Content")}
             selected={selectedSetting === "Content"}
-            selected_color="bg-secondary-verba"
+            selected_color="bg-[#023eba]"
+            selected_text_color="text-white"
           />
 
           <BEORRIButton
@@ -127,7 +128,8 @@ const DocumentExplorer: React.FC<DocumentExplorerProps> = ({
             Icon={MdContentCopy}
             onClick={() => setSelectedSetting("Chunks")}
             selected={selectedSetting === "Chunks"}
-            selected_color="bg-secondary-verba"
+            selected_color="bg-[#023eba]"
+            selected_text_color="text-white"
           />
 
           <BEORRIButton
@@ -135,7 +137,8 @@ const DocumentExplorer: React.FC<DocumentExplorerProps> = ({
             Icon={TbVectorTriangle}
             onClick={() => setSelectedSetting("Vector Space")}
             selected={selectedSetting === "Vector Space"}
-            selected_color="bg-secondary-verba"
+            selected_color="bg-[#023eba]"
+            selected_text_color="text-white"
           />
 
           <BEORRIButton
@@ -233,7 +236,8 @@ const DocumentExplorer: React.FC<DocumentExplorerProps> = ({
             Icon={FaInfoCircle}
             onClick={() => setSelectedSetting("Metadata")}
             selected={selectedSetting === "Metadata"}
-            selected_color="bg-secondary-verba"
+            selected_color="bg-[#023eba]"
+            selected_text_color="text-white"
           />
         </div>
       </div>

@@ -235,7 +235,8 @@ const DocumentSearch: React.FC<DocumentSearchComponentProps> = ({
                 Icon={MdCancel}
                 className="btn-sm min-w-min max-w-[200px]"
                 icon_size={12}
-                selected_color="bg-primary-verba"
+                selected_color="bg-[#023eba]"
+                selected_text_color="text-white"
                 selected={true}
                 text_class_name="truncate max-w-[200px]"
                 text_size="text-xs"
@@ -264,7 +265,8 @@ const DocumentSearch: React.FC<DocumentSearchComponentProps> = ({
                   <BEORRIButton
                     title={document.title}
                     selected={selectedDocument == document.uuid}
-                    selected_color="bg-secondary-verba"
+                    selected_color="bg-[#023eba]"
+                    selected_text_color="text-white"
                     key={document.title + index}
                     className="flex-grow"
                     text_class_name="truncate max-w-[150px] lg:max-w-[350px]"

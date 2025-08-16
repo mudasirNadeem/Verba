@@ -51,7 +51,8 @@ const FileComponent: React.FC<FileComponentProps> = ({
               Icon={FaCheckCircle}
               selected={true}
               className="w-[120px]"
-              selected_color={"bg-secondary-verba"}
+              selected_color={"bg-[#023eba]"}
+              selected_text_color="text-white"
             />
           )}
           {fileMap[fileData.fileID].status == "ERROR" && (
@@ -81,7 +82,8 @@ const FileComponent: React.FC<FileComponentProps> = ({
             : "No Filename"
         }
         selected={selectedFileData === fileMap[fileData.fileID].fileID}
-        selected_color="bg-secondary-verba"
+        selected_color="bg-[#023eba]"
+        selected_text_color="text-white"
         className="flex-grow"
         text_class_name="truncate max-w-[150px] lg:max-w-[300px]"
         onClick={() => {

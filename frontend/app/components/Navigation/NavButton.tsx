@@ -27,7 +27,8 @@ const NavbarButton: React.FC<NavbarButtonProps> = ({
     <BEORRIButton
       title={title}
       Icon={Icon}
-      selected_color="bg-primary-verba"
+      selected_color="bg-[#023eba]"
+      selected_text_color="text-white"
       selected={currentPage === setPage}
       onClick={() => {
         setCurrentPage(setPage);

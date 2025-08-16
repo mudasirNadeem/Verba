@@ -278,7 +278,8 @@ const LoginView: React.FC<LoginViewProps> = ({
                               title="Connect to Weaviate"
                               type="submit"
                               selected={true}
-                              selected_color="bg-primary-verba"
+                              selected_color="bg-[#023eba]"
+                              selected_text_color="text-white"
                               loading={isConnecting}
                             />
                             {selectedDeployment == "Weaviate" && (

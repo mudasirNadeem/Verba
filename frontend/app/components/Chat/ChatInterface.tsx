@@ -400,7 +400,8 @@ const ChatInterface: React.FC<ChatInterfaceProps> = ({
             }}
             selected={selectedSetting === "Chat"}
             disabled={false}
-            selected_color="bg-secondary-verba"
+            selected_color="bg-[#023eba]"
+            selected_text_color="text-white"
           />
           {production != "Demo" && (
             <BEORRIButton
@@ -486,7 +487,8 @@ const ChatInterface: React.FC<ChatInterfaceProps> = ({
                   Icon={MdCancel}
                   className="btn-sm min-w-min max-w-[200px]"
                   icon_size={12}
-                  selected_color="bg-primary-verba"
+                  selected_color="bg-[#023eba]"
+                  selected_text_color="text-white"
                   selected={true}
                   text_class_name="truncate max-w-[200px]"
                   text_size="text-xs"
@@ -502,7 +504,8 @@ const ChatInterface: React.FC<ChatInterfaceProps> = ({
                   Icon={MdCancel}
                   className="btn-sm min-w-min max-w-[200px]"
                   icon_size={12}
-                  selected_color="bg-secondary-verba"
+                  selected_color="bg-[#023eba]"
+                  selected_text_color="text-white"
                   selected={true}
                   text_size="text-xs"
                   text_class_name="truncate md:max-w-[100px] lg:max-w-[150px]"
@@ -649,7 +652,8 @@ const ChatInterface: React.FC<ChatInterfaceProps> = ({
                   sendUserMessage();
                 }}
                 disabled={false}
-                selected_color="bg-primary-verba"
+                selected_color="bg-[#023eba]"
+                selected_text_color="text-white"
               />
               <BEORRIButton
                 type="button"
@@ -668,7 +672,8 @@ const ChatInterface: React.FC<ChatInterfaceProps> = ({
                   ]);
                 }}
                 disabled={false}
-                selected_color="bg-primary-verba"
+                selected_color="bg-[#023eba]"
+                selected_text_color="text-white"
               />
             </div>
           </div>

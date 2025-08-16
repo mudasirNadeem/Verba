@@ -215,7 +215,8 @@ const ConfigurationView: React.FC<ConfigurationViewProps> = ({
           <BEORRIButton
             title="Overview"
             selected={selectedSetting === "Basic"}
-            selected_color="bg-secondary-verba"
+            selected_color="bg-[#023eba]"
+            selected_text_color="text-white"
             onClick={() => {
               setSelectedSetting("Basic");
             }}
@@ -225,7 +226,8 @@ const ConfigurationView: React.FC<ConfigurationViewProps> = ({
           <BEORRIButton
             title="Config"
             selected={selectedSetting === "Pipeline"}
-            selected_color="bg-secondary-verba"
+            selected_color="bg-[#023eba]"
+            selected_text_color="text-white"
             onClick={() => {
               setSelectedSetting("Pipeline");
             }}

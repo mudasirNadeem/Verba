@@ -59,21 +59,24 @@ const SettingsView: React.FC<SettingsViewProps> = ({
               title="Admin"
               onClick={() => setSettingMode("INFO")}
               selected={settingMode === "INFO"}
-              selected_color="bg-secondary-verba"
+              selected_color="bg-[#023eba]"
+              selected_text_color="text-white"
               Icon={RiAdminFill}
             />
             <BEORRIButton
               title="Customize Theme"
               onClick={() => setSettingMode("THEME")}
               selected={settingMode === "THEME"}
-              selected_color="bg-secondary-verba"
+              selected_color="bg-[#023eba]"
+              selected_text_color="text-white"
               Icon={FaPaintBrush}
             />
             <BEORRIButton
               title="Manage Suggestions"
               onClick={() => setSettingMode("SUGGESTIONS")}
               selected={settingMode === "SUGGESTIONS"}
-              selected_color="bg-secondary-verba"
+              selected_color="bg-[#023eba]"
+              selected_text_color="text-white"
               Icon={IoChatboxEllipsesSharp}
             />
           </div>
