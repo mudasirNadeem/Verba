@@ -204,7 +204,7 @@ const ComponentView: React.FC<ComponentViewProps> = ({
                 tabIndex={0}
                 role="button"
                 disabled={blocked}
-                className="btn bg-button-verba hover:bg-button-hover-verba text-text-verba w-full flex justify-start border-none"
+                className="btn bg-transparent hover:bg-transparent border border-gray-300 text-text-verba w-full flex justify-start"
               >
                 <GoTriangleDown size={15} />
                 <p>{RAGConfig[component_name].selected}</p>
@@ -246,7 +246,7 @@ const ComponentView: React.FC<ComponentViewProps> = ({
                   tabIndex={0}
                   role="button"
                   disabled={blocked}
-                  className="btn bg-button-verba hover:bg-button-hover-verba text-text-verba w-full flex justify-start border-none"
+                  className="btn bg-transparent hover:bg-transparent border border-gray-300 text-text-verba w-full flex justify-start"
                 >
                   <GoTriangleDown size={15} />
                   <p>{config.value}</p>
@@ -285,7 +285,7 @@ const ComponentView: React.FC<ComponentViewProps> = ({
             {typeof config.value != "boolean" &&
               ["textarea"].includes(config.type) && (
                 <textarea
-                  className="grow w-full text-sm min-h-[152px] bg-bg-verba rounded-lg p-2"
+                  className="grow w-full text-sm min-h-[152px] bg-transparent border border-gray-300 rounded-lg p-2"
                   value={config.value}
                   onChange={(e) => {
                     if (!blocked) {
