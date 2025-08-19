@@ -123,7 +123,7 @@ const LoginView: React.FC<LoginViewProps> = ({
       >
         <div className="hidden md:flex md:w-1/2 lg:w-3/5 h-full items-center justify-center bg-gray-50">
           <Image 
-            src="/verba2.png" 
+            src="/new-logo.png" 
             alt="Logo" 
             width={400}
             height={400}
@@ -135,7 +135,7 @@ const LoginView: React.FC<LoginViewProps> = ({
             <div className="flex flex-col items-center md:items-start gap-2">
               <div className="flex items-center gap-3">
                 <p className="font-light text-3xl md:text-4xl font-subtitle text-text-alt-verba">
-                  Welcome
+                  Welcome to Oxtari
                 </p>
                 {/* <p className="font-light text-3xl md:text-4xl text-text-verba">
                   BEORRI

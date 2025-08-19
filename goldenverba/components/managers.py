@@ -79,7 +79,7 @@ except Exception:
 
 ### Add new components here ###
 
-production = os.getenv("VERBA_PRODUCTION")
+production = os.getenv("OXTARI_PRODUCTION")
 if production != "Production":
     readers = [
         BasicReader(),
@@ -160,9 +160,9 @@ else:
 
 class WeaviateManager:
     def __init__(self):
-        self.document_collection_name = "VERBA_DOCUMENTS"
-        self.config_collection_name = "VERBA_CONFIGURATION"
-        self.suggestion_collection_name = "VERBA_SUGGESTIONS"
+        self.document_collection_name = "Oxtari_DOCUMENTS"
+        self.config_collection_name = "Oxtari_CONFIGURATION"
+        self.suggestion_collection_name = "Oxtari_SUGGESTIONS"
         self.embedding_table = {}
 
     ### Connection Handling
@@ -230,10 +230,10 @@ class WeaviateManager:
         try:
 
             if deployment == "Weaviate":
-                if weaviateURL == "" and os.environ.get("WEAVIATE_URL_VERBA"):
-                    weaviateURL = os.environ.get("WEAVIATE_URL_VERBA")
-                if weaviateAPIKey == "" and os.environ.get("WEAVIATE_API_KEY_VERBA"):
-                    weaviateAPIKey = os.environ.get("WEAVIATE_API_KEY_VERBA")
+                if weaviateURL == "" and os.environ.get("WEAVIATE_URL_OXTARI"):
+                    weaviateURL = os.environ.get("WEAVIATE_URL_OXTARI")
+                if weaviateAPIKey == "" and os.environ.get("WEAVIATE_API_KEY_OXTARI"):
+                    weaviateAPIKey = os.environ.get("WEAVIATE_API_KEY_OXTARI")
                 client = await self.connect_to_cluster(weaviateURL, weaviateAPIKey)
             elif deployment == "Docker":
                 client = await self.connect_to_docker("weaviate")
@@ -318,7 +318,7 @@ class WeaviateManager:
 
     async def verify_embedding_collection(self, client: WeaviateAsyncClient, embedder):
         if embedder not in self.embedding_table:
-            self.embedding_table[embedder] = "VERBA_Embedding_" + re.sub(
+            self.embedding_table[embedder] = "OXTARI_Embedding_" + re.sub(
                 r"[^a-zA-Z0-9]", "_", embedder
             )
             return await self.verify_collection(client, self.embedding_table[embedder])
@@ -327,7 +327,7 @@ class WeaviateManager:
 
     async def verify_cache_collection(self, client: WeaviateAsyncClient, embedder):
         if embedder not in self.embedding_table:
-            self.embedding_table[embedder] = "VERBA_Cache_" + re.sub(
+            self.embedding_table[embedder] = "OXTARI_Cache_" + re.sub(
                 r"[^a-zA-Z0-9]", "_", embedder
             )
             return await self.verify_collection(client, self.embedding_table[embedder])
@@ -341,7 +341,7 @@ class WeaviateManager:
             if embedder.check_available(environment_variables, libraries):
                 if "Model" in embedder.config:
                     for _embedder in embedder.config["Model"].values:
-                        self.embedding_table[_embedder] = "VERBA_Embedding_" + re.sub(
+                        self.embedding_table[_embedder] = "OXTARI_Embedding_" + re.sub(
                             r"[^a-zA-Z0-9]", "_", _embedder
                         )
                         await self.verify_collection(
@@ -500,7 +500,7 @@ class WeaviateManager:
     async def delete_all(self, client: WeaviateAsyncClient):
         node_payload, collection_payload = await self.get_metadata(client)
         for collection in collection_payload["collections"]:
-            if "VERBA" in collection["name"]:
+            if "OXTARI" in collection["name"]:
                 await client.collections.delete(collection["name"])
 
     async def get_documents(
@@ -1069,7 +1069,7 @@ class EmbeddingManager:
         logger: LoggerManager,
     ) -> list[Document]:
         """Vectorizes chunks in batches
-        @parameter: documents : Document - Verba document
+        @parameter: documents : Document - Oxtari document
         @returns Document - Document with vectorized chunks
         """
         try:

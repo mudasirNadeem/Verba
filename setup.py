@@ -7,15 +7,15 @@ setup(
     python_requires=">=3.10.0,<3.14.0",
     entry_points={
         "console_scripts": [
-            "verba=goldenverba.server.cli:cli",
+            "oxtari=goldenverba.server.cli:cli",
         ],
     },
     author="Weaviate",
     author_email="edward@weaviate.io",
-    description="Welcome to Verba: The Golden RAGtriever, an open-source initiative designed to offer a streamlined, user-friendly interface for Retrieval-Augmented Generation (RAG) applications. In just a few easy steps, dive into your data and make meaningful interactions!",
+    description="Welcome to Oxtari: The Golden RAGtriever, an open-source initiative designed to offer a streamlined, user-friendly interface for Retrieval-Augmented Generation (RAG) applications. In just a few easy steps, dive into your data and make meaningful interactions!",
     long_description=open("README.md", encoding="utf-8").read(),
     long_description_content_type="text/markdown",
-    url="https://github.com/weaviate/Verba",
+    url="https://github.com/weaviate/Oxtari",
     classifiers=[
         "License :: OSI Approved :: BSD License",
         "Programming Language :: Python :: 3.10",

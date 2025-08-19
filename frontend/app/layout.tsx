@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "RAG Assistant", // Changed from "Verba"
+  title: "Oxtari Assistant",
   description: "The GoldenRAGtriever",
 };
 

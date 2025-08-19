@@ -57,8 +57,8 @@ export type HealthPayload = {
   production: "Local" | "Demo" | "Production";
   gtag: string;
   deployments: {
-    WEAVIATE_URL_VERBA: string;
-    WEAVIATE_API_KEY_VERBA: string;
+    WEAVIATE_URL_OXTARI: string;
+    WEAVIATE_API_KEY_OXTARI: string;
   };
   default_deployment: "Weaviate" | "Docker" | "Local" | "Custom" | "";
 };
@@ -267,7 +267,7 @@ export type DocumentChunk = {
 
 export type DocumentPayload = {
   error: string;
-  document: VerbaDocument;
+  document: OxtariDocument;
 };
 
 type NodeInfo = {
@@ -302,12 +302,12 @@ export type MetadataPayload = {
 
 export type ChunksPayload = {
   error: string;
-  chunks: VerbaChunk[];
+  chunks: OxtariChunk[];
 };
 
 export type ChunkPayload = {
   error: string;
-  chunk: VerbaChunk;
+  chunk: OxtariChunk;
 };
 
 export type ContentPayload = {
@@ -332,7 +332,7 @@ export type VectorsPayload = {
   };
 };
 
-export type VerbaDocument = {
+export type OxtariDocument = {
   title: string;
   metadata: string;
   extension: string;
@@ -342,7 +342,7 @@ export type VerbaDocument = {
   meta: any;
 };
 
-export type VerbaChunk = {
+export type OxtariChunk = {
   content: string;
   chunk_id: number;
   doc_uuid: string;
@@ -377,12 +377,12 @@ export type VectorGroup = {
 };
 
 export type VectorChunk = {
-  vector: VerbaVector;
+  vector: OxtariVector;
   chunk_id: string;
   uuid: string;
 };
 
-export type VerbaVector = {
+export type OxtariVector = {
   x: number;
   y: number;
   z: number;
@@ -484,7 +484,7 @@ export interface Theme {
 
 export const LightTheme: Theme = {
   theme_name: "Light",
-  title: { text: "BEORRI Assistant", type: "text", description: "Title" },
+  title: { text: "Oxtari Assistant", type: "text", description: "Title" },
   subtitle: {
     text: "Your AI Assistant",
     type: "text",
@@ -558,7 +558,7 @@ export const LightTheme: Theme = {
 export const DarkTheme: Theme = {
   ...LightTheme,
   theme_name: "Dark",
-  title: { ...LightTheme.title, text: "BEORRI Assistant" },
+  title: { ...LightTheme.title, text: "Oxtari Assistant" },
   subtitle: { ...LightTheme.subtitle, text: "Your AI Assistant" },
   intro_message: {
     ...LightTheme.intro_message,
@@ -566,7 +566,7 @@ export const DarkTheme: Theme = {
   },
   image: {
     ...LightTheme.image,
-    src: "/verba2.png",
+    src: "/new-logo.png",
   },
   primary_color: { ...LightTheme.primary_color, color: "#023eba" },
   secondary_color: { ...LightTheme.secondary_color, color: "#ffffff" },
@@ -589,15 +589,15 @@ export const DarkTheme: Theme = {
 export const WCDTheme: Theme = {
   ...LightTheme,
   theme_name: "WCD",
-  title: { ...LightTheme.title, text: "BEORRI" },
+  title: { ...LightTheme.title, text: "Oxtari" },
   subtitle: { ...LightTheme.subtitle, text: "Weaviate Chatbot" },
   intro_message: {
     ...LightTheme.intro_message,
-    text: "Welcome to BEORRI, your open-source RAG application!",
+    text: "Welcome to Oxtari, your open-source RAG application!",
   },
   image: {
     ...LightTheme.image,
-    src: "/verba2.png",
+    src: "/new-logo.png",
   },
   primary_color: { ...LightTheme.primary_color, color: "#BF40C5" },
   secondary_color: { ...LightTheme.secondary_color, color: "#28395B" },
@@ -619,12 +619,12 @@ export const WCDTheme: Theme = {
 
 export const WeaviateTheme: Theme = {
   ...LightTheme,
-  theme_name: "Weaviate",
-  title: { ...LightTheme.title, text: "BEORRI" },
-  subtitle: { ...LightTheme.subtitle, text: "Weaviate Chatbot" },
+  theme_name: "Oxtari",
+  title: { ...LightTheme.title, text: "Oxtari" },
+  subtitle: { ...LightTheme.subtitle, text: "Oxtari Chatbot" },
   intro_message: {
     ...LightTheme.intro_message,
-    text: "Welcome to BEORRI, your open-source RAG application!",
+    text: "",
   },
   image: {
     ...LightTheme.image,

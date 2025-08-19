@@ -134,9 +134,9 @@ async def serve_frontend():
 
 
 # Serve specific images from root path for compatibility
-@app.get("/verba2.png")
-async def serve_verba2_image():
-    return FileResponse(os.path.join(BASE_DIR, "frontend/out/verba2.png"))
+@app.get("/new-logo.png")
+async def serve_oxtari_image():
+    return FileResponse(os.path.join(BASE_DIR, "frontend/out/new-logo.png"))
 
 @app.get("/verba.png")
 async def serve_verba_image():

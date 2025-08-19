@@ -69,7 +69,7 @@ const Navbar: React.FC<NavbarProps> = ({
   const handleGitHubClick = () => {
     // Open a new tab with the specified URL
     window.open(
-      "https://github.com/weaviate/verba",
+      "https://github.com/weaviate/oxtari",
       "_blank",
       "noopener,noreferrer"
     );
@@ -189,7 +189,8 @@ const Navbar: React.FC<NavbarProps> = ({
           <div
             className={`sm:h-[3vh] lg:h-[5vh] mx-1 hidden md:block bg-text-alt-verba w-px`}
           ></div>
-          <BEORRIButton
+          {/* GitHub Button - Commented Out */}
+          {/* <BEORRIButton
             title={gitHubStars}
             Icon={FaGithub}
             onClick={handleGitHubClick}
@@ -197,7 +198,7 @@ const Navbar: React.FC<NavbarProps> = ({
             icon_size={14}
             disabled={false}
             selected={false}
-          />
+          /> */}
         </div>
       </div>
     </div>

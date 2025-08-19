@@ -54,7 +54,7 @@ const InfoView: React.FC<InfoViewProps> = ({
     }
   };
 
-  const resetVerba = async () => {
+  const resetOxtari = async () => {
     const response = await deleteAllDocuments("ALL", credentials);
     if (response) {
       addStatusMessage("Application reset", "SUCCESS"); // Changed from "Verba reset"
@@ -105,7 +105,7 @@ const InfoView: React.FC<InfoViewProps> = ({
       </div>
       <div className="flex-grow overflow-y-auto">
         <div className="gap-4 flex flex-col p-4 text-text-verba">
-          <p className="font-bold text-lg">Resetting Verba</p>
+          <p className="font-bold text-lg">Resetting Oxtari</p>
           <div className="flex flex-wrap gap-2 justify-between">
             <div className="flex flex-wrap gap-2">
               <BEORRIButton
@@ -120,7 +120,7 @@ const InfoView: React.FC<InfoViewProps> = ({
               />
               <BEORRIButton
                 title="Clear Everything"
-                onClick={() => openModal("reset-verba")}
+                onClick={() => openModal("reset-oxtari")}
                 Icon={IoTrash}
               />
               <BEORRIButton
@@ -225,7 +225,7 @@ const InfoView: React.FC<InfoViewProps> = ({
       <UserModalComponent
         modal_id="reset-documents"
         title="Reset Documents"
-        text="Are you sure you want to reset all documents? This will clear all documents and chunks from Verba."
+        text="Are you sure you want to reset all documents? This will clear all documents and chunks from Oxtari."
         triggerAccept={resetDocuments}
         triggerString="Reset"
       />
@@ -237,10 +237,10 @@ const InfoView: React.FC<InfoViewProps> = ({
         triggerString="Reset"
       />
       <UserModalComponent
-        modal_id="reset-verba"
-        title="Reset Verba"
-        text="Are you sure you want to reset Verba? This will delete all collections related to Verba."
-        triggerAccept={resetVerba}
+        modal_id="reset-oxtari"
+        title="Reset Oxtari"
+        text="Are you sure you want to reset Oxtari? This will delete all collections related to Oxtari."
+        triggerAccept={resetOxtari}
         triggerString="Reset"
       />
       <UserModalComponent
