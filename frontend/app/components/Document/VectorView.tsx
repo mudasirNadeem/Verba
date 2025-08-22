@@ -317,33 +317,33 @@ const VectorView: React.FC<VectorViewProps> = ({
           <div className="flex flex-col gap-2">
             <div className="flex gap-2 items-center">
               {isFetching && (
-                <div className="flex items-center justify-center text-text-alt-verba gap-2 h-full">
+                <div className="flex items-center justify-center text-text-alt-oxtari gap-2 h-full">
                   <span className="loading loading-spinner loading-xs lg:loading-sm"></span>
                 </div>
               )}
-              <p className="text-text-alt-verba text-xs lg:text-sm font-bold">
+              <p className="text-text-alt-oxtari text-xs lg:text-sm font-bold">
                 Embedding Model:
               </p>
-              <p className="text-text-alt-verba text-xs lg:text-sm">
+              <p className="text-text-alt-oxtari text-xs lg:text-sm">
                 {embedder}
               </p>
             </div>
             <div className="flex gap-1 items-center">
-              <p className="text-text-alt-verba text-xs lg:text-sm font-bold">
+              <p className="text-text-alt-oxtari text-xs lg:text-sm font-bold">
                 Hover:
               </p>
               <p
-                className="text-xs lg:text-sm text-text-alt-verba truncate max-w-[100px] lg:max-w-[300px]"
+                className="text-xs lg:text-sm text-text-alt-oxtari truncate max-w-[100px] lg:max-w-[300px]"
                 title={hoverTitleState ?? ""}
               >
                 {hoverTitleState ?? ""}
               </p>
             </div>
             <div className="flex gap-1 items-center">
-              <p className="text-text-alt-verba text-xs lg:text-sm font-bold">
+              <p className="text-text-alt-oxtari text-xs lg:text-sm font-bold">
                 Vectors:
               </p>
-              <p className="text-xs lg:text-sm text-text-alt-verba">
+              <p className="text-xs lg:text-sm text-text-alt-oxtari">
                 {vectors.length} x {getVectorCount()} x {currentDimensions}
               </p>
             </div>
@@ -353,7 +353,7 @@ const VectorView: React.FC<VectorViewProps> = ({
             <div className="flex flex-col gap-2 w-full">
               {production != "Demo" && (
                 <div className="flex gap-2 items-center justify-between">
-                  <p className="text-xs text-text-alt-verba">
+                  <p className="text-xs text-text-alt-oxtari">
                     Show All Documents
                   </p>
                   <input
@@ -368,7 +368,7 @@ const VectorView: React.FC<VectorViewProps> = ({
               )}
 
               <div className="flex gap-2 items-center justify-between">
-                <p className="text-xs text-text-alt-verba">Dynamic Coloring</p>
+                <p className="text-xs text-text-alt-oxtari">Dynamic Coloring</p>
                 <input
                   type="checkbox"
                   className="toggle"
@@ -387,7 +387,7 @@ const VectorView: React.FC<VectorViewProps> = ({
                   tabIndex={0}
                   role="button"
                   disabled={true}
-                  className="btn btn-sm bg-button-verba hover:bg-button-hover-verba text-text-verba w-full flex justify-start border-none"
+                  className="btn btn-sm bg-button-oxtari hover:bg-button-hover-oxtari text-text-oxtari w-full flex justify-start border-none"
                 >
                   <GoTriangleDown size={15} />
                   <p>PCA</p>
@@ -399,7 +399,7 @@ const VectorView: React.FC<VectorViewProps> = ({
               </div>
               {/* Zoom */}
               <div className="flex items-center gap-2 w-full">
-                <p className="text-text-alt-verba text-sm">Zoom</p>
+                <p className="text-text-alt-oxtari text-sm">Zoom</p>
                 <input
                   onChange={(e) => {
                     setViewMultiplication(Number(e.target.value));
@@ -419,7 +419,7 @@ const VectorView: React.FC<VectorViewProps> = ({
                   setChunk(null);
                   setSelectedChunk(null);
                 }}
-                className="flex btn btn-square border-none text-text-verba bg-button-verba hover:bg-warning-verba gap-2"
+                className="flex btn btn-square border-none text-text-oxtari bg-button-oxtari hover:bg-warning-oxtari gap-2"
               >
                 <MdCancel size={15} />
               </button>
@@ -472,10 +472,10 @@ const VectorView: React.FC<VectorViewProps> = ({
         >
           {chunk && (
             <div className="flex flex-col p-3 gap-2 w-full">
-              <p className="text-text-alt-verba fond-bold">
+              <p className="text-text-alt-oxtari fond-bold">
                 Chunk {chunk.chunk_id}
               </p>
-              <p className="text-text-alt-verba text-sm">{chunk.content}</p>
+              <p className="text-text-alt-oxtari text-sm">{chunk.content}</p>
             </div>
           )}
         </div>

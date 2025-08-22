@@ -61,7 +61,7 @@ const FileComponent: React.FC<FileComponentProps> = ({
               Icon={MdError}
               className="w-[120px]"
               selected={true}
-              selected_color={"bg-warning-verba"}
+              selected_color={"bg-warning-oxtari"}
             />
           )}
         </div>
@@ -96,7 +96,7 @@ const FileComponent: React.FC<FileComponentProps> = ({
         onClick={openDeleteModal}
         className="w-[50px]"
         selected={selectedFileData === fileMap[fileData.fileID].fileID}
-        selected_color="bg-warning-verba"
+        selected_color="bg-warning-oxtari"
       />
 
       <UserModalComponent

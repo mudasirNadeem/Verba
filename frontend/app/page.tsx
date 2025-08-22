@@ -134,29 +134,29 @@ export default function Home() {
   const updateCSSVariables = useCallback(() => {
     const themeToUse = selectedTheme;
     const cssVars = {
-      "--primary-verba":
+      "--primary-oxtari":
         themeToUse.primary_color?.color || WeaviateTheme.primary_color.color,
-      "--secondary-verba":
+      "--secondary-oxtari":
         themeToUse.secondary_color?.color ||
         WeaviateTheme.secondary_color.color,
-      "--warning-verba":
+      "--warning-oxtari":
         themeToUse.warning_color?.color || WeaviateTheme.warning_color.color,
-      "--bg-verba": themeToUse.bg_color?.color || WeaviateTheme.bg_color.color,
-      "--bg-alt-verba":
+      "--bg-oxtari": themeToUse.bg_color?.color || WeaviateTheme.bg_color.color,
+      "--bg-alt-oxtari":
         themeToUse.bg_alt_color?.color || WeaviateTheme.bg_alt_color.color,
-      "--text-verba":
+      "--text-oxtari":
         themeToUse.text_color?.color || WeaviateTheme.text_color.color,
-      "--text-alt-verba":
+      "--text-alt-oxtari":
         themeToUse.text_alt_color?.color || WeaviateTheme.text_alt_color.color,
-      "--button-verba":
+      "--button-oxtari":
         themeToUse.button_color?.color || WeaviateTheme.button_color.color,
-      "--button-hover-verba":
+      "--button-hover-oxtari":
         themeToUse.button_hover_color?.color ||
         WeaviateTheme.button_hover_color.color,
-      "--text-verba-button":
+      "--text-oxtari-button":
         themeToUse.button_text_color?.color ||
         WeaviateTheme.button_text_color.color,
-      "--text-alt-verba-button":
+      "--text-alt-oxtari-button":
         themeToUse.button_text_alt_color?.color ||
         WeaviateTheme.button_text_alt_color.color,
     };
@@ -179,7 +179,7 @@ export default function Home() {
 
   return (
     <main
-      className={`min-h-screen bg-bg-verba text-text-verba min-w-screen ${fontClassName}`}
+      className={`min-h-screen bg-bg-oxtari text-text-oxtari min-w-screen ${fontClassName}`}
       data-theme={selectedTheme.theme}
     >
       {gtag !== "" && <GoogleAnalytics gaId={gtag} />}
@@ -277,7 +277,7 @@ export default function Home() {
           </div>
 
           <div
-            className={`footer footer-center p-4 mt-8 bg-bg-verba text-text-alt-verba transition-all duration-1500 delay-1000`}
+            className={`footer footer-center p-4 mt-8 bg-bg-oxtari text-text-alt-oxtari transition-all duration-1500 delay-1000`}
           >
             <aside>
               <p>Build with ♥ and Weaviate © 2024</p>

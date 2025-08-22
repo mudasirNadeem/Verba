@@ -12,7 +12,7 @@ build
 ~
 .local
 .cache
-.verba
+.oxtari
 .vscode
 verba_config.json
 text-generation-inference

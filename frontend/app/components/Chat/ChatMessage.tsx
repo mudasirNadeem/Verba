@@ -37,10 +37,10 @@ const ChatMessage: React.FC<ChatMessageProps> = ({
   setSelectedChunkScore,
 }) => {
   const colorTable = {
-    user: "bg-bg-verba",
-    system: "bg-bg-alt-verba",
-    error: "bg-warning-verba",
-    retrieval: "bg-bg-verba",
+    user: "bg-bg-oxtari",
+    system: "bg-bg-alt-oxtari",
+    error: "bg-warning-oxtari",
+    retrieval: "bg-bg-oxtari",
   };
 
   if (typeof message.content === "string") {
@@ -52,11 +52,11 @@ const ChatMessage: React.FC<ChatMessageProps> = ({
           className={`flex flex-col items-start p-5 rounded-3xl animate-press-in text-sm lg:text-base ${colorTable[message.type]}`}
         >
           {message.cached && (
-            <FaDatabase size={12} className="text-text-verba" />
+            <FaDatabase size={12} className="text-text-oxtari" />
           )}
           {message.type === "system" && (
             <ReactMarkdown
-              className="prose md:prose-sm lg:prose-base p-3 prose-pre:bg-bg-alt-verba"
+              className="prose md:prose-sm lg:prose-base p-3 prose-pre:bg-bg-alt-oxtari"
               components={{
                 code({ node, inline, className, children, ...props }) {
                   const match = /language-(\w+)/.exec(className || "");
@@ -88,7 +88,7 @@ const ChatMessage: React.FC<ChatMessageProps> = ({
             <div className="whitespace-pre-wrap">{message.content}</div>
           )}
           {message.type === "error" && (
-            <div className="whitespace-pre-wrap flex items-center gap-2 text-sm text-text-verba">
+            <div className="whitespace-pre-wrap flex items-center gap-2 text-sm text-text-oxtari">
               <BiError size={15} />
               <p>{message.content}</p>
             </div>
@@ -109,7 +109,7 @@ const ChatMessage: React.FC<ChatMessageProps> = ({
               setSelectedChunkScore(document.chunks);
             }}
             key={"Retrieval" + document.title + index}
-            className={`flex ${selectedDocument && selectedDocument === document.uuid + document.score + document.chunks.length ? "bg-secondary-verba hover:bg-button-hover-verba" : "bg-button-verba hover:bg-secondary-verba"} rounded-3xl p-3 items-center justify-between transition-colors duration-300 ease-in-out border-none`}
+            className={`flex ${selectedDocument && selectedDocument === document.uuid + document.score + document.chunks.length ? "bg-secondary-oxtari hover:bg-button-hover-oxtari" : "bg-button-oxtari hover:bg-secondary-oxtari"} rounded-3xl p-3 items-center justify-between transition-colors duration-300 ease-in-out border-none`}
           >
             <div className="flex items-center justify-between w-full">
               <p
@@ -118,7 +118,7 @@ const ChatMessage: React.FC<ChatMessageProps> = ({
               >
                 {document.title}
               </p>
-              <div className="flex gap-1 items-center text-text-verba flex-shrink-0">
+              <div className="flex gap-1 items-center text-text-oxtari flex-shrink-0">
                 <IoNewspaper size={12} />
                 <p className="text-sm">{document.chunks.length}</p>
               </div>
@@ -142,7 +142,7 @@ const ChatMessage: React.FC<ChatMessageProps> = ({
             <p className="py-4">{message.context}</p>
             <div className="modal-action">
               <form method="dialog">
-                <button className="btn focus:outline-none text-text-alt-verba bg-button-verba hover:bg-button-hover-verba hover:text-text-verba border-none shadow-none">
+                <button className="btn focus:outline-none text-text-alt-oxtari bg-button-oxtari hover:bg-button-hover-oxtari hover:text-text-oxtari border-none shadow-none">
                   <p>Close</p>
                 </button>
               </form>

@@ -44,7 +44,7 @@ export const MultiInput: React.FC<{
   return (
     <div className="flex flex-col w-full gap-2">
       <div className="flex gap-2 justify-between">
-        <label className="input flex items-center gap-2 w-full bg-bg-verba">
+        <label className="input flex items-center gap-2 w-full bg-bg-oxtari">
           <input
             type="text"
             className="grow w-full"
@@ -66,7 +66,7 @@ export const MultiInput: React.FC<{
             addValue(currentInput);
           }}
           disabled={blocked}
-          className="btn flex gap-2 bg-button-verba border-none hover:bg-secondary-verba text-text-verba"
+          className="btn flex gap-2 bg-button-oxtari border-none hover:bg-secondary-oxtari text-text-oxtari"
         >
           <IoAddCircleSharp size={15} />
           <p>Add</p>
@@ -77,7 +77,7 @@ export const MultiInput: React.FC<{
         {values.map((value, index) => (
           <div
             key={value + index}
-            className="flex bg-bg-verba w-full p-2 text-center text-sm text-text-verba justify-between items-center rounded-xl"
+            className="flex bg-bg-oxtari w-full p-2 text-center text-sm text-text-oxtari justify-between items-center rounded-xl"
           >
             <div className="flex w-full justify-center items-center overflow-hidden">
               <p className="truncate" title={value}>
@@ -89,7 +89,7 @@ export const MultiInput: React.FC<{
               onClick={() => {
                 removeValue(value);
               }}
-              className="btn btn-sm btn-square bg-button-verba border-none hover:bg-warning-verba text-text-verba ml-2"
+              className="btn btn-sm btn-square bg-button-oxtari border-none hover:bg-warning-oxtari text-text-oxtari ml-2"
             >
               <FaTrash size={12} />
             </button>
@@ -176,7 +176,7 @@ const ComponentView: React.FC<ComponentViewProps> = ({
   return (
     <div className="flex flex-col justify-start gap-3 rounded-2xl p-1 w-full ">
       <div className="flex items-center justify-between">
-        <div className="divider text-text-alt-verba flex-grow text-xs lg:text-sm">
+        <div className="divider text-text-alt-oxtari flex-grow text-xs lg:text-sm">
           <p>{RAGConfig[component_name].selected} Settings</p>
           <BEORRIButton
             title="Save"
@@ -195,7 +195,7 @@ const ComponentView: React.FC<ComponentViewProps> = ({
       {/* Component */}
       {!skip_component && (
         <div className="flex flex-col gap-2">
-          <div className="flex gap-2 justify-between items-center text-text-verba">
+          <div className="flex gap-2 justify-between items-center text-text-oxtari">
             <p className="flex min-w-[8vw] lg:text-base text-sm">
               {component_name}
             </p>
@@ -204,7 +204,7 @@ const ComponentView: React.FC<ComponentViewProps> = ({
                 tabIndex={0}
                 role="button"
                 disabled={blocked}
-                className="btn bg-transparent hover:bg-transparent border border-gray-300 text-text-verba w-full flex justify-start"
+                className="btn bg-transparent hover:bg-transparent border border-gray-300 text-text-oxtari w-full flex justify-start"
               >
                 <GoTriangleDown size={15} />
                 <p>{RAGConfig[component_name].selected}</p>
@@ -218,9 +218,9 @@ const ComponentView: React.FC<ComponentViewProps> = ({
             </div>
           </div>
 
-          <div className="flex gap-2 items-center text-text-verba">
+          <div className="flex gap-2 items-center text-text-oxtari">
             <p className="flex min-w-[8vw]"></p>
-            <p className="lg:text-sm text-xs text-text-alt-verba text-start">
+            <p className="lg:text-sm text-xs text-text-alt-oxtari text-start">
               {
                 RAGConfig[component_name].components[
                   RAGConfig[component_name].selected
@@ -236,7 +236,7 @@ const ComponentView: React.FC<ComponentViewProps> = ({
           .config
       ).map(([configTitle, config]) => (
         <div key={"Configuration" + configTitle + component_name}>
-          <div className="flex gap-3 justify-between items-center text-text-verba lg:text-base text-sm">
+          <div className="flex gap-3 justify-between items-center text-text-oxtari lg:text-base text-sm">
             <p className="flex min-w-[8vw]">{configTitle}</p>
 
             {/* Dropdown */}
@@ -246,7 +246,7 @@ const ComponentView: React.FC<ComponentViewProps> = ({
                   tabIndex={0}
                   role="button"
                   disabled={blocked}
-                  className="btn bg-transparent hover:bg-transparent border border-gray-300 text-text-verba w-full flex justify-start"
+                  className="btn bg-transparent hover:bg-transparent border border-gray-300 text-text-oxtari w-full flex justify-start"
                 >
                   <GoTriangleDown size={15} />
                   <p>{config.value}</p>
@@ -309,7 +309,7 @@ const ComponentView: React.FC<ComponentViewProps> = ({
             {/* Checkbox Input */}
             {config.type == "bool" && (
               <div className="flex gap-5 justify-start items-center w-full my-4">
-                <p className="lg:text-sm text-xs text-text-alt-verba text-start w-[250px]">
+                <p className="lg:text-sm text-xs text-text-alt-oxtari text-start w-[250px]">
                   {config.description}
                 </p>
                 <input
@@ -333,9 +333,9 @@ const ComponentView: React.FC<ComponentViewProps> = ({
           </div>
           {/* Description */}
           {config.type != "bool" && (
-            <div className="flex gap-2 items-center text-text-verba mt-3">
+            <div className="flex gap-2 items-center text-text-oxtari mt-3">
               <p className="flex min-w-[8vw]"></p>
-              <p className="text-xs text-text-alt-verba text-start">
+              <p className="text-xs text-text-alt-oxtari text-start">
                 {config.description}
               </p>
             </div>

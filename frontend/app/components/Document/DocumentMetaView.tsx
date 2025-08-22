@@ -45,46 +45,46 @@ const DocumentMetaView: React.FC<DocumentMetaViewProps> = ({
     <div className="flex flex-col h-full">
       {isFetching ? (
         <div className="flex items-center justify-center h-full">
-          <span className="loading loading-spinner loading-md text-text-verba bg-text-alt-verba"></span>
+          <span className="loading loading-spinner loading-md text-text-oxtari bg-text-alt-oxtari"></span>
         </div>
       ) : (
         document && (
-          <div className="bg-bg-alt-verba flex flex-col rounded-lg overflow-hidden h-full">
+          <div className="bg-bg-alt-oxtari flex flex-col rounded-lg overflow-hidden h-full">
             <div className="p-4 flex flex-col gap-2 items-start justify-start">
-              <p className="font-bold flex text-xs text-start text-text-alt-verba">
+              <p className="font-bold flex text-xs text-start text-text-alt-oxtari">
                 Title
               </p>
               <p
-                className="text-text-verba truncate max-w-full"
+                className="text-text-oxtari truncate max-w-full"
                 title={document.title}
               >
                 {document.title}
               </p>
             </div>
             <div className="p-4 flex flex-col gap-2 items-start justify-start">
-              <p className="font-bold flex text-xs text-start text-text-alt-verba">
+              <p className="font-bold flex text-xs text-start text-text-alt-oxtari">
                 Metadata
               </p>
-              <p className="text-text-verba max-w-full">{document.metadata}</p>
+              <p className="text-text-oxtari max-w-full">{document.metadata}</p>
             </div>
             <div className="p-4 flex flex-col gap-2 items-start justify-start">
-              <p className="font-bold flex text-xs text-start text-text-alt-verba">
+              <p className="font-bold flex text-xs text-start text-text-alt-oxtari">
                 Extension
               </p>
-              <p className="text-text-verba max-w-full">{document.extension}</p>
+              <p className="text-text-oxtari max-w-full">{document.extension}</p>
             </div>
             <div className="p-4 flex flex-col gap-2 items-start justify-start">
-              <p className="font-bold flex text-xs text-start text-text-alt-verba">
+              <p className="font-bold flex text-xs text-start text-text-alt-oxtari">
                 File Size
               </p>
-              <p className="text-text-verba max-w-full">{document.fileSize}</p>
+              <p className="text-text-oxtari max-w-full">{document.fileSize}</p>
             </div>
             <div className="p-4 flex flex-col gap-2 items-start justify-start">
-              <p className="font-bold flex text-xs text-start text-text-alt-verba">
+              <p className="font-bold flex text-xs text-start text-text-alt-oxtari">
                 Source
               </p>
               <button
-                className="text-text-verba truncate max-w-full"
+                className="text-text-oxtari truncate max-w-full"
                 onClick={() => window.open(document.source, "_blank")}
                 title={document.source}
               >
@@ -92,10 +92,10 @@ const DocumentMetaView: React.FC<DocumentMetaViewProps> = ({
               </button>
             </div>
             <div className="p-4 flex flex-col gap-2 items-start justify-start">
-              <p className="font-bold flex text-xs text-start text-text-alt-verba">
+              <p className="font-bold flex text-xs text-start text-text-alt-oxtari">
                 Labels
               </p>
-              <p className="text-text-verba max-w-full">{document.labels}</p>
+              <p className="text-text-oxtari max-w-full">{document.labels}</p>
             </div>
           </div>
         )

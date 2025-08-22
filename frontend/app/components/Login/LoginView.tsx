@@ -123,7 +123,7 @@ const LoginView: React.FC<LoginViewProps> = ({
       >
         <div className="hidden md:flex md:w-1/2 lg:w-3/5 h-full items-center justify-center bg-gray-50">
           <Image 
-            src="/new-logo.png" 
+            src="/Oxtari.png" 
             alt="Logo" 
             width={400}
             height={400}
@@ -134,15 +134,15 @@ const LoginView: React.FC<LoginViewProps> = ({
           <div className="flex flex-col gap-8 items-center md:items-start justify-center w-4/5">
             <div className="flex flex-col items-center md:items-start gap-2">
               <div className="flex items-center gap-3">
-                <p className="font-light text-3xl md:text-4xl font-subtitle text-text-alt-verba">
+                <p className="font-light text-3xl md:text-4xl font-subtitle text-text-alt-oxtari">
                   Welcome to Oxtari
                 </p>
-                {/* <p className="font-light text-3xl md:text-4xl text-text-verba">
+                {/* <p className="font-light text-3xl md:text-4xl text-text-oxtari">
                   BEORRI
                 </p> */}
               </div>
               {production == "Local" && (
-                <p className="text-text-verba text-base lg:text-lg ">
+                <p className="text-text-oxtari text-base lg:text-lg ">
                  Choose your deployment 
                 </p>
               )}
@@ -230,43 +230,43 @@ const LoginView: React.FC<LoginViewProps> = ({
                       }}
                     >
                       <div className="flex gap-2 items-center justify-between">
-                        <label className="input flex items-center gap-2 border-none shadow-md w-full bg-bg-verba">
-                          <FaDatabase className="text-text-alt-verba" />
+                        <label className="input flex items-center gap-2 border-none shadow-md w-full bg-bg-oxtari">
+                          <FaDatabase className="text-text-alt-oxtari" />
                           <input
                             type="text"
                             name="username"
                             value={weaviateURL}
                             onChange={(e) => setWeaviateURL(e.target.value)}
                             placeholder="Weaviate URL"
-                            className="grow bg-button-verba text-text-alt-verba hover:text-text-verba w-full"
+                            className="grow bg-button-oxtari text-text-alt-oxtari hover:text-text-oxtari w-full"
                             autoComplete="username"
                           />
                         </label>
                         {selectedDeployment == "Custom" && (
-                          <label className="input flex items-center gap-2 border-none shadow-md bg-bg-verba">
-                            <p className="text-text-alt-verba text-xs">Port</p>
+                          <label className="input flex items-center gap-2 border-none shadow-md bg-bg-oxtari">
+                            <p className="text-text-alt-oxtari text-xs">Port</p>
                             <input
                               type="text"
                               name="Port"
                               value={port}
                               onChange={(e) => setPort(e.target.value)}
                               placeholder="Port"
-                              className="grow bg-button-verba text-text-alt-verba hover:text-text-verba w-full"
+                              className="grow bg-button-oxtari text-text-alt-oxtari hover:text-text-oxtari w-full"
                               autoComplete="port"
                             />
                           </label>
                         )}
                       </div>
 
-                      <label className="input flex items-center gap-2 border-none shadow-md bg-bg-verba mt-4">
-                        <FaKey className="text-text-alt-verba" />
+                      <label className="input flex items-center gap-2 border-none shadow-md bg-bg-oxtari mt-4">
+                        <FaKey className="text-text-alt-oxtari" />
                         <input
                           type="password"
                           name="current-password"
                           value={weaviateAPIKey}
                           onChange={(e) => setWeaviateAPIKey(e.target.value)}
                           placeholder="API Key"
-                          className="grow bg-button-verba text-text-alt-verba hover:text-text-verba w-full"
+                          className="grow bg-button-oxtari text-text-alt-oxtari hover:text-text-oxtari w-full"
                           autoComplete="current-password"
                         />
                       </label>
@@ -314,7 +314,7 @@ const LoginView: React.FC<LoginViewProps> = ({
               </div>
             )}
             {errorText && (
-              <div className="bg-warning-verba p-4 rounded w-full h-full overflow-auto">
+              <div className="bg-warning-oxtari p-4 rounded w-full h-full overflow-auto">
                 <p className="flex w-full h-full whitespace-pre-wrap">
                   {errorText}
                 </p>

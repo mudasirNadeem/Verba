@@ -106,7 +106,7 @@ const DocumentExplorer: React.FC<DocumentExplorerProps> = ({
   return (
     <div className="flex flex-col gap-2 w-full">
       {/* Search Header */}
-      <div className="bg-bg-alt-verba rounded-2xl flex gap-2 p-3 items-center justify-end lg:justify-between h-min w-full">
+      <div className="bg-bg-alt-oxtari rounded-2xl flex gap-2 p-3 items-center justify-end lg:justify-between h-min w-full">
         <div className="hidden lg:flex gap-2 justify-start ">
           <InfoComponent
             tooltip_text="Inspect your all information about your document, such as chunks, metadata and more."
@@ -151,7 +151,7 @@ const DocumentExplorer: React.FC<DocumentExplorerProps> = ({
       </div>
 
       {/* Document List */}
-      <div className="bg-bg-alt-verba rounded-2xl flex flex-col p-6 h-full w-full overflow-y-auto overflow-x-hidden">
+      <div className="bg-bg-alt-oxtari rounded-2xl flex flex-col p-6 h-full w-full overflow-y-auto overflow-x-hidden">
         {selectedSetting === "Content" && (
           <ContentView
             selectedTheme={selectedTheme}
@@ -188,7 +188,7 @@ const DocumentExplorer: React.FC<DocumentExplorerProps> = ({
       </div>
 
       {/* Import Footer */}
-      <div className="bg-bg-alt-verba rounded-2xl flex gap-2 p-3 items-center justify-between h-min w-full">
+      <div className="bg-bg-alt-oxtari rounded-2xl flex gap-2 p-3 items-center justify-between h-min w-full">
         <div className="flex gap-3">
           {documentFilter.some(
             (filter) => filter.uuid === selectedDocument
@@ -197,7 +197,7 @@ const DocumentExplorer: React.FC<DocumentExplorerProps> = ({
               title="Delete from Chat"
               Icon={MdCancel}
               selected={true}
-              selected_color="bg-warning-verba"
+              selected_color="bg-warning-oxtari"
               onClick={() => {
                 setDocumentFilter(
                   documentFilter.filter((f) => f.uuid !== selectedDocument)

@@ -144,10 +144,10 @@ const SettingsComponent: React.FC<SettingsComponentProps> = ({
   ) => {
     return (
       <div key={title}>
-        <div className="flex gap-3 justify-between items-center text-text-verba">
+        <div className="flex gap-3 justify-between items-center text-text-oxtari">
           <p className="flex min-w-[8vw]">{setting_type.description}</p>
           {setting_type.type === "text" && (
-            <label className="input flex items-center gap-2 w-full border-none bg-bg-verba">
+            <label className="input flex items-center gap-2 w-full border-none bg-bg-oxtari">
               <input
                 type="text"
                 className="grow w-full"
@@ -163,7 +163,7 @@ const SettingsComponent: React.FC<SettingsComponentProps> = ({
               onChange={(e) => {
                 updateValue(title, e.target.value);
               }}
-              className="select bg-bg-verba"
+              className="select bg-bg-oxtari"
             >
               {setting_type.options.map((template) => (
                 <option key={"Select_" + template} value={template}>
@@ -174,7 +174,7 @@ const SettingsComponent: React.FC<SettingsComponentProps> = ({
           )}
           {setting_type.type === "color" && (
             <div className="flex flex-col gap-1 h-[15vh] z-10">
-              <label className="input bg-bg-verba input-sm input-bordered flex items-center gap-2 w-full">
+              <label className="input bg-bg-oxtari input-sm input-bordered flex items-center gap-2 w-full">
                 <input
                   type="text"
                   className="grow"
@@ -197,7 +197,7 @@ const SettingsComponent: React.FC<SettingsComponentProps> = ({
           {setting_type.type === "image" && (
             <div className="flex justify-between gap-4 w-full items-center">
               <div className="flex-grow">
-                <label className="input flex items-center text-text-verba gap-2 w-full border-none bg-bg-verba">
+                <label className="input flex items-center text-text-oxtari gap-2 w-full border-none bg-bg-oxtari">
                   <input
                     type="text"
                     className="grow"
@@ -246,8 +246,8 @@ const SettingsComponent: React.FC<SettingsComponentProps> = ({
     <div className="flex flex-col w-full h-full p-4">
       <div className="flex justify-between items-center mb-4">
         <p className="text-2xl font-subtitle font-bold">Customize Theme</p>
-        <select
-          className="select bg-bg-verba"
+        {/* <select
+          className="select bg-bg-oxtari"
           value={
             Object.keys(themes).find((key) => themes[key] === selectedTheme) ||
             ""
@@ -261,7 +261,7 @@ const SettingsComponent: React.FC<SettingsComponentProps> = ({
               {themeKey}
             </option>
           ))}
-        </select>
+        </select> */}
       </div>
       <div className="flex-grow overflow-y-auto">
         <div className="gap-4 flex flex-col p-4">

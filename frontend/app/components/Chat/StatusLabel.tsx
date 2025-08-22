@@ -15,10 +15,10 @@ const StatusLabel: React.FC<StatusLabelProps> = ({
 }) => {
   return (
     <div
-      className={`p-2 rounded-lg text-text-verba text-sm ${status ? "bg-secondary-verba" : "bg-bg-alt-verba text-text-alt-verba"}`}
+      className={`p-2 rounded-lg text-text-oxtari text-sm ${status ? "bg-secondary-oxtari" : "bg-bg-alt-oxtari text-text-alt-oxtari"}`}
     >
       <p
-        className={`text-xs ${status ? "text-text-verba" : "text-text-alt-verba"}`}
+        className={`text-xs ${status ? "text-text-oxtari" : "text-text-alt-oxtari"}`}
       >
         {status ? true_text : false_text}
       </p>

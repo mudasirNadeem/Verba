@@ -11,7 +11,7 @@ load_dotenv()
 
 @click.group()
 def cli():
-    """Main command group for verba."""
+    """Main command group for oxtari."""
     pass
 
 

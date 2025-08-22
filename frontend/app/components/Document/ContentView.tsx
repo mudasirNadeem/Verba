@@ -127,7 +127,7 @@ const ContentView: React.FC<ContentViewProps> = ({
           ref={!chunkScores ? contentRef : null}
         >
           <ReactMarkdown
-            className="max-w-[50vw] items-center justify-center flex-wrap prose-sm p-3 prose-pre:bg-bg-alt-verba"
+            className="max-w-[50vw] items-center justify-center flex-wrap prose-sm p-3 prose-pre:bg-bg-alt-oxtari"
             components={{
               code({ node, inline, className, children, ...props }) {
                 const match = /language-(\w+)/.exec(className || "");
@@ -159,31 +159,31 @@ const ContentView: React.FC<ContentViewProps> = ({
     } else {
       return (
         <div
-          className="flex p-2 border-2 flex-col gap-2 border-secondary-verba shadow-lg rounded-3xl"
+          className="flex p-2 border-2 flex-col gap-2 border-secondary-oxtari shadow-lg rounded-3xl"
           ref={contentRef}
         >
           <div className="flex justify-between">
             <div className="flex gap-2">
-              <div className="flex gap-2 items-center p-3 bg-secondary-verba rounded-full w-fit">
+              <div className="flex gap-2 items-center p-3 bg-secondary-oxtari rounded-full w-fit">
                 <HiSparkles size={12} />
-                <p className="text-xs flex text-text-verba">Context Used</p>
+                <p className="text-xs flex text-text-oxtari">Context Used</p>
               </div>
-              <div className="flex gap-2 items-center p-3 bg-secondary-verba rounded-full w-fit">
+              <div className="flex gap-2 items-center p-3 bg-secondary-oxtari rounded-full w-fit">
                 <IoNewspaper size={12} />
-                <p className="text-xs flex text-text-verba">
+                <p className="text-xs flex text-text-oxtari">
                   Chunk {contentSnippet.chunk_id + 1}
                 </p>
               </div>
               {contentSnippet.score > 0 && (
-                <div className="flex gap-2 items-center p-3 bg-primary-verba rounded-full w-fit">
+                <div className="flex gap-2 items-center p-3 bg-primary-oxtari rounded-full w-fit">
                   <HiSparkles size={12} />
-                  <p className="text-xs flex text-text-verba">High Relevancy</p>
+                  <p className="text-xs flex text-text-oxtari">High Relevancy</p>
                 </div>
               )}
             </div>
           </div>
           <ReactMarkdown
-            className="w-full items-center justify-center flex-wrap md:prose-base sm:prose-sm p-3 prose-pre:bg-bg-alt-verba"
+            className="w-full items-center justify-center flex-wrap md:prose-base sm:prose-sm p-3 prose-pre:bg-bg-alt-oxtari"
             components={{
               code({ node, inline, className, children, ...props }) {
                 const match = /language-(\w+)/.exec(className || "");
@@ -222,13 +222,13 @@ const ContentView: React.FC<ContentViewProps> = ({
   return (
     <div className="flex flex-col h-full">
       {document && (
-        <div className="bg-bg-alt-verba flex flex-col rounded-lg overflow-hidden h-full">
+        <div className="bg-bg-alt-oxtari flex flex-col rounded-lg overflow-hidden h-full">
           {/* Header */}
-          <div className="p-3 bg-bg-alt-verba">
+          <div className="p-3 bg-bg-alt-oxtari">
             <div className="flex gap-4 w-full justify-between">
               <div className="flex gap-4 items-center">
                 {isFetching && (
-                  <div className="flex items-center justify-center text-text-verba gap-2">
+                  <div className="flex items-center justify-center text-text-oxtari gap-2">
                     <span className="loading loading-spinner loading-sm"></span>
                   </div>
                 )}
@@ -265,7 +265,7 @@ const ContentView: React.FC<ContentViewProps> = ({
 
           {/* Navigation div */}
 
-          <div className="flex justify-center items-center gap-2 p-3 bg-bg-alt-verba">
+          <div className="flex justify-center items-center gap-2 p-3 bg-bg-alt-oxtari">
             <BEORRIButton
               title={"Previous " + (chunkScores ? "Chunk" : "Page")}
               onClick={previousPage}
@@ -274,7 +274,7 @@ const ContentView: React.FC<ContentViewProps> = ({
               Icon={FaArrowAltCircleLeft}
             />
             <div className="flex items-center">
-              <p className="text-xs text-text-verba">
+              <p className="text-xs text-text-oxtari">
                 {chunkScores ? "Chunk " : "Page "} {page}
               </p>
             </div>

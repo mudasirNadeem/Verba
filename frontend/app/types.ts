@@ -217,18 +217,18 @@ export type CreateNewDocument = {
 };
 
 export const statusColorMap = {
-  DONE: "bg-secondary-verba",
-  ERROR: "bg-warning-verba",
-  READY: "bg-button-verba",
-  STARTING: "bg-button-verba",
-  CHUNKING: "bg-button-verba",
-  LOADING: "bg-button-verba",
-  EMBEDDING: "bg-button-verba",
-  INGESTING: "bg-button-verba",
-  NER: "bg-button-verba",
-  EXTRACTION: "bg-button-verba",
-  SUMMARIZING: "bg-button-verba",
-  WAITING: "bg-button-verba",
+  DONE: "bg-secondary-oxtari",
+  ERROR: "bg-warning-oxtari",
+  READY: "bg-button-oxtari",
+  STARTING: "bg-button-oxtari",
+  CHUNKING: "bg-button-oxtari",
+  LOADING: "bg-button-oxtari",
+  EMBEDDING: "bg-button-oxtari",
+  INGESTING: "bg-button-oxtari",
+  NER: "bg-button-oxtari",
+  EXTRACTION: "bg-button-oxtari",
+  SUMMARIZING: "bg-button-oxtari",
+  WAITING: "bg-button-oxtari",
 };
 
 export const statusTextMap = {
@@ -566,7 +566,7 @@ export const DarkTheme: Theme = {
   },
   image: {
     ...LightTheme.image,
-    src: "/new-logo.png",
+    src: "oxtari.png",
   },
   primary_color: { ...LightTheme.primary_color, color: "#023eba" },
   secondary_color: { ...LightTheme.secondary_color, color: "#ffffff" },
@@ -628,7 +628,7 @@ export const WeaviateTheme: Theme = {
   },
   image: {
     ...LightTheme.image,
-    src: "/verba2.png",
+    src: "oxtari",
   },
   primary_color: { ...LightTheme.primary_color, color: "#023eba" },
   secondary_color: { ...LightTheme.secondary_color, color: "#1e40af" },

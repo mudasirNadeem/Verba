@@ -20,11 +20,11 @@ const InfoComponent: React.FC<InfoComponentProps> = ({
       <div
         onMouseEnter={() => setShowTooltip(true)}
         onMouseLeave={() => setShowTooltip(false)}
-        className="relative cursor-pointer flex flex-col items-center text-text-alt-verba"
+        className="relative cursor-pointer flex flex-col items-center text-text-alt-oxtari"
       >
         <p className="text-sm ml-3">{display_text}</p>
         <div
-          className={`absolute top-full left-full mt-2 z-30 p-4 bg-bg-verba text-text-alt-verba text-xs rounded-xl shadow-md w-[300px] transition-opacity duration-300 ${
+          className={`absolute top-full left-full mt-2 z-30 p-4 bg-bg-oxtari text-text-alt-oxtari text-xs rounded-xl shadow-md w-[300px] transition-opacity duration-300 ${
             showTooltip ? "opacity-100" : "opacity-0 pointer-events-none"
           }`}
         >

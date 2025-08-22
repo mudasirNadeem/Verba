@@ -157,7 +157,7 @@ const DocumentSearch: React.FC<DocumentSearchComponentProps> = ({
   return (
     <div className="flex flex-col gap-2 w-full">
       {/* Search Header */}
-      <div className="bg-bg-alt-verba rounded-2xl flex gap-2 p-3 items-center justify-between h-min w-full">
+      <div className="bg-bg-alt-oxtari rounded-2xl flex gap-2 p-3 items-center justify-between h-min w-full">
         <div className="hidden lg:flex gap-2 justify-start w-[8vw]">
           <InfoComponent
             tooltip_text="Search and inspect different documents imported into BEORRI"
@@ -165,7 +165,7 @@ const DocumentSearch: React.FC<DocumentSearchComponentProps> = ({
           />
         </div>
 
-        <label className="input flex items-center gap-2 w-full bg-bg-verba">
+        <label className="input flex items-center gap-2 w-full bg-bg-oxtari">
           <input
             type="text"
             className="grow w-full"
@@ -187,7 +187,7 @@ const DocumentSearch: React.FC<DocumentSearchComponentProps> = ({
       </div>
 
       {/* Document List */}
-      <div className="bg-bg-alt-verba rounded-2xl flex flex-col p-6 gap-3 items-center h-full w-full overflow-auto">
+      <div className="bg-bg-alt-oxtari rounded-2xl flex flex-col p-6 gap-3 items-center h-full w-full overflow-auto">
         <div className="flex flex-col w-full justify-start gap-2">
           <div className="dropdown dropdown-hover">
             <label tabIndex={0}>
@@ -250,7 +250,7 @@ const DocumentSearch: React.FC<DocumentSearchComponentProps> = ({
 
         {isFetching && (
           <div className="flex items-center justify-center gap-2">
-            <span className="loading loading-spinner loading-sm text-text-alt-verba"></span>
+            <span className="loading loading-spinner loading-sm text-text-alt-oxtari"></span>
           </div>
         )}
 
@@ -276,7 +276,7 @@ const DocumentSearch: React.FC<DocumentSearchComponentProps> = ({
                     <BEORRIButton
                       Icon={FaTrash}
                       selected={selectedDocument == document.uuid}
-                      selected_color="bg-warning-verba"
+                      selected_color="bg-warning-oxtari"
                       className="max-w-min"
                       key={document.title + index + "delete"}
                       onClick={() => {
@@ -298,9 +298,9 @@ const DocumentSearch: React.FC<DocumentSearchComponentProps> = ({
         </div>
       </div>
 
-      <div className="bg-bg-alt-verba rounded-2xl flex gap-2 p-4 items-center justify-center h-min w-full">
-        <div className="join justify-center items-center text-text-verba">
-          <div className="flex justify-center items-center gap-2 bg-bg-alt-verba">
+      <div className="bg-bg-alt-oxtari rounded-2xl flex gap-2 p-4 items-center justify-center h-min w-full">
+        <div className="join justify-center items-center text-text-oxtari">
+          <div className="flex justify-center items-center gap-2 bg-bg-alt-oxtari">
             <BEORRIButton
               title={"Previous Page"}
               onClick={previousPage}
@@ -309,7 +309,7 @@ const DocumentSearch: React.FC<DocumentSearchComponentProps> = ({
               Icon={FaArrowAltCircleLeft}
             />
             <div className="flex items-center">
-              <p className="text-xs text-text-verba">Page {page}</p>
+              <p className="text-xs text-text-oxtari">Page {page}</p>
             </div>
             <BEORRIButton
               title={"Next Page"}

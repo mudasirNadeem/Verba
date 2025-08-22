@@ -384,7 +384,7 @@ const ChatInterface: React.FC<ChatInterfaceProps> = ({
   return (
     <div className="flex flex-col gap-2 w-full">
       {/* Header */}
-      <div className="bg-bg-alt-verba rounded-2xl flex gap-2 p-3 items-center justify-between h-min w-full">
+      <div className="bg-bg-alt-oxtari rounded-2xl flex gap-2 p-3 items-center justify-between h-min w-full">
         <div className="hidden md:flex gap-2 justify-start items-center">
           <InfoComponent
             tooltip_text="Use the Chat interface to interact with your data and perform Retrieval Augmented Generation (RAG). This interface allows you to ask questions, analyze sources, and generate responses based on your stored documents."
@@ -412,16 +412,16 @@ const ChatInterface: React.FC<ChatInterfaceProps> = ({
               }}
               selected={selectedSetting === "Config"}
               disabled={false}
-              selected_color="bg-secondary-verba"
+              selected_color="bg-secondary-oxtari"
             />
           )}
         </div>
       </div>
 
-      <div className="bg-bg-alt-verba rounded-2xl flex flex-col h-[50vh] md:h-full w-full overflow-y-auto overflow-x-hidden relative">
+      <div className="bg-bg-alt-oxtari rounded-2xl flex flex-col h-[50vh] md:h-full w-full overflow-y-auto overflow-x-hidden relative">
         {/* New fixed tab */}
         {selectedSetting == "Chat" && (
-          <div className="sticky flex flex-col gap-2 top-0 z-9 p-4 backdrop-blur-sm bg-opacity-30 bg-bg-alt-verba rounded-lg">
+          <div className="sticky flex flex-col gap-2 top-0 z-9 p-4 backdrop-blur-sm bg-opacity-30 bg-bg-alt-oxtari rounded-lg">
             <div className="flex gap-2 justify-start items-center">
               <div className="flex gap-2">
                 <div className="dropdown dropdown-hover">
@@ -522,10 +522,10 @@ const ChatInterface: React.FC<ChatInterfaceProps> = ({
         <div
           className={`${selectedSetting === "Chat" ? "flex flex-col gap-3 p-4" : "hidden"}`}
         >
-          <div className="flex w-full justify-start items-center text-text-alt-verba gap-2">
+          <div className="flex w-full justify-start items-center text-text-alt-oxtari gap-2">
             {currentDatacount === 0 && <BiError size={15} />}
             {currentDatacount === 0 && (
-              <p className="text-text-alt-verba text-sm items-center flex">{`${currentDatacount} documents embedded by ${currentEmbedding}`}</p>
+              <p className="text-text-alt-oxtari text-sm items-center flex">{`${currentDatacount} documents embedded by ${currentEmbedding}`}</p>
             )}
           </div>
           {messages.map((message, index) => (
@@ -558,8 +558,8 @@ const ChatInterface: React.FC<ChatInterfaceProps> = ({
           {isFetching.current && (
             <div className="flex flex-col gap-2">
               <div className="flex items-center gap-3">
-                <span className="text-text-alt-verba loading loading-dots loading-md"></span>
-                <p className="text-text-alt-verba">
+                <span className="text-text-alt-oxtari loading loading-dots loading-md"></span>
+                <p className="text-text-alt-oxtari">
                   {fetchingStatus === "CHUNKS" && "Retrieving..."}
                   {fetchingStatus === "RESPONSE" && "Generating..."}
                 </p>
@@ -568,7 +568,7 @@ const ChatInterface: React.FC<ChatInterfaceProps> = ({
                     setFetchingStatus("DONE");
                     isFetching.current = false;
                   }}
-                  className="btn btn-circle btn-sm bg-bg-alt-verba hover:bg-warning-verba hover:text-text-verba text-text-alt-verba shadow-none border-none text-sm"
+                  className="btn btn-circle btn-sm bg-bg-alt-oxtari hover:bg-warning-oxtari hover:text-text-oxtari text-text-alt-oxtari shadow-none border-none text-sm"
                 >
                   <MdCancel size={15} />
                 </button>
@@ -589,7 +589,7 @@ const ChatInterface: React.FC<ChatInterfaceProps> = ({
         )}
       </div>
 
-      <div className="bg-bg-alt-verba rounded-2xl flex gap-2 p-6 items-center justify-end h-min w-full">
+      <div className="bg-bg-alt-oxtari rounded-2xl flex gap-2 p-6 items-center justify-end h-min w-full">
         {socketOnline ? (
           <div className="flex gap-2 items-center justify-end w-full relative">
             <div className="relative w-full">
@@ -619,7 +619,7 @@ const ChatInterface: React.FC<ChatInterfaceProps> = ({
                   {currentSuggestions.map((suggestion, index) => (
                     <li
                       key={index}
-                      className="p-3 bg-button-verba hover:bg-secondary-verba text-text-alt-verba rounded-xl w-full hover:text-text-verba cursor-pointer"
+                      className="p-3 bg-button-oxtari hover:bg-secondary-oxtari text-text-alt-oxtari rounded-xl w-full hover:text-text-oxtari cursor-pointer"
                       onClick={() => {
                         setUserInput(suggestion.query);
                         setCurrentSuggestions([]);
@@ -681,7 +681,7 @@ const ChatInterface: React.FC<ChatInterfaceProps> = ({
           <div className="flex gap-2 items-center justify-end w-full">
             <button
               onClick={reconnectToVerba}
-              className="flex btn border-none text-text-verba bg-button-verba hover:bg-button-hover-verba gap-2 items-center"
+              className="flex btn border-none text-text-oxtari bg-button-oxtari hover:bg-button-hover-oxtari gap-2 items-center"
             >
               <TbPlugConnected size={15} />
               <p>Reconnecting...</p>

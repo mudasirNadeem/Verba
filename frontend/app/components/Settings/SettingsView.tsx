@@ -46,7 +46,7 @@ const SettingsView: React.FC<SettingsViewProps> = ({
     <div className="flex justify-center gap-3 h-[80vh] ">
       <div className={`w-1/3 flex`}>
         <div className="flex flex-col gap-2 w-full">
-          <div className="bg-bg-alt-verba rounded-2xl flex gap-2 p-3 items-center justify-between h-min w-full">
+          <div className="bg-bg-alt-oxtari rounded-2xl flex gap-2 p-3 items-center justify-between h-min w-full">
             <div className="flex gap-2 justify-start ">
               <InfoComponent
                 tooltip_text="Customize Theme, reset collections, logout or report issues." // Removed "Verba's"
@@ -54,7 +54,7 @@ const SettingsView: React.FC<SettingsViewProps> = ({
               />
             </div>
           </div>
-          <div className="bg-bg-alt-verba gap-2 rounded-2xl flex flex-col p-3 w-full overflow-y-auto overflow-x-hidden">
+          <div className="bg-bg-alt-oxtari gap-2 rounded-2xl flex flex-col p-3 w-full overflow-y-auto overflow-x-hidden">
             <BEORRIButton
               title="Admin"
               onClick={() => setSettingMode("INFO")}
@@ -63,14 +63,14 @@ const SettingsView: React.FC<SettingsViewProps> = ({
               selected_text_color="text-white"
               Icon={RiAdminFill}
             />
-            <BEORRIButton
+            {/* <BEORRIButton
               title="Customize Theme"
               onClick={() => setSettingMode("THEME")}
               selected={settingMode === "THEME"}
               selected_color="bg-[#023eba]"
               selected_text_color="text-white"
               Icon={FaPaintBrush}
-            />
+            /> */}
             <BEORRIButton
               title="Manage Suggestions"
               onClick={() => setSettingMode("SUGGESTIONS")}
@@ -80,7 +80,7 @@ const SettingsView: React.FC<SettingsViewProps> = ({
               Icon={IoChatboxEllipsesSharp}
             />
           </div>
-          <div className="bg-bg-alt-verba gap-2 rounded-2xl flex flex-col p-6 w-full overflow-y-auto overflow-x-hidden">
+          <div className="bg-bg-alt-oxtari gap-2 rounded-2xl flex flex-col p-6 w-full overflow-y-auto overflow-x-hidden">
             <BEORRIButton
               title="Logout"
               onClick={() => window.location.reload()}
@@ -102,7 +102,7 @@ const SettingsView: React.FC<SettingsViewProps> = ({
 
       <div className={`w-2/3 flex`}>
         <div className="flex flex-col gap-2 w-full">
-          <div className="bg-bg-alt-verba gap-2 rounded-2xl flex flex-col p-6 h-full w-full overflow-y-auto overflow-x-hidden">
+          <div className="bg-bg-alt-oxtari gap-2 rounded-2xl flex flex-col p-6 h-full w-full overflow-y-auto overflow-x-hidden">
             {settingMode === "THEME" && (
               <SettingsComponent
                 themes={themes}

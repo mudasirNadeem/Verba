@@ -35,8 +35,8 @@ const BEORRIButton: React.FC<BEORRIButtonProps> = ({
   className = "",
   text_class_name = "",
   selected = false,
-  selected_color = "bg-button-verba",
-  selected_text_color = "text-text-verba-button",
+  selected_color = "bg-button-oxtari",
+  selected_text_color = "text-text-oxtari-button",
   text_size = "text-xs",
   icon_size = 12,
   type = "button",
@@ -58,7 +58,7 @@ const BEORRIButton: React.FC<BEORRIButtonProps> = ({
       onMouseLeave={onMouseLeave}
     >
       {loading ? (
-        <span className="text-text-verba-button loading loading-spinner loading-xs"></span>
+        <span className="text-text-oxtari-button loading loading-spinner loading-xs"></span>
       ) : (
         <>
           {Icon && <Icon size={icon_size} className="w-[20px]" />}

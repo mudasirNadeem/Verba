@@ -104,7 +104,7 @@ const InfoView: React.FC<InfoViewProps> = ({
         />
       </div>
       <div className="flex-grow overflow-y-auto">
-        <div className="gap-4 flex flex-col p-4 text-text-verba">
+        <div className="gap-4 flex flex-col p-4 text-text-oxtari">
           <p className="font-bold text-lg">Resetting Oxtari</p>
           <div className="flex flex-wrap gap-2 justify-between">
             <div className="flex flex-wrap gap-2">
@@ -133,25 +133,25 @@ const InfoView: React.FC<InfoViewProps> = ({
           <p className="font-bold text-lg">Weaviate Information</p>
 
           <div className="card bg-base-100 shadow-md border-1 p-4">
-            <p className="text-sm lg:text-base font-semibold text-text-alt-verba">
+            <p className="text-sm lg:text-base font-semibold text-text-alt-oxtari">
               Connected to
             </p>
-            <p className="   text-text-verba">{credentials.url}</p>
+            <p className="   text-text-oxtari">{credentials.url}</p>
           </div>
 
           <div className="card bg-base-100 shadow-md border-1 p-4">
-            <p className="text-sm lg:text-base font-semibold text-text-alt-verba">
+            <p className="text-sm lg:text-base font-semibold text-text-alt-oxtari">
               Deployment
             </p>
-            <p className=" text-text-verba">{credentials.deployment}</p>
+            <p className=" text-text-oxtari">{credentials.deployment}</p>
           </div>
 
-          <div className="card bg-base-100 shadow-lg border-1 border-primary-verba p-4 ring-2 ring-primary-verba ring-opacity-30">
-            <p className="text-sm lg:text-base font-semibold text-primary-verba">
+          <div className="card bg-base-100 shadow-lg border-1 border-primary-oxtari p-4 ring-2 ring-primary-oxtari ring-opacity-30">
+            <p className="text-sm lg:text-base font-semibold text-primary-oxtari">
               Version
             </p>
             {nodePayload ? (
-              <p className="text-text-verba font-medium">{nodePayload.weaviate_version}</p>
+              <p className="text-text-oxtari font-medium">{nodePayload.weaviate_version}</p>
             ) : (
               <span className="loading loading-spinner loading-sm"></span>
             )}
@@ -159,11 +159,11 @@ const InfoView: React.FC<InfoViewProps> = ({
 
           <div className="card bg-base-100 shadow-md border-1 p-4">
             <div className="flex gap-2 items-center">
-              <p className="text-text-alt-verba text-sm lg:text-base font-semibold">
+              <p className="text-text-alt-oxtari text-sm lg:text-base font-semibold">
                 Nodes
               </p>
               {nodePayload ? (
-                <p className="text-text-alt-verba text-sm lg:text-base font-semibold">
+                <p className="text-text-alt-oxtari text-sm lg:text-base font-semibold">
                   {nodePayload.node_count}
                 </p>
               ) : (
@@ -176,7 +176,7 @@ const InfoView: React.FC<InfoViewProps> = ({
                 {nodePayload.nodes.map((node) => (
                   <li
                     key={"Node" + node.name}
-                    className="text-sm text-text-verba flex justify-between"
+                    className="text-sm text-text-oxtari flex justify-between"
                   >
                     <span className="w-64 truncate">{node.name}</span>
                     <span>
@@ -192,11 +192,11 @@ const InfoView: React.FC<InfoViewProps> = ({
 
           <div className="card bg-base-100 shadow-md border-1 p-4">
             <div className="flex gap-2 items-center">
-              <p className="text-text-alt-verba text-sm lg:text-base font-semibold">
+              <p className="text-text-alt-oxtari text-sm lg:text-base font-semibold">
                 Collections
               </p>
               {collectionPayload ? (
-                <p className="text-text-alt-verba text-sm lg:text-base font-semibold">
+                <p className="text-text-alt-oxtari text-sm lg:text-base font-semibold">
                   {collectionPayload.collection_count}
                 </p>
               ) : (
@@ -209,7 +209,7 @@ const InfoView: React.FC<InfoViewProps> = ({
                 {collectionPayload.collections.map((collection) => (
                   <li
                     key={"Collection" + collection.name}
-                    className="text-sm text-text-verba flex justify-between"
+                    className="text-sm text-text-oxtari flex justify-between"
                   >
                     <span className="w-128 truncate">{collection.name}</span>
                     <span>{collection.count} objects</span>

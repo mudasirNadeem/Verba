@@ -122,7 +122,7 @@ const ChunkView: React.FC<ChunkViewProps> = ({
     return (
       <div>
         {isFetching && (
-          <div className="flex items-center justify-center text-text-verba gap-2 h-full">
+          <div className="flex items-center justify-center text-text-oxtari gap-2 h-full">
             <span className="loading loading-spinner loading-sm"></span>
           </div>
         )}
@@ -133,14 +133,14 @@ const ChunkView: React.FC<ChunkViewProps> = ({
   return (
     <div className="flex flex-col h-full">
       {chunks.length > 0 && (
-        <div className="bg-bg-alt-verba flex flex-col rounded-lg overflow-hidden h-full">
+        <div className="bg-bg-alt-oxtari flex flex-col rounded-lg overflow-hidden h-full">
           {/* Content div */}
           <div className="flex-grow overflow-hidden p-3">
             <div className="flex justify-between mb-2">
               <div className="flex gap-2">
-                <div className="flex gap-2 items-center p-3 bg-secondary-verba rounded-full w-fit">
+                <div className="flex gap-2 items-center p-3 bg-secondary-oxtari rounded-full w-fit">
                   <IoNewspaper size={12} />
-                  <p className="text-xs flex text-text-verba">
+                  <p className="text-xs flex text-text-oxtari">
                     Chunk {chunks[currentChunkIndex].chunk_id}
                   </p>
                 </div>
@@ -148,7 +148,7 @@ const ChunkView: React.FC<ChunkViewProps> = ({
             </div>
             <div className="overflow-y-auto h-[calc(100%-3rem)]">
               <ReactMarkdown
-                className="max-w-[50vw] items-center justify-center flex-wrap md:prose-base sm:prose-sm p-3 prose-pre:bg-bg-alt-verba"
+                className="max-w-[50vw] items-center justify-center flex-wrap md:prose-base sm:prose-sm p-3 prose-pre:bg-bg-alt-oxtari"
                 components={{
                   code({ node, inline, className, children, ...props }) {
                     const match = /language-(\w+)/.exec(className || "");
@@ -180,7 +180,7 @@ const ChunkView: React.FC<ChunkViewProps> = ({
 
           {/* Navigation div */}
           {chunks.length > 1 && (
-            <div className="flex justify-center items-center gap-2 p-3 bg-bg-alt-verba">
+            <div className="flex justify-center items-center gap-2 p-3 bg-bg-alt-oxtari">
               <BEORRIButton
                 title={"Previous Chunk"}
                 onClick={previousChunk}

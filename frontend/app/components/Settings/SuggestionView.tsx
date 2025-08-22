@@ -105,19 +105,19 @@ const SuggestionView: React.FC<SuggestionViewProps> = ({
         />
       </div>
       <div className="flex-grow overflow-y-auto">
-        <div className="gap-4 flex flex-col p-4 text-text-verba">
+        <div className="gap-4 flex flex-col p-4 text-text-oxtari">
           <div className="flex flex-col gap-2">
             {suggestions.map((suggestion, index) => (
               <div
                 key={"Suggestion" + suggestion.uuid}
-                className="flex items-center justify-between gap-2 p-4 border-2 bg-bg-alt-verba rounded-xl"
+                className="flex items-center justify-between gap-2 p-4 border-2 bg-bg-alt-oxtari rounded-xl"
               >
                 <div className="flex flex-col items-start justify-start gap-2 w-2/3">
-                  <p className="font-bold flex text-xs text-start text-text-alt-verba">
+                  <p className="font-bold flex text-xs text-start text-text-alt-oxtari">
                     {getTimeAgo(suggestion.timestamp)}
                   </p>
                   <p
-                    className="text-sm text-text-verba truncate max-w-full"
+                    className="text-sm text-text-oxtari truncate max-w-full"
                     title={suggestion.query}
                   >
                     {suggestion.query}
@@ -149,7 +149,7 @@ const SuggestionView: React.FC<SuggestionViewProps> = ({
         </div>
       </div>
       {suggestions.length > 0 && (
-        <div className="flex justify-center items-center gap-2 p-3 bg-bg-alt-verba">
+        <div className="flex justify-center items-center gap-2 p-3 bg-bg-alt-oxtari">
           <BEORRIButton
             title="Previous Page"
             onClick={previousPage}
@@ -157,7 +157,7 @@ const SuggestionView: React.FC<SuggestionViewProps> = ({
             text_class_name="text-xs"
             Icon={FaArrowAltCircleLeft}
           />
-          <p className="text-xs flex text-text-verba">Page {page}</p>
+          <p className="text-xs flex text-text-oxtari">Page {page}</p>
           <BEORRIButton
             title="Next Page"
             onClick={nextPage}

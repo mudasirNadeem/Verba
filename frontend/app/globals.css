@@ -44,27 +44,27 @@ html {
 
 /* CSS Variables for dynamic theming */
 :root {
-  --font-verba: Amiri, serif;
-  --bg-verba: #ffffff;
-  --bg-alt-verba: #ffffff;
-  --text-verba: #000000;
-  --text-alt-verba: #023eba;
-  --primary-verba: #023eba;
-  --secondary-verba: #000000;
-  --warning-verba: #023eba;
-  --button-verba: #ffffff;
-  --button-hover-verba: #023eba;
-  --button-text-verba: #000000;
-  --button-text-alt-verba: #ffffff;
+  --font-oxtari: Amiri, serif;
+  --bg-oxtari: #ffffff;
+  --bg-alt-oxtari: #ffffff;
+  --text-oxtari: #000000;
+  --text-alt-oxtari: #023eba;
+  --primary-oxtari: #023eba;
+  --secondary-oxtari: #000000;
+  --warning-oxtari: #023eba;
+  --button-oxtari: #ffffff;
+  --button-hover-oxtari: #023eba;
+  --button-text-oxtari: #000000;
+  --button-text-alt-oxtari: #ffffff;
 }
 
 [data-theme="dark"] {
-  --bg-verba: #000000;
-  --bg-alt-verba: #023eba;
-  --text-verba: #ffffff;
-  --text-alt-verba: #ffffff;
-  --button-verba: #023eba;
-  --button-hover-verba: #ffffff;
-  --button-text-verba: #ffffff;
-  --button-text-alt-verba: #000000;
+  --bg-oxtari: #000000;
+  --bg-alt-oxtari: #023eba;
+  --text-oxtari: #ffffff;
+  --text-alt-oxtari: #ffffff;
+  --button-oxtari: #023eba;
+  --button-hover-oxtari: #ffffff;
+  --button-text-oxtari: #ffffff;
+  --button-text-alt-oxtari: #000000;
 }

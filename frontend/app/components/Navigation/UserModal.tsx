@@ -41,9 +41,9 @@ const UserModalComponent: React.FC<UserModalComponentProps> = ({
             <BEORRIButton
               type="submit"
               title="Cancel"
-              selected_color="bg-warning-verba"
+              selected_color="bg-warning-oxtari"
               selected={true}
-              className="hover:!bg-warning-verba"
+              className="hover:!bg-warning-oxtari"
             />
           </form>
         </div>

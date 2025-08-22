@@ -21,7 +21,7 @@ class GoogleEmbedder(Embedder):
         client: Client,
         logging: list[dict],
     ) -> bool:
-        """Embed verba documents and its chunks to Weaviate
+        """Embed oxtari documents and its chunks to Weaviate
         @parameter: documents : list[Document] - List of Verba documents
         @parameter: client : Client - Weaviate Client
         @parameter: batch_size : int - Batch Size of Input

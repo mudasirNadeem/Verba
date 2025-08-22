@@ -220,7 +220,7 @@ const FileSelectionView: React.FC<FileSelectionViewProps> = ({
   return (
     <div className="flex flex-col gap-2 w-full">
       {/* FileSelection Header */}
-      <div className="bg-bg-alt-verba rounded-2xl flex gap-2 p-3 items-center justify-end lg:justify-between h-min w-full">
+      <div className="bg-bg-alt-oxtari rounded-2xl flex gap-2 p-3 items-center justify-end lg:justify-between h-min w-full">
         <div className="hidden lg:flex gap-2 justify-start ">
           <InfoComponent
             tooltip_text="Upload your data through this interface into BEORRI. You can select individual files, directories or add URL to fetch data from."
@@ -328,7 +328,7 @@ const FileSelectionView: React.FC<FileSelectionViewProps> = ({
       </div>
 
       {/* File List */}
-      <div className="bg-bg-alt-verba rounded-2xl flex flex-col gap-3 p-6 items-center justify-start h-full w-full overflow-auto">
+      <div className="bg-bg-alt-oxtari rounded-2xl flex flex-col gap-3 p-6 items-center justify-start h-full w-full overflow-auto">
         {Object.entries(fileMap).map(([key, fileData]) => (
           <FileComponent
             key={"FileComponent_" + key}
@@ -343,7 +343,7 @@ const FileSelectionView: React.FC<FileSelectionViewProps> = ({
 
       {/* Import Footer */}
       {socketStatus === "ONLINE" ? (
-        <div className="bg-bg-alt-verba rounded-2xl flex gap-2 p-3 items-center justify-end h-min w-full">
+        <div className="bg-bg-alt-oxtari rounded-2xl flex gap-2 p-3 items-center justify-end h-min w-full">
           <div className="flex flex-wrap gap-3 justify-end">
             {selectedFileData && (
               <BEORRIButton
@@ -366,11 +366,11 @@ const FileSelectionView: React.FC<FileSelectionViewProps> = ({
           </div>
         </div>
       ) : (
-        <div className="bg-bg-alt-verba rounded-2xl flex gap-2 p-3 items-center justify-end h-min w-full">
+        <div className="bg-bg-alt-oxtari rounded-2xl flex gap-2 p-3 items-center justify-end h-min w-full">
           <div className="flex gap-3 justify-end">
             <button
               onClick={reconnect}
-              className="flex btn border-none text-text-verba bg-button-verba hover:bg-button-hover-verba gap-2 items-center"
+              className="flex btn border-none text-text-oxtari bg-button-oxtari hover:bg-button-hover-oxtari gap-2 items-center"
             >
               <TbPlugConnected size={15} />
               <p>Reconnecting...</p>

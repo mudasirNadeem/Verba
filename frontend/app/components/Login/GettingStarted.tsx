@@ -94,7 +94,7 @@ const GettingStartedComponent: React.FC<GettingStartedComponentProps> = ({
                   Icon={IoDocumentTextSharp}
                   onClick={() =>
                     window.open(
-                      "https://weaviate.io/blog/verba-open-source-rag-app",
+                      "https://weaviate.io/blog/oxtari-open-source-rag-app",
                       "_blank"
                     )
                   }

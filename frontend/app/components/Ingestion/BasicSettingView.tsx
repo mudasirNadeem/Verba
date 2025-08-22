@@ -187,15 +187,15 @@ const BasicSettingView: React.FC<BasicSettingViewProps> = ({
     return (
       <div className="flex flex-col justify-start gap-3 rounded-2xl p-1 w-full ">
         {selectedFileData && fileMap[selectedFileData].status != "READY" && (
-          <div className="divider  text-text-alt-verba">Import Status</div>
+          <div className="divider  text-text-alt-oxtari">Import Status</div>
         )}
 
-        <div className="flex flex-col gap-3 text-text-verba">
+        <div className="flex flex-col gap-3 text-text-oxtari">
           {selectedFileData &&
             Object.entries(fileMap[selectedFileData].status_report).map(
               ([status, statusReport]) => (
                 <div className="flex" key={"Status" + status}>
-                  <p className="flex min-w-[8vw] gap-2 items-center text-text-verba">
+                  <p className="flex min-w-[8vw] gap-2 items-center text-text-oxtari">
                     {statusReport.status === "DONE" && (
                       <FaCheckCircle size={15} />
                     )}
@@ -203,7 +203,7 @@ const BasicSettingView: React.FC<BasicSettingViewProps> = ({
                     {statusTextMap[statusReport.status]}
                   </p>
                   <label
-                    className={`input flex items-center gap-2 w-full ${statusColorMap[statusReport.status]} bg-bg-verba`}
+                    className={`input flex items-center gap-2 w-full ${statusColorMap[statusReport.status]} bg-bg-oxtari`}
                   >
                     <input
                       type="text"
@@ -234,12 +234,12 @@ const BasicSettingView: React.FC<BasicSettingViewProps> = ({
           blocked={fileMap[selectedFileData].block}
         />
 
-        <div className="divider text-text-alt-verba">File Settings</div>
+        <div className="divider text-text-alt-oxtari">File Settings</div>
 
         {/* Filename */}
-        <div className="flex gap-2 justify-between items-center text-text-verba">
+        <div className="flex gap-2 justify-between items-center text-text-oxtari">
           <p className="flex min-w-[8vw]">Title</p>
-          <label className="input flex items-center gap-2 w-full bg-bg-verba">
+          <label className="input flex items-center gap-2 w-full bg-bg-oxtari">
             <input
               type="text"
               className="grow w-full"
@@ -250,18 +250,18 @@ const BasicSettingView: React.FC<BasicSettingViewProps> = ({
           </label>
         </div>
 
-        <div className="flex gap-2 items-center text-text-verba">
+        <div className="flex gap-2 items-center text-text-oxtari">
           <p className="flex min-w-[8vw]"></p>
-          <p className="text-sm text-text-alt-verba text-start">
+          <p className="text-sm text-text-alt-oxtari text-start">
             Add a Title to the document. If you are adding a URL, all URL will
             have a have their corresponding URL as filename.
           </p>
         </div>
 
         {/* Source */}
-        <div className="flex gap-2 justify-between items-center text-text-verba">
+        <div className="flex gap-2 justify-between items-center text-text-oxtari">
           <p className="flex min-w-[8vw]">Source Link</p>
-          <label className="input flex items-center gap-2 w-full bg-bg-verba">
+          <label className="input flex items-center gap-2 w-full bg-bg-oxtari">
             <input
               type="text"
               className="grow w-full"
@@ -272,18 +272,18 @@ const BasicSettingView: React.FC<BasicSettingViewProps> = ({
           </label>
         </div>
 
-        <div className="flex gap-2 items-center text-text-verba">
+        <div className="flex gap-2 items-center text-text-oxtari">
           <p className="flex min-w-[8vw]"></p>
-          <p className="text-sm text-text-alt-verba text-start">
+          <p className="text-sm text-text-alt-oxtari text-start">
             Add a link to reference the original source of the document. You can
             access it through the Document Explorer via the View Source button
           </p>
         </div>
 
         {/* Labels */}
-        <div className="flex gap-2 justify-between items-center text-text-verba">
+        <div className="flex gap-2 justify-between items-center text-text-oxtari">
           <p className="flex min-w-[8vw]">Labels</p>
-          <label className="input flex items-center gap-2 w-full bg-bg-verba">
+          <label className="input flex items-center gap-2 w-full bg-bg-oxtari">
             <input
               type="text"
               className="grow w-full"
@@ -311,14 +311,14 @@ const BasicSettingView: React.FC<BasicSettingViewProps> = ({
           />
         </div>
 
-        <div className="flex gap-2 items-center text-text-verba">
+        <div className="flex gap-2 items-center text-text-oxtari">
           <p className="flex min-w-[8vw]"></p>
-          <p className="text-sm text-text-alt-verba text-start">
+          <p className="text-sm text-text-alt-oxtari text-start">
             Add or remove labels for Document Filtering
           </p>
         </div>
 
-        <div className="flex gap-2 items-center text-text-verba">
+        <div className="flex gap-2 items-center text-text-oxtari">
           <p className="flex min-w-[8vw]"></p>
           <div className="flex flex-wrap gap-2">
             {renderLabelBoxes(fileMap[selectedFileData])}
@@ -326,7 +326,7 @@ const BasicSettingView: React.FC<BasicSettingViewProps> = ({
         </div>
 
         {/* Overwrite */}
-        <div className="flex gap-2 items-center text-text-verba">
+        <div className="flex gap-2 items-center text-text-oxtari">
           <p className="flex min-w-[8vw]">Overwrite</p>
           <input
             type="checkbox"
@@ -341,17 +341,17 @@ const BasicSettingView: React.FC<BasicSettingViewProps> = ({
           />
         </div>
 
-        <div className="flex gap-2 items-center text-text-verba">
+        <div className="flex gap-2 items-center text-text-oxtari">
           <p className="flex min-w-[8vw]"></p>
-          <p className="text-sm text-text-alt-verba text-start">
+          <p className="text-sm text-text-alt-oxtari text-start">
             Overwrite existing documents with the same name.
           </p>
         </div>
 
-        <div className="divider  text-text-alt-verba">Metadata</div>
+        <div className="divider  text-text-alt-oxtari">Metadata</div>
 
         {/* Metadata */}
-        <div className="flex gap-2 justify-between items-center text-text-verba">
+        <div className="flex gap-2 justify-between items-center text-text-oxtari">
           <p className="flex min-w-[8vw]">Metadata</p>
           <textarea
             className="grow w-full textarea flex items-center gap-2 max-h-64 bg-transparent border border-gray-300"
@@ -361,21 +361,21 @@ const BasicSettingView: React.FC<BasicSettingViewProps> = ({
           />
         </div>
 
-        <div className="flex gap-2 items-center text-text-verba">
+        <div className="flex gap-2 items-center text-text-oxtari">
           <p className="flex min-w-[8vw]"></p>
-          <p className="text-sm text-text-alt-verba text-start">
+          <p className="text-sm text-text-alt-oxtari text-start">
             Add metadata to the document to improve retrieval and generation.
             Metadata will added to the context sent to the embedding and
             generation, to influcence the results.
           </p>
         </div>
 
-        <div className="divider  text-text-alt-verba">File Information</div>
+        <div className="divider  text-text-alt-oxtari">File Information</div>
 
         {/* Extension */}
-        <div className="flex gap-2 justify-between items-center text-text-verba">
+        <div className="flex gap-2 justify-between items-center text-text-oxtari">
           <p className="flex min-w-[8vw]">Extension</p>
-          <label className="input flex items-center gap-2 w-full bg-bg-verba">
+          <label className="input flex items-center gap-2 w-full bg-bg-oxtari">
             <input
               type="text"
               className="grow w-full"
@@ -386,9 +386,9 @@ const BasicSettingView: React.FC<BasicSettingViewProps> = ({
         </div>
 
         {/* File Size */}
-        <div className="flex gap-2 justify-between items-center text-text-verba">
+        <div className="flex gap-2 justify-between items-center text-text-oxtari">
           <p className="flex min-w-[8vw]">File Size</p>
-          <label className="input flex items-center gap-2 w-full bg-bg-verba">
+          <label className="input flex items-center gap-2 w-full bg-bg-oxtari">
             <input
               type="text"
               className="grow w-full"
@@ -398,12 +398,12 @@ const BasicSettingView: React.FC<BasicSettingViewProps> = ({
           </label>
         </div>
 
-        <div className="divider  text-text-alt-verba">Ingestion Pipeline</div>
+        <div className="divider  text-text-alt-oxtari">Ingestion Pipeline</div>
 
         {/* Reader */}
-        <div className="flex gap-2 justify-between items-center text-text-verba">
+        <div className="flex gap-2 justify-between items-center text-text-oxtari">
           <p className="flex min-w-[8vw]">Reader</p>
-          <label className="input flex items-center gap-2 w-full bg-bg-verba">
+          <label className="input flex items-center gap-2 w-full bg-bg-oxtari">
             <input
               type="text"
               className="grow w-full"
@@ -413,9 +413,9 @@ const BasicSettingView: React.FC<BasicSettingViewProps> = ({
           </label>
         </div>
 
-        <div className="flex gap-2 items-center text-text-verba">
+        <div className="flex gap-2 items-center text-text-oxtari">
           <p className="flex min-w-[8vw]"></p>
-          <p className="text-sm text-text-alt-verba text-start">
+          <p className="text-sm text-text-alt-oxtari text-start">
             {selectedFileData &&
               fileMap[selectedFileData].rag_config["Reader"].components[
                 fileMap[selectedFileData].rag_config["Reader"].selected
@@ -424,9 +424,9 @@ const BasicSettingView: React.FC<BasicSettingViewProps> = ({
         </div>
 
         {/* Chunker */}
-        <div className="flex gap-2 justify-between items-center text-text-verba">
+        <div className="flex gap-2 justify-between items-center text-text-oxtari">
           <p className="flex min-w-[8vw]">Chunker</p>
-          <label className="input flex items-center gap-2 w-full bg-bg-verba">
+          <label className="input flex items-center gap-2 w-full bg-bg-oxtari">
             <input
               type="text"
               className="grow w-full"
@@ -436,9 +436,9 @@ const BasicSettingView: React.FC<BasicSettingViewProps> = ({
           </label>
         </div>
 
-        <div className="flex gap-2 items-center text-text-verba">
+        <div className="flex gap-2 items-center text-text-oxtari">
           <p className="flex min-w-[8vw]"></p>
-          <p className="text-sm text-text-alt-verba text-start">
+          <p className="text-sm text-text-alt-oxtari text-start">
             {selectedFileData &&
               fileMap[selectedFileData].rag_config["Chunker"].components[
                 fileMap[selectedFileData].rag_config["Chunker"].selected
@@ -447,9 +447,9 @@ const BasicSettingView: React.FC<BasicSettingViewProps> = ({
         </div>
 
         {/* Embedder */}
-        <div className="flex gap-2 justify-between items-center text-text-verba">
+        <div className="flex gap-2 justify-between items-center text-text-oxtari">
           <p className="flex min-w-[8vw]">Embedder</p>
-          <label className="input flex items-center gap-2 w-full bg-bg-verba">
+          <label className="input flex items-center gap-2 w-full bg-bg-oxtari">
             <input
               type="text"
               className="grow w-full"
@@ -459,9 +459,9 @@ const BasicSettingView: React.FC<BasicSettingViewProps> = ({
           </label>
         </div>
 
-        <div className="flex gap-2 items-center text-text-verba">
+        <div className="flex gap-2 items-center text-text-oxtari">
           <p className="flex min-w-[8vw]"></p>
-          <p className="text-sm text-text-alt-verba text-start">
+          <p className="text-sm text-text-alt-oxtari text-start">
             {selectedFileData &&
               fileMap[selectedFileData].rag_config["Embedder"].components[
                 fileMap[selectedFileData].rag_config["Embedder"].selected
@@ -471,7 +471,7 @@ const BasicSettingView: React.FC<BasicSettingViewProps> = ({
 
         <div className="divider"></div>
 
-        <div className="flex gap-2 justify-between items-center text-text-verba">
+        <div className="flex gap-2 justify-between items-center text-text-oxtari">
           <p className="flex min-w-[8vw]">Debug</p>
           <BEORRIButton
             Icon={CgDebug}
@@ -497,7 +497,7 @@ const BasicSettingView: React.FC<BasicSettingViewProps> = ({
             </pre>
             <div className="modal-action">
               <form method="dialog">
-                <button className="btn text-text-verba bg-warning-verba border-none hover:bg-button-hover-verba ml-2">
+                <button className="btn text-text-oxtari bg-warning-oxtari border-none hover:bg-button-hover-oxtari ml-2">
                   Close
                 </button>
               </form>
