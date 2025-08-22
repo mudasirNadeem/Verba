@@ -1,7 +1,7 @@
 ﻿"use client";
 
 import React, { useState, useEffect } from "react";
-import { VerbaChunk, ChunksPayload, Theme } from "@/app/types";
+import { OxtariChunk, ChunksPayload, Theme } from "@/app/types";
 import ReactMarkdown from "react-markdown";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import {
@@ -28,7 +28,7 @@ const ChunkView: React.FC<ChunkViewProps> = ({
   selectedTheme,
 }) => {
   const [isFetching, setIsFetching] = useState(false);
-  const [chunks, setChunks] = useState<VerbaChunk[]>([]);
+  const [chunks, setChunks] = useState<OxtariChunk[]>([]);
   const [page, setPage] = useState(1);
   const [currentChunkIndex, setCurrentChunkIndex] = useState(0);
   const [isPreviousDisabled, setIsPreviousDisabled] = useState(true);

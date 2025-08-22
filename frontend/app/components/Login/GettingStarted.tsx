@@ -42,7 +42,7 @@ const GettingStartedComponent: React.FC<GettingStartedComponentProps> = ({
     // Set getting_started to true in localStorage
     localStorage.setItem("getting_started", "true");
     setShouldShow(false);
-    addStatusMessage("Achievement unlocked: Welcome to Verba!", "SUCCESS");
+    addStatusMessage("Achievement unlocked: Welcome to Oxtari!", "SUCCESS");
   };
 
   return (
@@ -102,12 +102,7 @@ const GettingStartedComponent: React.FC<GettingStartedComponentProps> = ({
               </div>
             </div>
             <div className="hidden md:block shrink-0">
-              <img
-                src="https://raw.githubusercontent.com/weaviate/Verba/main/img/thumbnail.png"
-                alt="Verba AI"
-                width={400}
-                className="rounded-lg shadow-2xl"
-              />
+          
             </div>
           </div>
         </div>

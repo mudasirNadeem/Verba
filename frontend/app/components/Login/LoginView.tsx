@@ -210,7 +210,7 @@ const LoginView: React.FC<LoginViewProps> = ({
                   <div className="flex flex-col justify-start gap-4 w-full">
                     <BEORRIButton
                       Icon={HiMiniSparkles}
-                      title="Start Application" // Changed from "Start Verba"
+                      title="Start Application" 
                       onClick={() => {
                         setSelectStage(false);
                         setSelectedDeployment("Weaviate");

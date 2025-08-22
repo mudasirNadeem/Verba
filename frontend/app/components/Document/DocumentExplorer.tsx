@@ -15,7 +15,7 @@ import ContentView from "./ContentView";
 import { IoMdAddCircle } from "react-icons/io";
 import { FaExternalLinkAlt } from "react-icons/fa";
 import {
-  VerbaDocument,
+  OxtariDocument,
   DocumentPayload,
   Credentials,
   ChunkScore,
@@ -58,7 +58,7 @@ const DocumentExplorer: React.FC<DocumentExplorerProps> = ({
   >("Content");
 
   const [isFetching, setIsFetching] = useState(false);
-  const [document, setDocument] = useState<VerbaDocument | null>(null);
+  const [document, setDocument] = useState<OxtariDocument | null>(null);
 
   useEffect(() => {
     if (selectedDocument) {

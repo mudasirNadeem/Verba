@@ -353,7 +353,7 @@ const ChatInterface: React.FC<ChatInterfaceProps> = ({
     }
   };
 
-  const reconnectToVerba = () => {
+  const reconnectToOxtari = () => {
     setReconnect((prevState) => !prevState);
   };
 
@@ -680,7 +680,7 @@ const ChatInterface: React.FC<ChatInterfaceProps> = ({
         ) : (
           <div className="flex gap-2 items-center justify-end w-full">
             <button
-              onClick={reconnectToVerba}
+              onClick={reconnectToOxtari}
               className="flex btn border-none text-text-oxtari bg-button-oxtari hover:bg-button-hover-oxtari gap-2 items-center"
             >
               <TbPlugConnected size={15} />

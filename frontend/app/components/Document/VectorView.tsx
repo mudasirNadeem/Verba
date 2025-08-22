@@ -20,8 +20,8 @@ import {
   VectorsPayload,
   VectorGroup,
   ChunkPayload,
-  VerbaChunk,
-  VerbaVector,
+  OxtariChunk,
+  OxtariVector,
   Credentials,
   ChunkScore,
 } from "@/app/types";
@@ -31,7 +31,7 @@ import { colors } from "./util";
 extend({ OrbitControls: OrbitControls });
 
 const Sphere: React.FC<{
-  vector: VerbaVector;
+  vector: OxtariVector;
   color: string;
   setHoverTitle: React.MutableRefObject<(t: string | null) => void>;
   documentTitle: string;
@@ -183,7 +183,7 @@ const VectorView: React.FC<VectorViewProps> = ({
   const [currentDimensions, setCurrentDimensions] = useState(0);
 
   const [selectedChunk, setSelectedChunk] = useState<null | string>(null);
-  const [chunk, setChunk] = useState<VerbaChunk | null>(null);
+  const [chunk, setChunk] = useState<OxtariChunk | null>(null);
 
   const [minX, setMinX] = useState(-1);
   const [maxX, setMaxX] = useState(1);

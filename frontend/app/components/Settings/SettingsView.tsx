@@ -49,7 +49,7 @@ const SettingsView: React.FC<SettingsViewProps> = ({
           <div className="bg-bg-alt-oxtari rounded-2xl flex gap-2 p-3 items-center justify-between h-min w-full">
             <div className="flex gap-2 justify-start ">
               <InfoComponent
-                tooltip_text="Customize Theme, reset collections, logout or report issues." // Removed "Verba's"
+                tooltip_text="Customize Theme, reset collections, logout or report issues."
                 display_text={"Settings"}
               />
             </div>
@@ -63,14 +63,14 @@ const SettingsView: React.FC<SettingsViewProps> = ({
               selected_text_color="text-white"
               Icon={RiAdminFill}
             />
-            {/* <BEORRIButton
+            <BEORRIButton
               title="Customize Theme"
               onClick={() => setSettingMode("THEME")}
               selected={settingMode === "THEME"}
               selected_color="bg-[#023eba]"
               selected_text_color="text-white"
               Icon={FaPaintBrush}
-            /> */}
+            />
             <BEORRIButton
               title="Manage Suggestions"
               onClick={() => setSettingMode("SUGGESTIONS")}
@@ -90,7 +90,7 @@ const SettingsView: React.FC<SettingsViewProps> = ({
               title="Report Issue"
               onClick={() =>
                 window.open(
-                  "https://github.com/weaviate/Verba/issues/new/choose",
+                  "https://github.com/weaviate/oxtari/issues/new/choose",
                   "_blank"
                 )
               }

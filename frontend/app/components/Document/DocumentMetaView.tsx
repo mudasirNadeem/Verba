@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { VerbaDocument, Credentials } from "@/app/types";
+import { OxtariDocument, Credentials } from "@/app/types";
 import { fetchSelectedDocument } from "@/app/api";
 
 interface DocumentMetaViewProps {
@@ -14,7 +14,7 @@ const DocumentMetaView: React.FC<DocumentMetaViewProps> = ({
   credentials,
 }) => {
   const [isFetching, setIsFetching] = useState(true);
-  const [document, setDocument] = useState<VerbaDocument | null>(null);
+  const [document, setDocument] = useState<OxtariDocument | null>(null);
 
   useEffect(() => {
     handleFetchDocument();

@@ -496,7 +496,7 @@ export const LightTheme: Theme = {
     description: "First Message",
   },
   image: {
-    src: "/verba2.png",
+    src: "/oxtari.png",
     type: "image",
     description: "Logo",
   },

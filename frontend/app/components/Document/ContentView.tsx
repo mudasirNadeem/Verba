@@ -11,7 +11,7 @@ import { FaArrowAltCircleLeft, FaArrowAltCircleRight } from "react-icons/fa";
 import { HiSparkles } from "react-icons/hi2";
 import { IoNewspaper } from "react-icons/io5";
 import {
-  VerbaDocument,
+  OxtariDocument,
   ContentPayload,
   Credentials,
   ContentSnippet,
@@ -23,7 +23,7 @@ import { fetchContent } from "@/app/api";
 import BEORRIButton from "../Navigation/BEORRIButton";
 
 interface ContentViewProps {
-  document: VerbaDocument | null;
+  document: OxtariDocument | null;
   selectedTheme: Theme;
   selectedDocument: string;
   credentials: Credentials;

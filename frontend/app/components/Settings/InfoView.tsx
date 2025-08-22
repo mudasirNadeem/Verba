@@ -57,10 +57,10 @@ const InfoView: React.FC<InfoViewProps> = ({
   const resetOxtari = async () => {
     const response = await deleteAllDocuments("ALL", credentials);
     if (response) {
-      addStatusMessage("Application reset", "SUCCESS"); // Changed from "Verba reset"
+      addStatusMessage("Application reset", "SUCCESS"); 
       fetchMetadata();
     } else {
-      addStatusMessage("Failed to reset application", "ERROR"); // Changed from "Failed to reset Verba"
+      addStatusMessage("Failed to reset application", "ERROR"); 
     }
   };
 
