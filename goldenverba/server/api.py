@@ -47,7 +47,7 @@ tag = os.environ.get("VERBA_GOOGLE_TAG", "")
 
 
 if production_key:
-    msg.info(f"Verba runs in {production_key} mode")
+    msg.info(f"Oxtari runs in {production_key} mode")
     production = production_key
 else:
     production = "Local"
@@ -707,12 +707,12 @@ async def reset_verba(payload: ResetPayload):
         elif payload.resetMode == "SUGGESTIONS":
             await manager.weaviate_manager.delete_all_suggestions(client)
 
-        msg.info(f"Resetting Verba in ({payload.resetMode}) mode")
+        msg.info(f"Resetting Oxtari in ({payload.resetMode}) mode")
 
         return JSONResponse(status_code=200, content={})
 
     except Exception as e:
-        msg.warn(f"Failed to reset Verba {str(e)}")
+        msg.warn(f"Failed to reset Oxtari {str(e)}")
         return JSONResponse(status_code=500, content={})
 
 

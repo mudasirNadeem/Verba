@@ -14,7 +14,7 @@ load_dotenv()
 
 class VerbaComponent:
     """
-    Base Class for Verba Readers, Chunkers, Embedders, Retrievers, and Generators.
+    Base Class for Oxtari Readers, Chunkers, Embedders, Retrievers, and Generators.
     """
 
     def __init__(self):
@@ -56,7 +56,7 @@ class VerbaComponent:
 
 class Reader(VerbaComponent):
     """
-    Interface for Verba Readers.
+    Interface for Oxtari Readers.
     """
 
     def __init__(self):
@@ -65,16 +65,16 @@ class Reader(VerbaComponent):
         self.extension = ["txt", "md", "mdx", "py", "ts", "tsx", "js", "go", "css"]
 
     async def load(self, config: dict, fileConfig: FileConfig) -> list[Document]:
-        """Convert fileConfig into Verba Documents
+        """Convert fileConfig into Oxtari Documents
         @parameter: fileConfig: FileConfig - FileConfiguration sent by the frontend
-        @returns list[Document] - Verba documents
+        @returns list[Document] - Oxtari documents
         """
         raise NotImplementedError("load method must be implemented by a subclass.")
 
 
 class Embedding(VerbaComponent):
     """
-    Interface for Verba Embedder Components.
+    Interface for Oxtari Embedder Components.
     """
 
     def __init__(self):
@@ -92,7 +92,7 @@ class Embedding(VerbaComponent):
 
 class Chunker(VerbaComponent):
     """
-    Interface for Verba Chunking.
+    Interface for Oxtari Chunking.
     """
 
     def __init__(self):
@@ -106,9 +106,9 @@ class Chunker(VerbaComponent):
         embedder: Embedding | None = None,
         embedder_config: dict | None = None,
     ) -> list[Document]:
-        """Split Verba documents into chunks.
+        """Split Oxtari documents into chunks.
         @parameter: config : dict - Chunker Configuration
-        @parameter: documents : list[Document] - List of Verba documents to chunk
+        @parameter: documents : list[Document] - List of Oxtari documents to chunk
         @parameter: embedder : Embedding | None - (Optional) Selected Embedder if the Chunker requires vectorization
         @parameter: embedder_config : dict | None - (Optional) Embedder Configuration
         @return: list[Documents]
@@ -118,7 +118,7 @@ class Chunker(VerbaComponent):
 
 class Retriever(VerbaComponent):
     """
-    Interface for Verba Retrievers.
+    Interface for Oxtari Retrievers.
     """
 
     def __init__(self):
@@ -147,13 +147,13 @@ class Retriever(VerbaComponent):
 
 class Generator(VerbaComponent):
     """
-    Interface for Verba Generators.
+    Interface for Oxtari Generators.
     """
 
     def __init__(self):
         super().__init__()
         self.context_window = 5000
-        default_prompt = "You are an AI assistant for Retrieval Augmented Generation (RAG). You will receive a user query and context pieces that have a semantic similarity to that query. Please answer these user queries only with the provided context. Mention documents you used from the context if you use them to reduce hallucination. If the provided documentation does not provide enough information, say so. If the user asks questions about you as a chatbot specifially, answer them naturally. If the answer requires code examples encapsulate them with ```programming-language-name ```. Don't do pseudo-code." # Changed from "You are Verba"
+        default_prompt = "You are an AI assistant for Retrieval Augmented Generation (RAG). You will receive a user query and context pieces that have a semantic similarity to that query. Please answer these user queries only with the provided context. Mention documents you used from the context if you use them to reduce hallucination. If the provided documentation does not provide enough information, say so. If the user asks questions about you as a chatbot specifially, answer them naturally. If the answer requires code examples encapsulate them with ```programming-language-name ```. Don't do pseudo-code." # Changed from "You are Oxtari"
         prompt = os.getenv("SYSYEM_MESSAGE_PROMPT", default_prompt)
         self.config["System Message"] = InputConfig(
             type="textarea",

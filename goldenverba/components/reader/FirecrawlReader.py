@@ -16,14 +16,14 @@ from goldenverba.components.types import InputConfig
 
 class FirecrawlReader(Reader):
     """
-    FirecrawlReader uses the Firecrawl API to scrape or crawl websites and ingest them into Verba.
+    FirecrawlReader uses the Firecrawl API to scrape or crawl websites and ingest them into Oxtari.
     """
 
     def __init__(self):
         super().__init__()
         self.name = "Firecrawl"
         self.type = "URL"
-        self.description = "Use Firecrawl to scrape websites and ingest them into Verba"
+        self.description = "Use Firecrawl to scrape websites and ingest them into Oxtari"
         self.config = {
             "Mode": InputConfig(
                 type="dropdown",

@@ -1,4 +1,4 @@
-# Windows-compatible build script for Verba frontend
+# Windows-compatible build script for Oxtari frontend
 Write-Host "Starting build process..."
 Set-Location "C:\Users\GAC\Verba\frontend"
 

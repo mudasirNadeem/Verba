@@ -12,7 +12,7 @@ from wasabi import msg
 
 class CohereEmbedder(Embedding):
     """
-    CohereEmbedder for Verba.
+    CohereEmbedder for Oxtari.
     """
 
     def __init__(self):

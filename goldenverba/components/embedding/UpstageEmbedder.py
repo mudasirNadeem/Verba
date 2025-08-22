@@ -12,7 +12,7 @@ from goldenverba.components.util import get_environment, get_token
 
 
 class UpstageEmbedder(Embedding):
-    """UpstageEmbedder for Verba."""
+    """UpstageEmbedder for Oxtari."""
 
     def __init__(self):
         super().__init__()

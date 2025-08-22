@@ -11,7 +11,7 @@ from goldenverba.components.interfaces import Embedding
 
 class HTMLChunker(Chunker):
     """
-    HTMLChunker for Verba using LangChain.
+    HTMLChunker for Oxtari using LangChain.
     """
 
     def __init__(self):

@@ -34,7 +34,7 @@ def cli():
 @click.option(
     "--workers",
     default=4,
-    help="Workers to run Verba",
+    help="Workers to run Oxtari",
 )
 def start(port, host, prod, workers):
     """

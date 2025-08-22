@@ -12,7 +12,7 @@ from goldenverba.components.util import get_environment, get_token
 
 
 class OpenAIEmbedder(Embedding):
-    """OpenAIEmbedder for Verba."""
+    """OpenAIEmbedder for Oxtari."""
 
     def __init__(self):
         super().__init__()
