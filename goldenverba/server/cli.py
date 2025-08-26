@@ -51,12 +51,12 @@ def start(port, host, prod, workers):
 
 @click.option(
     "--url",
-    default=os.getenv("WEAVIATE_URL_VERBA"),
+    default=os.getenv("WEAVIATE_URL_OXTARI"),
     help="Weaviate URL",
 )
 @click.option(
     "--api_key",
-    default=os.getenv("WEAVIATE_API_KEY_VERBA"),
+    default=os.getenv("WEAVIATE_API_KEY_OXTARI"),
     help="Weaviate API Key",
 )
 @click.option(

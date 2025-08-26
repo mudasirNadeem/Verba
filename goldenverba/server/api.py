@@ -139,7 +139,7 @@ async def serve_oxtari_image():
     return FileResponse(os.path.join(BASE_DIR, "frontend/out/new-logo.png"))
 
 @app.get("/oxtari.png")
-async def serve_verba_image():
+async def serve_oxtari_image():
     return FileResponse(os.path.join(BASE_DIR, "frontend/out/oxtari.png"))
 
 
@@ -155,7 +155,7 @@ async def health_check():
     if production == "Local":
         deployments = await manager.get_deployments()
     else:
-        deployments = {"WEAVIATE_URL_VERBA": "", "WEAVIATE_API_KEY_VERBA": ""}
+        deployments = {"WEAVIATE_URL_OXTARI": "", "WEAVIATE_API_KEY_OXTARI": ""}
 
     return JSONResponse(
         content={

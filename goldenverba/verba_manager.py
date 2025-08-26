@@ -394,7 +394,7 @@ class VerbaManager:
     def verify_config(self, a: dict, b: dict) -> bool:
         # Check Settings ( RAG & Settings )
         try:
-            if os.getenv("VERBA_PRODUCTION") == "Demo":
+            if os.getenv("OXTARI_PRODUCTION") == "Demo":
                 return True
             for a_component_key, b_component_key in zip(a, b):
                 if a_component_key != b_component_key:
@@ -775,8 +775,8 @@ class ClientManager:
         _credentials = credentials
 
         if not _credentials.url and not _credentials.key:
-            _credentials.url = os.environ.get("WEAVIATE_URL_VERBA", "")
-            _credentials.key = os.environ.get("WEAVIATE_API_KEY_VERBA", "")
+            _credentials.url = os.environ.get("WEAVIATE_URL_OXTARI", "")
+            _credentials.key = os.environ.get("WEAVIATE_API_KEY_OXTARI", "")
 
         cred_hash = self.hash_credentials(_credentials)
 
