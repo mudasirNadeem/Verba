@@ -80,8 +80,8 @@ export default function Home() {
         setIsHealthy(true);
         setCredentials({
           deployment: "Local",
-          url: health_data.deployments.WEAVIATE_URL_VERBA,
-          key: health_data.deployments.WEAVIATE_API_KEY_VERBA,
+          url: health_data.deployments.WEAVIATE_URL_OXTARI,
+          key: health_data.deployments.WEAVIATE_API_KEY_OXTARI,
           default_deployment: health_data.default_deployment,
         });
       } else {

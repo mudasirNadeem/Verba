@@ -79,14 +79,14 @@ class VerbaManager:
 
     async def get_deployments(self):
         deployments = {
-            "WEAVIATE_URL_VERBA": (
-                os.getenv("WEAVIATE_URL_VERBA")
-                if os.getenv("WEAVIATE_URL_VERBA")
+            "WEAVIATE_URL_OXTARI": (
+                os.getenv("WEAVIATE_URL_OXTARI")
+                if os.getenv("WEAVIATE_URL_OXTARI")
                 else ""
             ),
-            "WEAVIATE_API_KEY_VERBA": (
-                os.getenv("WEAVIATE_API_KEY_VERBA")
-                if os.getenv("WEAVIATE_API_KEY_VERBA")
+            "WEAVIATE_API_KEY_OXTARI": (
+                os.getenv("WEAVIATE_API_KEY_OXTARI")
+                if os.getenv("WEAVIATE_API_KEY_OXTARI")
                 else ""
             ),
         }

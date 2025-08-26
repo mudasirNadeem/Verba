@@ -12,7 +12,7 @@ from weaviate import Client
 load_dotenv()
 
 
-class VerbaComponent:
+class OxtariComponent:
     """
     Base Class for Oxtari Readers, Chunkers, Embedders, Retrievers, and Generators.
     """
@@ -54,7 +54,7 @@ class VerbaComponent:
         return True
 
 
-class Reader(VerbaComponent):
+class Reader(OxtariComponent):
     """
     Interface for Oxtari Readers.
     """
@@ -72,7 +72,7 @@ class Reader(VerbaComponent):
         raise NotImplementedError("load method must be implemented by a subclass.")
 
 
-class Embedding(VerbaComponent):
+class Embedding(OxtariComponent):
     """
     Interface for Oxtari Embedder Components.
     """
@@ -90,7 +90,7 @@ class Embedding(VerbaComponent):
         raise NotImplementedError("embed method must be implemented by a subclass.")
 
 
-class Chunker(VerbaComponent):
+class Chunker(OxtariComponent):
     """
     Interface for Oxtari Chunking.
     """
@@ -116,7 +116,7 @@ class Chunker(VerbaComponent):
         raise NotImplementedError("chunk method must be implemented by a subclass.")
 
 
-class Retriever(VerbaComponent):
+class Retriever(OxtariComponent):
     """
     Interface for Oxtari Retrievers.
     """
@@ -145,7 +145,7 @@ class Retriever(VerbaComponent):
         raise NotImplementedError("retrieve method must be implemented by a subclass.")
 
 
-class Generator(VerbaComponent):
+class Generator(OxtariComponent):
     """
     Interface for Oxtari Generators.
     """

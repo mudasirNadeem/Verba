@@ -14,7 +14,7 @@ build
 .cache
 .oxtari
 .vscode
-verba_config.json
+oxtari_config.json
 text-generation-inference
 test.py
 cache.txt
