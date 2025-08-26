@@ -155,7 +155,7 @@ class ImportStreamPayload(BaseModel):
     fileMap: dict[str, FileConfig]
 
 
-class VerbaConfig(BaseModel):
+class OxtariConfig(BaseModel):
     RAG: dict[str, RAGComponentClass]
     SETTING: dict
 
@@ -234,11 +234,11 @@ class GeneratePayload(BaseModel):
 
 
 class ConfigPayload(BaseModel):
-    config: VerbaConfig
+    config: OxtariConfig
 
 
 class RAGConfigPayload(BaseModel):
-    config: VerbaConfig
+    config: OxtariConfig
 
 
 class SearchQueryPayload(BaseModel):

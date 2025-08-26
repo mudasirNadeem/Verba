@@ -42,8 +42,8 @@ from goldenverba.server.types import (
 load_dotenv()
 
 # Check if runs in production
-production_key = os.environ.get("VERBA_PRODUCTION")
-tag = os.environ.get("VERBA_GOOGLE_TAG", "")
+production_key = os.environ.get("OXTARI_PRODUCTION")
+tag = os.environ.get("OXTARI_GOOGLE_TAG", "")
 
 
 if production_key:
