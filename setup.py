@@ -1,13 +1,13 @@
 from setuptools import find_packages, setup
 
 setup(
-    name="goldenverba",
+    name="goldenoxtari",
     version="2.1.3",
     packages=find_packages(),
     python_requires=">=3.10.0,<3.14.0",
     entry_points={
         "console_scripts": [
-            "oxtari=goldenverba.server.cli:cli",
+            "oxtari=goldenoxtari.server.cli:cli",
         ],
     },
     author="Weaviate",

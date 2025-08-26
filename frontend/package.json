@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build && powershell -ExecutionPolicy Bypass -File .\\build-copy.ps1",
-    "build:unix": "next build && cp -r out/* ../goldenverba/server/frontend/out/ && rm -r out",
+    "build:unix": "next build && cp -r out/* ../goldenoxtari/server/frontend/out/ && rm -r out",
     "start": "next start -H 0.0.0.0 -p 8080",
     "lint": "next lint"
   },
