@@ -100,7 +100,6 @@ const ChatInterface: React.FC<ChatInterfaceProps> = ({
         "Model"
       ].value as string)
     : "No Config found";
-  useState("No Embedding Model");
 
   useEffect(() => {
     setReconnect(true);

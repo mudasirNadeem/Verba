@@ -94,7 +94,7 @@ const FileComponent: React.FC<FileComponentProps> = ({
       <BEORRIButton
         Icon={FaTrash}
         onClick={openDeleteModal}
-        className="w-[50px]"
+        className="w-[50px] hover:!bg-[#f77579] hover:!text-white"
         selected={selectedFileData === fileMap[fileData.fileID].fileID}
         selected_color="bg-warning-oxtari"
       />

@@ -63,14 +63,14 @@ const SettingsView: React.FC<SettingsViewProps> = ({
               selected_text_color="text-white"
               Icon={RiAdminFill}
             />
-            <BEORRIButton
+            {/* <BEORRIButton
               title="Customize Theme"
               onClick={() => setSettingMode("THEME")}
               selected={settingMode === "THEME"}
               selected_color="bg-[#023eba]"
               selected_text_color="text-white"
               Icon={FaPaintBrush}
-            />
+            /> */}
             <BEORRIButton
               title="Manage Suggestions"
               onClick={() => setSettingMode("SUGGESTIONS")}
