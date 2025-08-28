@@ -29,7 +29,7 @@ pip install goldenoxtari
 - [Quickstart: Deploy with pip](#how-to-deploy-with-pip)
 - [Quickstart: Build from Source](#how-to-build-from-source)
 - [Quickstart: Deploy with Docker](#how-to-install-oxtari-with-docker)
-- [💾 Oxtari Walkthrough](#️verba-walkthrough)
+- [💾 Oxtari Walkthrough](#️oxtari-walkthrough)
 - [💖 Open Source Contribution](#open-source-contribution)
 - [🚩 Known Issues](#known-issues)
 - [❔FAQ](#faq)
@@ -119,7 +119,7 @@ Oxtari is a fully-customizable personal assistant utilizing [Retrieval Augmented
 
 > Something is missing? Feel free to create a new issue or discussion with your idea!
 
-![Showcase of Oxtari](https://github.com/weaviate/Oxtari/blob/2.0.0/img/verba_screen.png)
+![Showcase of Oxtari](https://github.com/weaviate/Oxtari/blob/2.0.0/img/oxtari_screen.png)
 
 ---
 
@@ -163,8 +163,8 @@ Below is a comprehensive list of the API keys and variables you may require:
 
 | Environment Variable   | Value                                                      | Description                                                                                                                   |
 | ---------------------- | ---------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
-| WEAVIATE_URL_VERBA     | URL to your hosted Weaviate Cluster                        | Connect to your [WCS](https://console.weaviate.cloud/) Cluster                                                                |
-| WEAVIATE_API_KEY_VERBA | API Credentials to your hosted Weaviate Cluster            | Connect to your [WCS](https://console.weaviate.cloud/) Cluster                                                                |
+| WEAVIATE_URL_oxtari     | URL to your hosted Weaviate Cluster                        | Connect to your [WCS](https://console.weaviate.cloud/) Cluster                                                                |
+| WEAVIATE_API_KEY_oxtari | API Credentials to your hosted Weaviate Cluster            | Connect to your [WCS](https://console.weaviate.cloud/) Cluster                                                                |
 | ANTHROPIC_API_KEY      | Your Anthropic API Key                                     | Get Access to [Anthropic](https://www.anthropic.com/) Models                                                                  |
 | OPENAI_API_KEY         | Your OpenAI Key                                            | Get Access to [OpenAI](https://openai.com/) Models                                                                            |
 | OPENAI_EMBED_API_KEY         | Your OpenAI Key                                            | Use a different endpoint for embeddings                                                                            |
@@ -175,7 +175,7 @@ Below is a comprehensive list of the API keys and variables you may require:
 | OPENAI_CUSTOM_EMBED        | `true` \| `false`                                    | Allow Oxtari to recognize custom embedding model names (not only OpenAI ones)                                                                            |
 | COHERE_API_KEY         | Your API Key                                               | Get Access to [Cohere](https://cohere.com/) Models                                                                            |
 | GROQ_API_KEY           | Your Groq API Key                                          | Get Access to [Groq](https://groq.com/) Models                                                                                |
-| NOVITA_API_KEY         | Your Novita API Key                                        | Get Access to [Novita AI](https://novita.ai?utm_source=github_verba&utm_medium=github_readme&utm_campaign=github_link) Models |
+| NOVITA_API_KEY         | Your Novita API Key                                        | Get Access to [Novita AI](https://novita.ai?utm_source=github_oxtari&utm_medium=github_readme&utm_campaign=github_link) Models |
 | OLLAMA_URL             | URL to your Ollama instance (e.g. http://localhost:11434 ) | Get Access to [Ollama](https://ollama.com/) Models                                                                            |
 | UNSTRUCTURED_API_KEY   | Your API Key                                               | Get Access to [Unstructured](https://docs.unstructured.io/welcome) Data Ingestion                                             |
 | UNSTRUCTURED_API_URL   | URL to Unstructured Instance                               | Get Access to [Unstructured](https://docs.unstructured.io/welcome) Data Ingestion                                             |
@@ -213,7 +213,7 @@ If you prefer a cloud-based solution, Weaviate Cloud (WCD) offers a scalable, ma
 **🐳 Docker Deployment**
 Another local alternative is deploying Weaviate using Docker. For more details, follow the [How to install Oxtari with Docker](#how-to-install-oxtari-with-docker) section.
 
-![Deployment in Oxtari](https://github.com/weaviate/Oxtari/blob/2.0.0/img/verba_deployment.png)
+![Deployment in Oxtari](https://github.com/weaviate/Oxtari/blob/2.0.0/img/oxtari_deployment.png)
 
 **⚙️ Custom Weaviate Deployment**
 
@@ -282,7 +282,7 @@ To use Groq LPUs as generation engine, you need to get an API key from [Groq](ht
 
 ## Novita
 
-To use Novita AI as generation engine, you need to get an API key from [Novita AI](https://novita.ai/settings/key-management?utm_source=github_verba&utm_medium=github_readme&utm_campaign=github_link).
+To use Novita AI as generation engine, you need to get an API key from [Novita AI](https://novita.ai/settings/key-management?utm_source=github_oxtari&utm_medium=github_readme&utm_campaign=github_link).
 
 # How to deploy with pip
 
@@ -419,13 +419,13 @@ You can skip this part by setting the `DEFAULT_DEPLOYMENT` environment variable 
 
 First thing you need to do is to add your data. You can do this by clicking on `Import Data` and selecting either `Add Files`, `Add Directory`, or `Add URL` tab. Here you can add all your files that you want to ingest.
 You can then configure every file individually by selecting the file and clicking on `Overview` or `Configure` tab.
-![Demo of Oxtari](https://github.com/weaviate/Oxtari/blob/2.0.0/img/verba_data.png)
+![Demo of Oxtari](https://github.com/weaviate/Oxtari/blob/2.0.0/img/oxtari_data.png)
 
 ### Query Your Data
 
 With Data imported, you can use the `Chat` page to ask any related questions. You will receive relevant chunks that are semantically relevant to your question and an answer generated by your choosen model. You can configure the RAG pipeline under the `Config` tab.
 
-![Demo of Oxtari](https://github.com/weaviate/Oxtari/blob/2.0.0/img/verba_rag.png)
+![Demo of Oxtari](https://github.com/weaviate/Oxtari/blob/2.0.0/img/oxtari_rag.png)
 
 ## Open Source Contribution
 
