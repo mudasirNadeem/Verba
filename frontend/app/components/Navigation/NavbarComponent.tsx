@@ -80,7 +80,7 @@ const Navbar: React.FC<NavbarProps> = ({
       {/* Logo, Title, Subtitle */}
       <div className="flex flex-row items-center gap-5">
         <img
-          src="oxtari.png"
+          src="OXTARI2.png"
           className="flex rounded-lg w-[60px] object-contain [filter:drop-shadow(0_4px_3px_rgb(0_0_0_/0.07))_drop-shadow(0_2px_2px_rgb(0_0_0_/0.06))]"
         />
         <div className="flex flex-col">

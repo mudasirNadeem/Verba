@@ -169,9 +169,15 @@ def get_models(url: str, api_key: str) -> List[str]:
     Fetch online and return available Groq models if api_key is not empty and valid.
     Else, return offline default model list.
     """
+    # If no API key provided, return default models
+    if not api_key:
+        msg.warn("No GROQ_API_KEY provided, using default model list")
+        return DEFAULT_MODEL_LIST
+        
     try:
         headers = {"Authorization": f"Bearer {api_key}"}
-        response = requests.get(url + "models", headers=headers)
+        # Add timeout to prevent hanging
+        response = requests.get(url + "models", headers=headers, timeout=10)
         models = [
             model.get("id")
             for model in response.json().get("data")
@@ -184,6 +190,7 @@ def get_models(url: str, api_key: str) -> List[str]:
         return models
 
     except Exception as e:
+        msg.warn(f"Failed to fetch Groq models: {e}, using default model list")
         return DEFAULT_MODEL_LIST
 
 

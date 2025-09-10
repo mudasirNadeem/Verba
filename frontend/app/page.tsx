@@ -280,7 +280,7 @@ export default function Home() {
             className={`footer footer-center p-4 mt-8 bg-bg-oxtari text-text-alt-oxtari transition-all duration-1500 delay-1000`}
           >
             <aside>
-              <p>Build with ♥ and Weaviate © 2024</p>
+              {/* <p>Build with ♥ and Weaviate © 2024</p> */}
             </aside>
           </div>
         </div>

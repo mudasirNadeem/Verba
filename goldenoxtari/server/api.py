@@ -138,9 +138,9 @@ async def serve_frontend():
 async def serve_oxtari_image():
     return FileResponse(os.path.join(BASE_DIR, "frontend/out/new-logo.png"))
 
-@app.get("/oxtari.png")
+@app.get("/OXTARI.jpg")
 async def serve_oxtari_image():
-    return FileResponse(os.path.join(BASE_DIR, "frontend/out/oxtari.png"))
+    return FileResponse(os.path.join(BASE_DIR, "frontend/out/OXTARI.jpg"))
 
 
 ### INITIAL ENDPOINTS
